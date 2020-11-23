@@ -82,4 +82,12 @@ export default {
     font-size: 15px;
   }
 }
+
+.van-doc-header__logo img {
+  width: 150px !important;
+}
+
+.van-doc-header__top {
+  background-color: white !important;
+}
 </style>
