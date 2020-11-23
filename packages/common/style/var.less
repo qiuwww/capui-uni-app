@@ -1,14 +1,6 @@
 // Color Palette
 @black: #000;
 @white: #fff;
-@gray-1: #f7f8fa;
-@gray-2: #f2f3f5;
-@gray-3: #ebedf0;
-@gray-4: #dcdee0;
-@gray-5: #c8c9cc;
-@gray-6: #969799;
-@gray-7: #646566;
-@gray-8: #323233;
 @red: #ee0a24;
 @blue: #1989fa;
 @orange: #ff976a;
@@ -16,18 +8,66 @@
 @orange-light: #fffbe8;
 @green: #07c160;
 
+//中性色板
+@gray-1: #ffffff; //模块背景
+@gray-2: #f5f5f5; //默认背景/界面背景
+@gray-3: #eeeeee; //分割线/占位图
+@gray-4: #d9d9d9; //边框
+@gray-5: #bfbfbf; //暗文本/为输入
+@gray-6: #8c8c8c; //副标题/辅助文案
+@gray-7: #595959; //描述文本/正文
+@gray-8: #262626; //主标题/重要标题
+
+//品牌色
+@primary-1: #ebf8ff; //背景
+@primary-2: #c2e9ff;
+@primary-3: #99d6ff;
+@primary-4: #70c1ff;
+@primary-5: #47a9ff; //点击
+@primary-6: #1e8dff; //默认
+@primary-7: #0f6dd9;
+@primary-8: #044fb3;
+@primary-9: #00388c;
+@primary-10: #002566;
+
+// @secondary-color:
+//辅色
+@secondary-1: #fff7e6; //背景
+@secondary-2: #ffdfa3;
+@secondary-3: #ffcc7a;
+@secondary-4: #ffb752;
+@secondary-5: #ff9f29;
+@secondary-6: #ff8200; // 默认
+@secondary-7: #d96900; //点击
+@secondary-8: #b35000;
+@secondary-9: #8c3a00;
+@secondary-10: #8c3a00;
+
 // Gradient Colors
 @gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
 @gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
 
 // Component Colors
-@text-color: @gray-8;
+@text-color: @gray-7;
 @active-color: @gray-2;
 @active-opacity: 0.7;
-@disabled-opacity: 0.5;
+@disabled-opacity: 0.45;
 @background-color: @gray-1;
 @background-color-light: #fafafa;
 @text-link-color: #576b95;
+
+@primary-color: @primary-6; //主色
+@primary-color-disable: @primary-1;
+@secondary-color: @secondary-6; //辅色
+// 功能色 ，跟设计师沟通功能色的确定可能不在颜色的10个色阶中，所以有的颜色是直接写死了颜色的
+@link-color: @primary-color;
+@link-bg-color: @primary-1;
+@warning-color: @secondary-color;
+@warning-bg-color: @secondary-1;
+@success-color: #52c41a;
+@success-bg-color: #f6ffed;
+@error-color: #ff4e47;
+@error-bg-color: #ff4e47;
 
 // Padding
 @padding-base: 4px;
@@ -38,10 +78,18 @@
 @padding-xl: @padding-base * 8;
 
 // Font
-@font-size-xs: 10px;
-@font-size-sm: 12px;
-@font-size-md: 14px;
-@font-size-lg: 16px;
+// @font-size-xs: 10px;
+// @font-size-sm: 12px;
+// @font-size-md: 14px;
+// @font-size-lg: 16px;
+@font-size-xxs: 10px; //特殊搭配图形样式，用于角标或特定场景
+@font-size-xs: 12px; //提示性标题，用于辅助文案，警示文案或用于小标签字体大小
+@font-size-sm: 14px; //副标题/描述文本，辅助文本，可单独使用或搭配标题使用
+@font-size-md: 16px; //标题/正文/描述文本，常规文本或正文，输入文案，描述文案，首选字号
+@font-size-lg: 18px; //重要标题，用于主标题或列表标题
+@font-size-xl: 20px; //重要标题/独立使用，重点且突出的标题，可搭配或单独使用
+@font-size-bg: 24px; //特殊标题，独立页面或结构简单数字或需强调文本
+
 @font-weight-bold: 500;
 @line-height-xs: 14px;
 @line-height-sm: 18px;
