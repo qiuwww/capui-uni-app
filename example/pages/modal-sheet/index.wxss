@@ -1,3 +1,7 @@
 .content {
   padding: 20px;
 }
+
+.confirm{
+  color:#1e8dff;
+}

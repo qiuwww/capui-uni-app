@@ -4,4 +4,32 @@
 .van-modal-sheet {
   .theme(max-height, '@action-sheet-max-height') !important;
   .theme(color, '@action-sheet-item-text-color');
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 36px;
+
+    &--title {
+      display: flex;
+      align-items: center;
+      color: @gray-8;
+      font-size: @font-size-md;
+    }
+
+    &--left {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+    }
+
+    &--right {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+    }
+  }
 }

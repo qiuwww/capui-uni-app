@@ -3,7 +3,7 @@ import { VantComponent } from '../common/component';
 VantComponent({
   props: {
     show: Boolean,
-    title: String,
+    title: { type: String, value: '我是标题' },
     cancelText: String,
     description: String,
     round: {
