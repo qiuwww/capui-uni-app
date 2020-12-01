@@ -4,8 +4,9 @@ VantComponent({
   props: {
     show: Boolean,
     title: { type: String, value: '我是标题' },
-    cancelText: String,
-    description: String,
+    customClass: {
+      type: String,
+    },
     round: {
       type: Boolean,
       value: true,
@@ -19,10 +20,6 @@ VantComponent({
       value: true,
     },
     closeOnClickOverlay: {
-      type: Boolean,
-      value: true,
-    },
-    closeOnClickAction: {
       type: Boolean,
       value: true,
     },
