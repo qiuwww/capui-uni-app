@@ -6,7 +6,9 @@
     />
     <div class="preview-popup">
       <div class="preview-content">
-        <img src="https://img.yzcdn.cn/vant-weapp/qrcode-201808101114.jpg" />
+        <img
+          src="http://static.91jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg"
+        />
         <p>微信扫码体验</p>
       </div>
     </div>

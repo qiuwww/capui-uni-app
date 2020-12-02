@@ -52,7 +52,7 @@
 @active-color: @gray-2;
 @active-opacity: 0.7;
 @disabled-opacity: 0.45;
-@background-color: @gray-1;
+@background-color: @gray-2;
 @background-color-light: #fafafa;
 @text-link-color: #576b95;
 
@@ -137,34 +137,37 @@
 @action-sheet-cancel-padding-color: @background-color;
 
 // Button
-@button-mini-height: 22px;
+@button-mini-height: 24px;
 @button-mini-min-width: 50px;
 @button-mini-font-size: @font-size-xs;
-@button-small-height: 30px;
+@button-small-height: 32px;
 @button-small-font-size: @font-size-sm;
 @button-small-min-width: 60px;
 @button-normal-font-size: @font-size-md;
-@button-large-height: 50px;
+@button-large-height: 48px;
+@button-middle-height: 40px;
 @button-default-color: @text-color;
-@button-default-height: 44px;
-@button-default-font-size: @font-size-lg;
+@button-default-height: 48px;
+@button-default-font-size: @font-size-md;
 @button-default-background-color: @white;
 @button-default-border-color: @border-color;
 @button-primary-color: @white;
-@button-primary-background-color: @green;
-@button-primary-border-color: @green;
+@button-primary-background-color: @primary-color;
+@button-primary-border-color: @primary-color;
 @button-info-color: @white;
-@button-info-background-color: @blue;
-@button-info-border-color: @blue;
+@button-info-background-color: @primary-color;
+@button-info-border-color: @primary-color;
 @button-danger-color: @white;
 @button-danger-background-color: @red;
 @button-danger-border-color: @red;
 @button-warning-color: @white;
 @button-warning-background-color: @orange;
 @button-warning-border-color: @orange;
+@button-text-color: @primary-color;
+@button-text-background-color: transparent;
 @button-line-height: 20px;
 @button-border-width: 1px;
-@button-border-radius: @border-radius-sm;
+@button-border-radius: @border-radius-lg;
 @button-round-border-radius: @border-radius-max;
 @button-plain-background-color: @white;
 @button-disabled-opacity: @disabled-opacity;
@@ -216,9 +219,9 @@
 
 // Cell
 @cell-font-size: @font-size-md;
-@cell-line-height: 24px;
-@cell-vertical-padding: 10px;
-@cell-horizontal-padding: @padding-md;
+@cell-line-height: @font-size-md;
+@cell-vertical-padding: 18px;
+@cell-horizontal-padding: 16px;
 @cell-text-color: @text-color;
 @cell-background-color: @white;
 @cell-border-color: @border-color;
@@ -382,7 +385,7 @@
 @notify-warning-background-color: @orange;
 
 // Overlay
-@overlay-background-color: rgba(0, 0, 0, 0.7);
+@overlay-background-color: rgba(0, 0, 0, 0.65);
 
 // Panel
 @panel-background-color: @white;
@@ -395,14 +398,15 @@
 @picker-title-font-size: @font-size-lg;
 @picker-action-padding: 0 @padding-md;
 @picker-action-font-size: @font-size-md;
-@picker-confirm-action-color: @text-link-color;
-@picker-cancel-action-color: @gray-6;
-@picker-option-font-size: @font-size-lg;
+@picker-confirm-action-color: @primary-color;
+@picker-cancel-action-color: @gray-8;
+@picker-option-font-size: @padding-md;
+@picker-title-font-size: @font-size-lg;
 @picker-option-text-color: @black;
 @picker-loading-icon-color: @blue;
-@picker-loading-mask-color: rgba(255, 255, 255, 0.9);
+@picker-loading-mask-color: rgba(255, 255, 255, 0.85);
 @picker-option-disabled-opacity: 0.3;
-@picker-option-selected-text-color: @text-color;
+@picker-option-selected-text-color: @gray-8;
 
 // Popup
 @popup-background-color: @white;
