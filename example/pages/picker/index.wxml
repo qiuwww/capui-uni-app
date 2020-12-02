@@ -31,6 +31,13 @@
   />
 </demo-block>
 
+<demo-block title="省市区三级联动">
+  <van-picker
+    columns="{{ column5 }}"
+    bind:change="onChange3"
+  />
+</demo-block>
+
 <demo-block title="禁用选项">
   <van-picker columns="{{ column2 }}" />
 </demo-block>
