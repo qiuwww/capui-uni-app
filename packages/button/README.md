@@ -116,8 +116,8 @@
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
 | id | 标识符 | _string_ | - | - |
-| type | 按钮类型，可选值为 `primary` `info` `warning` `danger` | _string_ | `default` | - |
-| size | 按钮尺寸，可选值为 `normal` `large` `small` `mini` | _string_ | `normal` | - |
+| type | 按钮类型，可选值为 `primary` `info` `warning` `danger` `text` | _string_ | `default` | - |
+| size | 按钮尺寸，可选值为 `normal` `large` `middle` `small` `mini` | _string_ | `normal` | - |
 | color | 按钮颜色，支持传入`linear-gradient`渐变色 | _string_ | - | 1.0.0 |
 | icon | 左侧图标名称或图片链接，可选值见 [Icon 组件](#/icon) | _string_ | - | - |
 | class-prefix | 图标类名前缀，同 Icon 组件的 [class-prefix 属性](#/icon) | _string_ | `van-icon` | - |
