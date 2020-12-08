@@ -15,6 +15,7 @@
   &__body {
     display: flex;
     align-items: center;
+    overflow: hidden;
 
     &--textarea {
       box-sizing: border-box;
@@ -22,6 +23,13 @@
       line-height: 1.2em;
       .theme(min-height, '@cell-line-height');
     }
+  }
+  &__input_wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 16px;
+    width: 100%;
   }
 
   &__input {
@@ -35,9 +43,10 @@
     text-align: left;
     background-color: transparent;
     border: 0;
-    resize: none;
+    height: 28px; // 不闪烁
+
     .theme(color, '@field-input-text-color');
-    .theme(height, '@cell-line-height');
+    // .theme(height, '@cell-line-height');
     .theme(min-height, '@cell-line-height');
 
     &--textarea {
