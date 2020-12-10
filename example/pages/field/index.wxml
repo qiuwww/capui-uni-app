@@ -1,28 +1,30 @@
 <demo-block title="基础用法">
   <van-cell-group>
-    <van-field value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" clearable />
+    <van-field value="{{ value }}" label="标题" placeholder="请输入" border="{{ false }}" clearable />
   </van-cell-group>
 </demo-block>
 
-<demo-block title="自定义类型">
+<demo-block title="必填标题">
   <van-cell-group>
     <van-field
       value="{{ username }}"
       label="用户名"
       placeholder="请输入用户名"
       clearable
-      right-icon="question-o"
-      right-icon-class="custom-icon"
       required
       bind:click-icon="onClickIcon"
     />
+  </van-cell-group>
+</demo-block>
+<demo-block title="右侧图标">
+  <van-cell-group>
     <van-field
-      value="{{ password }}"
-      type="password"
-      label="密码"
-      placeholder="请输入密码"
+      value="{{ username }}"
+      label="用户名"
+      placeholder="请输入用户名"
+      right-icon="setting-o"
       required
-      border="{{ false }}"
+      bind:click-icon="onClickIcon"
     />
   </van-cell-group>
 </demo-block>

@@ -2,9 +2,11 @@
 @import '../common/style/theme.less';
 
 .van-field {
+  padding: 6px 16px !important;
   .theme(--cell-icon-size,  '@field-icon-size');
 
   &__label {
+    .theme(margin-top, '@field-label-margin-top');
     .theme(color, '@field-label-color');
 
     &--disabled {
@@ -27,26 +29,24 @@
   &__input_wrapper {
     display: flex;
     align-items: center;
-    overflow: hidden;
-    height: 16px;
+    height: @field-input-height;
     width: 100%;
+    vertical-align: middle;
   }
 
   &__input {
     position: relative;
-    display: block;
-    box-sizing: border-box;
+    display: flex;
     width: 100%;
     margin: 0;
     padding: 0;
-    line-height: inherit;
     text-align: left;
     background-color: transparent;
     border: 0;
-    height: 28px; // 不闪烁
+    height: @field-input-height; // 不闪烁
 
     .theme(color, '@field-input-text-color');
-    // .theme(height, '@cell-line-height');
+    .theme(font-size,  '@font-size-md');
     .theme(min-height, '@cell-line-height');
 
     &--textarea {
@@ -95,9 +95,15 @@
   &__clear-root,
   &__icon-container {
     line-height: inherit;
-    vertical-align: middle;
-    .theme(padding, '0 @padding-xs');
-    .theme(margin-right, '-@padding-xs');
+    height: @field-input-height;
+    width: @field-input-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 12px;
+    // .theme(padding, '0 @padding-xs');
+    // .theme(margin-right, '-@padding-xs');
   }
 
   &__clear-root,

@@ -42,7 +42,7 @@ VantComponent({
     },
     titleWidth: {
       type: String,
-      value: '6.2em',
+      value: '80px',
     },
   },
 
