@@ -54,7 +54,7 @@ Page({
 | --- | --- | --- | --- | --- |
 | title | 标题 | _string_ | `''` | - |
 | left-text | 左侧文案 | _string_ | `''` | - |
-| right-text | 右侧文案 | _string_ | `''` | - |
+| right-text | 右侧文案 | _string_ | `''` | 小程序自定义导航栏上无效 |
 | left-arrow | 是否显示左侧箭头 | _boolean_ | `false` | - |
 | fixed | 是否固定在顶部 | _boolean_ | `false` | - |
 | placeholder | 固定在顶部时是否开启占位 | _boolean_ | `false` | - |
@@ -62,6 +62,9 @@ Page({
 | z-index | 元素 z-index | _number_ | `1` | - |
 | custom-style | 根节点自定义样式 | _string_ | - | - |
 | safe-area-inset-top | 是否留出顶部安全距离（状态栏高度） | _boolean_ | `true` | - |
+| title-color | 标题颜色 | _string_ | - | - |
+| left-text-color | 右侧文本颜色 | _string_ | - | - |
+| left-arrow-color | 右侧箭头颜色 | _string_ | - | - |
 
 ### Slot
 
