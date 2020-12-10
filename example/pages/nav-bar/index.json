@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "NavBar 导航栏"
+  "navigationBarTitleText": "NavBar 导航栏",
+  "navigationStyle": "custom"
 }
