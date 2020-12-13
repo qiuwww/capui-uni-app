@@ -16,7 +16,7 @@
     />
   </van-cell-group>
 </demo-block>
-<demo-block title="右侧图标">
+<demo-block title="右侧图标(请勿设置 clearable)">
   <van-cell-group>
     <van-field
       value="{{ username }}"
@@ -28,6 +28,25 @@
     />
   </van-cell-group>
 </demo-block>
+
+<demo-block title="多行文本">
+  <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      type="textarea"
+      label="用户名"
+      action="保存"
+      placeholder="请输入用户名"
+      right-icon="setting-o"
+      required
+      bind:click-icon="onClickIcon"
+    />
+   
+  </van-cell-group>
+</demo-block>
+
+
+
 
 <demo-block title="禁用输入框">
   <van-cell-group>

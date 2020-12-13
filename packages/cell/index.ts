@@ -19,6 +19,7 @@ VantComponent({
     size: String,
     label: String,
     center: Boolean,
+    moreline: Boolean,
     isLink: Boolean,
     required: Boolean,
     clickable: Boolean,
