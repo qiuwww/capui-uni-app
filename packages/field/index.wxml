@@ -1,9 +1,10 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
 <wxs src="./index.wxs" module="computed" />
 
+
+<view>
 <van-cell
   size="{{ size }}"
-  icon="{{ leftIcon }}"
   center="{{ center }}"
   border="{{ border }}"
   moreline="{{type === 'textarea'}}"
@@ -15,11 +16,9 @@
   arrow-direction="{{ arrowDirection }}"
   custom-class="van-field"
 > 
-  
-  <slot name="left-icon" slot="icon" />
   <view wx:if="{{ label }}" class="label-class {{ utils.bem('field__label', { disabled, moreline__label: type === 'textarea' }) }}" slot="title">
     {{ label }}
-    <view wx:if="{{ action }}" class=" {{ utils.bem('field__action')}}" >
+    <view wx:if="{{ action }}" class=" {{ utils.bem('field__action')}}" bind:tap="onClickAction" >
     {{action}}
     </view>
   </view>
@@ -27,6 +26,7 @@
   
   <view class="{{ utils.bem('field__body', [type]) }}">
     <view wx:if="{{ type === 'textarea' }}" class="{{ utils.bem('field__textarea_wrapper') }}">
+      <text hidden='{{isHidePlaceholder}}'  style="{{placeholderStyle}}" class="{{ utils.bem('field__placeholder_textarea', { error, disabled }) }}">{{ placeholder }}</text>
       <textarea
         class="input-class {{ utils.bem('field__input', [inputAlign, type, { disabled, error }]) }}"
         fixed="{{ fixed }}"
@@ -36,9 +36,6 @@
         auto-focus="{{ autoFocus }}"
         disabled="{{ disabled || readonly }}"
         maxlength="{{ maxlength }}"
-        placeholder="{{ placeholder }}"
-        placeholder-style="{{ placeholderStyle }}"
-        placeholder-class="{{ utils.bem('field__placeholder', { error, disabled }) }}"
         auto-height="{{ !!autosize }}"
         style="{{ computed.inputStyle(autosize) }}"
         cursor-spacing="{{ cursorSpacing }}"
@@ -109,7 +106,9 @@
   <view wx:if="{{ showWordLimit && maxlength }}" class="van-field__word-limit">
     <view class="{{ utils.bem('field__word-num', { full: value.length >= maxlength }) }}">{{ value.length }}</view>/{{ maxlength }}
   </view>
-  <view wx:if="{{ errorMessage }}" class="{{ utils.bem('field__error-message', [errorMessageAlign, { disabled, error }]) }}">
+</van-cell>
+<view wx:if="{{ errorMessage }}" class="{{ utils.bem('field__error-message', [errorMessageAlign, { disabled, error }]) }}">
     {{ errorMessage }}
   </view>
-</van-cell>
+
+</view>

@@ -54,17 +54,30 @@ VantComponent({
     focused: false,
     innerValue: '',
     showClear: false,
+    isHidePlaceholder: false,
   },
 
   created() {
     this.value = this.data.value;
-    this.setData({ innerValue: this.value });
+    this.setData({
+      innerValue: this.value,
+      isHidePlaceholder: !!this.data.value,
+    });
   },
 
   methods: {
     onInput(event: WechatMiniprogram.Input | WechatMiniprogram.TextareaInput) {
       const { value = '' } = event.detail || {};
 
+      if (value) {
+        this.setData({
+          isHidePlaceholder: true,
+        });
+      } else {
+        this.setData({
+          isHidePlaceholder: false,
+        });
+      }
       this.value = value;
       this.setShowClear();
       this.emitChange();
@@ -88,6 +101,10 @@ VantComponent({
 
     onClickIcon() {
       this.$emit('click-icon');
+    },
+
+    onClickAction() {
+      this.$emit('click-action');
     },
 
     onClear() {

@@ -10,7 +10,10 @@
   .theme(--cell-icon-size,  '@field-icon-size');
 
   &__label {
-    .theme(margin-top, '@field-label-margin-top');
+    // .theme(margin-top, '@field-label-margin-top');
+    height: @field-input-height;
+    display: flex;
+    align-items: center;
     .theme(color, '@field-label-color');
 
     &--disabled {
@@ -26,9 +29,11 @@
 
   &__label--moreline__label {
     width: 100%;
+    height: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .theme(margin-top, '@field-label-margin-top');
   }
 
   &__body {
@@ -42,7 +47,6 @@
       display: block;
       box-sizing: border-box;
       padding: 8px 0;
-      .theme(min-height, '24px');
     }
   }
   &__input_wrapper {
@@ -54,7 +58,7 @@
   }
 
   &__textarea_wrapper {
-    min-height: 24px;
+    position: relative;
     width: calc(100% - 24px);
   }
 
@@ -75,11 +79,14 @@
     .theme(min-height, '@cell-line-height');
 
     &--textarea {
+      .theme(line-height, '@field-text-area-min-height');
       .theme(height, '@field-text-area-min-height');
       .theme(min-height, '@field-text-area-min-height');
     }
 
     &--error {
+      width: 100%;
+      .theme(font-size, '@field-input-error-text-color');
       .theme(color, '@field-input-error-text-color');
     }
 
@@ -104,6 +111,19 @@
     right: 0;
     left: 0;
     pointer-events: none;
+    .theme(color, '@field-placeholder-text-color');
+
+    &--error {
+      .theme(color, '@field-error-message-color');
+    }
+  }
+
+  &__placeholder_textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    .theme(line-height, '@field-text-area-min-height');
     .theme(color, '@field-placeholder-text-color');
 
     &--error {
@@ -160,9 +180,12 @@
   }
 
   &__error-message {
+    background: #ffeeeb;
+    padding: 3px 16px;
     text-align: left;
     .theme(font-size, '@field-error-message-text-font-size');
     .theme(color, '@field-error-message-color');
+    .theme(line-height, '@field-error-line-height');
 
     &--center {
       text-align: center;
