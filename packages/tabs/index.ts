@@ -45,7 +45,7 @@ VantComponent({
     },
     lineWidth: {
       type: [String, Number],
-      value: 40,
+      value: 20,
       observer: 'setLine',
     },
     lineHeight: {

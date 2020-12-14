@@ -1,9 +1,32 @@
+<demo-block title="自定义标题">
+  <van-tabs active="{{ 1 }}" bind:change="onChange" tab-class="special-tab" tab-active-class="special-tab-active">
+    <van-icon
+      slot="nav-right"
+      name="search"
+      custom-class="right-nav"
+      bind:click="onClickNavRight"
+    />
+    <van-tab
+      wx:for="{{ tabs4 }}"
+      wx:key="index"
+      title="{{ '标签 ' + item }}"
+      dot="{{ index === 1 }}"
+      info="{{ index === 2 ? '免费' : index === 3 ? '99' : null }}"
+    >
+      <view class="content">
+        {{ '内容' + item }}
+      </view>
+    </van-tab>
+  </van-tabs>
+</demo-block>
+
 <demo-block title="基础用法">
   <van-tabs active="{{ 1 }}" bind:change="onChange">
     <van-tab
       wx:for="{{ tabs4 }}"
       wx:key="index"
       title="{{ '标签 ' + item }}"
+
     >
       <view class="content">
         {{ '内容' + item }}
@@ -126,24 +149,4 @@
   </van-tabs>
 </demo-block>
 
-<demo-block title="自定义标题">
-  <van-tabs active="{{ 1 }}" bind:change="onChange" tab-class="special-tab" tab-active-class="special-tab-active">
-    <van-icon
-      slot="nav-right"
-      name="search"
-      custom-class="right-nav"
-      bind:click="onClickNavRight"
-    />
-    <van-tab
-      wx:for="{{ tabs4 }}"
-      wx:key="index"
-      title="{{ '标签 ' + item }}"
-      dot="{{ index === 1 }}"
-      info="{{ index === 2 ? 99 : null }}"
-    >
-      <view class="content">
-        {{ '内容' + item }}
-      </view>
-    </van-tab>
-  </van-tabs>
-</demo-block>
+

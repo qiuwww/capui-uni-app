@@ -96,6 +96,10 @@ export default [
         title: 'ActionSheet 上拉菜单',
       },
       {
+        path: '/modal-sheet',
+        title: 'ModalSheet 模态框',
+      },
+      {
         path: '/dialog',
         title: 'Dialog 弹出框',
       },
