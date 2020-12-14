@@ -10,12 +10,13 @@ function inputStyle(autosize) {
     if (autosize.maxHeight) {
       style += 'max-height:' + utils.addUnit(autosize.maxHeight) + ';';
     }
+
     return style;
   }
-
-  return '';
+  /* 多行文本默认展示 4行 */
+  return 'max-height:' + '96px' + ';';
 }
 
 module.exports = {
-  inputStyle: inputStyle
+  inputStyle: inputStyle,
 };

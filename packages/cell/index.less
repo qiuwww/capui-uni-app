@@ -5,6 +5,7 @@
 .van-cell {
   position: relative;
   display: flex;
+  align-items: center; // wangfeng 加的  不要删除
   box-sizing: border-box;
   width: 100%;
   .theme(padding, '@cell-vertical-padding @cell-horizontal-padding');
@@ -58,7 +59,7 @@
   }
 
   &__left-icon-wrap {
-    .theme(margin-right, '@padding-base');
+    .theme(margin-right, '@padding-xs');
   }
 
   &__right-icon-wrap {
@@ -66,10 +67,10 @@
     .theme(color, '@cell-right-icon-color');
   }
 
-  &__left-icon {
-    vertical-align: middle;
-    .theme(line-height, '@cell-line-height');
-  }
+  // &__left-icon {
+  //   vertical-align: middle;
+  //   .theme(line-height, '40px');
+  // }
 
   &__right-icon {
     .theme(line-height, '@cell-line-height');
@@ -86,6 +87,7 @@
       position: absolute;
       content: '*';
       .theme(left, '@padding-xs');
+      .theme(top, '@cell-require-top');
       .theme(font-size, '@cell-font-size');
       .theme(color, '@cell-required-color');
     }
@@ -93,6 +95,13 @@
 
   &--center {
     align-items: center;
+  }
+
+  &--moreline {
+    display: block;
+    .van-cell__value {
+      margin-left: 0;
+    }
   }
 
   &--large {
