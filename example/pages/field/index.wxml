@@ -92,10 +92,26 @@
   </van-cell-group>
 </demo-block>
 
+<demo-block title="文本输入字数限制">
+  <van-cell-group>
+    <van-field
+      type="textarea"
+      value="{{ username3 }}"
+      clearable
+      label="用户名"
+      placeholder="请输入用户名"
+      showWordLimit
+      maxlength="5"
+     
+    />
+  </van-cell-group>
+</demo-block>
+
 <demo-block title="内容对齐方式">
   <van-cell-group>
     <van-field
       value="{{ username3 }}"
+      clearable
       label="用户名"
       placeholder="请输入用户名"
       input-align="right"

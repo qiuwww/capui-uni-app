@@ -5,6 +5,7 @@
 <view>
 <van-cell
   size="{{ size }}"
+  icon="{{ leftIcon }}"
   center="{{ center }}"
   border="{{ border }}"
   moreline="{{type === 'textarea'}}"
@@ -16,6 +17,7 @@
   arrow-direction="{{ arrowDirection }}"
   custom-class="van-field"
 > 
+<slot name="left-icon" slot="icon" />
   <view wx:if="{{ label }}" class="label-class {{ utils.bem('field__label', { disabled, moreline__label: type === 'textarea' }) }}" slot="title">
     {{ label }}
     <view wx:if="{{ action }}" class=" {{ utils.bem('field__action')}}" bind:tap="onClickAction" >
@@ -104,7 +106,7 @@
     </view>
   </view>
   <view wx:if="{{ showWordLimit && maxlength }}" class="van-field__word-limit">
-    <view class="{{ utils.bem('field__word-num', { full: value.length >= maxlength }) }}">{{ value.length }}</view>/{{ maxlength }}
+    <view class="{{ utils.bem('field__word-num', { full: value.length >= maxlength }) }}">{{ value.length }}/{{ maxlength }}</view>
   </view>
 </van-cell>
 <view wx:if="{{ errorMessage }}" class="{{ utils.bem('field__error-message', [errorMessageAlign, { disabled, error }]) }}">
