@@ -12,6 +12,15 @@ VantComponent({
         });
       },
     },
+    type: {
+      type: String,
+      value: '',
+      observer() {
+        wx.nextTick(() => {
+          this.initTypeInfo();
+        });
+      },
+    },
     mode: {
       type: String,
       value: '',
@@ -138,6 +147,43 @@ VantComponent({
 
     onClick(event: WechatMiniprogram.TouchEvent) {
       this.$emit('click', event);
+    },
+
+    initTypeInfo() {
+      if (this.data.type) {
+        switch (this.data.type) {
+          case 'info':
+            this.setData({
+              color: '#1E8DFF',
+              leftIcon: 'info-o',
+              backgroundColor: '#EBF8FF',
+            });
+            break;
+          case 'warning':
+            this.setData({
+              color: '#FF8200',
+              leftIcon: 'waring-o',
+              backgroundColor: '#FFF7E6',
+            });
+            break;
+          case 'success':
+            this.setData({
+              color: '#52C41A',
+              leftIcon: 'passed',
+              backgroundColor: '#F6FFED',
+            });
+            break;
+          case 'error':
+            this.setData({
+              color: '#FF4E47',
+              leftIcon: 'close',
+              backgroundColor: '#FFEEEB',
+            });
+            break;
+          default:
+            break;
+        }
+      }
     },
   },
 });
