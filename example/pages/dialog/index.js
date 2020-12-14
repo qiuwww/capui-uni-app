@@ -82,7 +82,7 @@ Page({
   },
 
   onClickThreeColumnButtons() {
-    const consoleLog = (...args) => console.log(args);
+    const consoleLog = (args) => console.log(args);
     Dialog.alert({
       title: '标题',
       message,
@@ -94,11 +94,11 @@ Page({
         },
         {
           command: 'command2',
-          text: '次要按钮',
+          text: '辅助按钮',
         },
         {
           command: 'command2',
-          text: '次要按钮',
+          text: '辅助按钮',
         },
       ],
     }).then(consoleLog);

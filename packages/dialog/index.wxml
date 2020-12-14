@@ -35,7 +35,7 @@
       class="van-dialog__button van-hairline--top"
       wx:for="{{customButtons}}"
       wx:for-index="index"
-      wx:key="{{index}}"
+      wx:key="index"
       hairline="{{false}}"
       wx:for-item="item"
       custom-class="van-dialog__cancel"

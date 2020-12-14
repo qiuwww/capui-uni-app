@@ -1,7 +1,10 @@
 import { VantComponent } from '../common/component';
 import { button } from '../mixins/button';
 import { openType } from '../mixins/open-type';
-import { GRAY, RED } from '../common/color';
+// import { GRAY, RED } from '../common/color';
+
+const PRIMARY_COLOR = '#1E8DFF';
+const DEFAULT_COLOR = '#595959';
 
 type Action = 'confirm' | 'cancel' | 'overlay';
 
@@ -46,11 +49,11 @@ VantComponent({
     },
     confirmButtonColor: {
       type: String,
-      value: RED,
+      value: PRIMARY_COLOR,
     },
     cancelButtonColor: {
       type: String,
-      value: GRAY,
+      value: DEFAULT_COLOR,
     },
     showConfirmButton: {
       type: Boolean,
