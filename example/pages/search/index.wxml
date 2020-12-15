@@ -38,6 +38,7 @@
     model:value="{{ value }}"
     shape="round"
     background="#4fc08d"
+    input-background="#ffffff"
     placeholder="请输入搜索关键词"
   />
 </demo-block>
@@ -53,4 +54,35 @@
   >
     <view slot="action" bind:tap="onClick">搜索</view>
   </van-search>
+</demo-block>
+
+<demo-block title="设置透明度，使用Rgba">
+  <view style="background: #4fc08d">
+    <van-search
+    model:value="{{ value }}"
+    shape="round"
+    background="rgba(255, 255, 255, 0.4)"
+    placeholder="请输入搜索关键词"
+  />
+  </view>
+</demo-block>
+
+<demo-block title="自定义图标">
+  <van-search
+    model:value="{{ value }}"
+    shape="round"
+    background="#4fc08d"
+    left-icon="location-o"
+    placeholder="请输入搜索关键词"
+  />
+</demo-block>
+
+<demo-block title="自定义Input圆角大小">
+  <van-search
+    model:value="{{ value }}"
+    input-radius="8px"
+    background="#4fc08d"
+    left-icon="location-o"
+    placeholder="请输入搜索关键词"
+  />
 </demo-block>

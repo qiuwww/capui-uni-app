@@ -23,6 +23,7 @@ VantComponent({
     isLink: Boolean,
     required: Boolean,
     clickable: Boolean,
+    isSearch: Boolean,
     titleWidth: {
       type: String,
       value: '112px',
