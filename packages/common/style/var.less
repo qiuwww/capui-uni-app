@@ -220,6 +220,7 @@
 // Cell
 @cell-font-size: @font-size-md;
 @cell-line-height: @font-size-md;
+@cell-require-top: 20px;
 @cell-vertical-padding: 18px;
 @cell-horizontal-padding: 16px;
 @cell-text-color: @text-color;
@@ -293,19 +294,24 @@
 
 // Field
 @field-label-color: @gray-7;
+@field-cell-padding: 16px;
+@field-label-margin-top: 12px;
 @field-input-text-color: @text-color;
+@field-input-height: 40px;
 @field-input-error-text-color: @red;
 @field-input-disabled-text-color: @gray-5;
 @field-placeholder-text-color: @gray-5;
 @field-icon-size: 16px;
 @field-clear-icon-size: 16px;
+
 @field-clear-icon-color: @gray-5;
 @field-icon-container-color: @gray-6;
 @field-error-message-color: @red;
-@field-error-message-text-font-size: @font-size-sm;
-@field-text-area-min-height: 18px;
-@field-word-limit-color: @gray-7;
-@field-word-limit-font-size: @font-size-sm;
+@field-error-line-height: 16px;
+@field-error-message-text-font-size: @font-size-xxs;
+@field-text-area-min-height: 24px;
+@field-word-limit-color: @gray-5;
+@field-word-limit-font-size: @font-size-xs;
 @field-word-limit-line-height: 16px;
 @field-word-num-full-color: @red;
 @field-disabled-text-color: @gray-5;
@@ -482,9 +488,10 @@
 @share-sheet-cancel-button-background: @white;
 
 // Search
-@search-background-color: @gray-1;
-@search-padding: 10px @padding-sm;
+@search-background-color: @gray-2;
+@search-padding: 4px @padding-sm;
 @search-input-height: 34px;
+@search-input-height-large: 36px;
 @search-label-padding: 0 5px;
 @search-label-color: @text-color;
 @search-label-font-size: @font-size-md;

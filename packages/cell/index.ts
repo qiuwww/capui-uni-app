@@ -19,9 +19,11 @@ VantComponent({
     size: String,
     label: String,
     center: Boolean,
+    moreline: Boolean,
     isLink: Boolean,
     required: Boolean,
     clickable: Boolean,
+    isSearch: Boolean,
     titleWidth: {
       type: String,
       value: '112px',
