@@ -20,21 +20,18 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "bundle": false,
-    "useIsolateContext": true,
     "useCompilerModule": false,
     "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "useIsolateContext": true,
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true
@@ -42,7 +39,7 @@
   "compileType": "miniprogram",
   "cloudfunctionRoot": "functions/",
   "libVersion": "2.3.0",
-  "appid": "wxab2f9a4af54b22e4",
+  "appid": "wxfb3a2ed783a19e35",
   "projectname": "CapUi-Mini-Program",
   "debugOptions": {
     "hidedInDevtools": []
@@ -392,6 +389,13 @@
           "id": 51,
           "name": "share-sheet",
           "pathName": "pages/share-sheet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "modal-sheet",
+          "pathName": "pages/modal-sheet/index",
           "query": "",
           "scene": null
         }

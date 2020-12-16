@@ -1,7 +1,7 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
 
 <view
-  class="custom-class {{ utils.bem('cell', [size, { center, required, borderless: !border, clickable: isLink || clickable }]) }}"
+  class="custom-class {{ utils.bem('cell', [size, { moreline, search: isSearch ,center, required, borderless: !border, clickable: isLink || clickable }]) }}"
   hover-class="van-cell--hover hover-class"
   hover-stay-time="70"
   style="{{ customStyle }}"

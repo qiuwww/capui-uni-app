@@ -14,7 +14,7 @@ Capsule-Mini-Program 是**智云健康**前端团队及设计团队开发的移�
 
 扫描下方小程序二维码，体验组件库示例：
 
-<img src="https://img.yzcdn.cn/vant-weapp/qrcode-201808101114.jpg" style="width: 200px; height: 200px; margin-top: 15px; box-shadow: none" >
+<img src="http://static.91jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg" style="width: 200px; height: 200px; margin-top: 15px; box-shadow: none" >
 
 ### 快速上手
 

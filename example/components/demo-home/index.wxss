@@ -26,8 +26,8 @@
 }
 
 .demo-home__image {
-  width: 32px;
-  height: 32px;
+  width: 154px;
+  height: 30px;
 }
 
 .demo-home__text {
