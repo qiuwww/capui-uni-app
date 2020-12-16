@@ -119,6 +119,10 @@ function flexStyle(jusitifyContent = 'flex-start') {
   return 'justify-content: ' + jusitifyContent + ';';
 }
 
+function isSpaceAround(jusitifyContent) {
+  return jusitifyContent.indexOf('space-around') > -1 ? 'flex:1;' : '';
+}
+
 module.exports = {
   tabClass: tabClass,
   tabStyle: tabStyle,
@@ -128,4 +132,5 @@ module.exports = {
   isNumber: isNumber,
   bigThan99: bigThan99,
   flexStyle: flexStyle,
+  isSpaceAround: isSpaceAround,
 };

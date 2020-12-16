@@ -27,7 +27,11 @@
 </demo-block>
 
 <demo-block title="基础用法">
-	<van-tabs active="{{ 1 }}" bind:change="onChange">
+	<van-tabs
+	 justify-content="space-around"
+	 active="{{ 1 }}"
+	 bind:change="onChange"
+	>
 		<van-tab
 		 wx:for="{{ tabs4 }}"
 		 wx:key="index"

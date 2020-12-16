@@ -186,7 +186,7 @@ Page({
 | animated | 是否使用动画切换 Tabs | _boolean_ | `false` | - |
 | ellipsis | 是否省略过长的标题文字 | _boolean_ | `true` | - |
 | sticky | 是否使用粘性定位布局 | _boolean_ | `false` | - |
-| justify-content | tab 使用 flex 布局 | _string_ | `flex-start,center,flex-end` | - |
+| justify-content | tab 使用 flex 布局 | _string_ | `flex-start,center,flex-end,space-around` | - |
 | swipeable | 是否开启手势滑动切换 | _boolean_ | `false` | - |
 | lazy-render | 是否开启标签页内容延迟渲染 | _boolean_ | `true` | - |
 | offset-top | 粘性定位布局下与顶部的最小距离，单位`px` | _number_ | - | - |

@@ -20,7 +20,7 @@
 			 style="{{ color ? 'border-color: ' + color : '' }}"
 			>
 				<view class="van-tabs__outblock" style="{{getters.flexStyle(justifyContent)}}">
-					<view class="van-tabs__innerblock">
+					<view class="van-tabs__innerblock" style=" {{getters.isSpaceAround(justifyContent)}}">
 						<view class="{{ utils.bem('tabs__nav', [type, { complete: !ellipsis }]) }} nav-class" style="{{ getters.tabCardTypeBorderStyle(color, type) }}">
 							<view
 							 wx:if="{{ type === 'line' }}"
@@ -32,7 +32,7 @@
 							 wx:key="index"
 							 data-index="{{ index }}"
 							 class="{{ getters.tabClass(index === currentIndex, ellipsis) }} {{ utils.bem('tab', { active: index === currentIndex, disabled: item.disabled, complete: !ellipsis }) }}"
-							 style="{{ getters.tabStyle(index === currentIndex, ellipsis, color, type, item.disabled, titleActiveColor, titleInactiveColor, swipeThreshold, scrollable) }}"
+							 style="{{ getters.tabStyle(index === currentIndex, ellipsis, color, type, item.disabled, titleActiveColor, titleInactiveColor, swipeThreshold, scrollable) }} {{getters.isSpaceAround(justifyContent)}}"
 							 bind:tap="onTap"
 							>
 								<view class="{{ ellipsis ? 'van-ellipsis' : '' }}" style="{{ item.titleStyle }}">
