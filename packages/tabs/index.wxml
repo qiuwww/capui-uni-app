@@ -2,62 +2,68 @@
 <wxs src="./index.wxs" module="getters" />
 
 <view class="custom-class {{ utils.bem('tabs', [type]) }}">
-  <van-sticky
-    disabled="{{ !sticky }}"
-    z-index="{{ zIndex }}"
-    offset-top="{{ offsetTop }}"
-    container="{{ container }}"
-    bind:scroll="onTouchScroll"
-  >
-    <view class="{{ utils.bem('tabs__wrap', { scrollable }) }} {{ type === 'line' && border ? 'van-hairline--top-bottom' : '' }}">
-      <slot name="nav-left" />
+	<van-sticky
+	 disabled="{{ !sticky }}"
+	 z-index="{{ zIndex }}"
+	 offset-top="{{ offsetTop }}"
+	 container="{{ container }}"
+	 bind:scroll="onTouchScroll"
+	>
+		<view class="{{ utils.bem('tabs__wrap', { scrollable }) }} {{ type === 'line' && border ? 'van-hairline--top-bottom' : '' }}">
+			<slot name="nav-left" />
 
-      <scroll-view
-        scroll-x="{{ scrollable }}"
-        scroll-with-animation
-        scroll-left="{{ scrollLeft }}"
-        class="{{ utils.bem('tabs__scroll', [type]) }}"
-        style="{{ color ? 'border-color: ' + color : '' }}"
-      >
-        <view class="{{ utils.bem('tabs__nav', [type, { complete: !ellipsis }]) }} nav-class" style="{{ getters.tabCardTypeBorderStyle(color, type) }}">
-          <view wx:if="{{ type === 'line' }}" class="van-tabs__line" style="{{ getters.lineStyle({ color, lineOffsetLeft, lineHeight, skipTransition, duration, lineWidth }) }}" />
-          <view
-            wx:for="{{ tabs }}"
-            wx:key="index"
-            data-index="{{ index }}"
-            class="{{ getters.tabClass(index === currentIndex, ellipsis) }} {{ utils.bem('tab', { active: index === currentIndex, disabled: item.disabled, complete: !ellipsis }) }}"
-            style="{{ getters.tabStyle(index === currentIndex, ellipsis, color, type, item.disabled, titleActiveColor, titleInactiveColor, swipeThreshold, scrollable) }}"
-            bind:tap="onTap"
-          >
-            <view class="{{ ellipsis ? 'van-ellipsis' : '' }}" style="{{ item.titleStyle }}">
-              <view class="van-tab__title__wrap">
-                {{ item.title }}
-                <view wx:if="{{ item.dot }}" class="van-tab__title__common van-tab__title__dot"></view>
-                <view wx:if="{{ item.info !== null && !item.dot }}" class="van-tab__title__common van-tab__title__infowrap {{ getters.isNumber(item.info) ? 'van-tab__title__numberwrap' : 'van-tab__title__textwrap' }}">
-                  <text class="van-tab__title__info">{{item.info}}</text>
-                </view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </scroll-view>
+			<scroll-view
+			 scroll-x="{{ scrollable }}"
+			 scroll-with-animation
+			 scroll-left="{{ scrollLeft }}"
+			 class="{{ utils.bem('tabs__scroll', [type]) }}"
+			 style="{{ color ? 'border-color: ' + color : '' }}"
+			>
+				<view class="van-tabs__outblock" style="{{getters.flexStyle(justifyContent)}}">
+					<view class="van-tabs__innerblock">
+						<view class="{{ utils.bem('tabs__nav', [type, { complete: !ellipsis }]) }} nav-class" style="{{ getters.tabCardTypeBorderStyle(color, type) }}">
+							<view
+							 wx:if="{{ type === 'line' }}"
+							 class="van-tabs__line"
+							 style="{{ getters.lineStyle({ color, lineOffsetLeft, lineHeight, skipTransition, duration, lineWidth }) }}"
+							/>
+							<view
+							 wx:for="{{ tabs }}"
+							 wx:key="index"
+							 data-index="{{ index }}"
+							 class="{{ getters.tabClass(index === currentIndex, ellipsis) }} {{ utils.bem('tab', { active: index === currentIndex, disabled: item.disabled, complete: !ellipsis }) }}"
+							 style="{{ getters.tabStyle(index === currentIndex, ellipsis, color, type, item.disabled, titleActiveColor, titleInactiveColor, swipeThreshold, scrollable) }}"
+							 bind:tap="onTap"
+							>
+								<view class="{{ ellipsis ? 'van-ellipsis' : '' }}" style="{{ item.titleStyle }}">
+									<view class="van-tab__title__wrap">
+										{{ item.title }}
+										<view wx:if="{{ item.dot }}" class="van-tab__title__common van-tab__title__dot"></view>
+										<view wx:if="{{ item.info !== null && !item.dot }}" class="van-tab__title__common van-tab__title__infowrap {{getters.isNumber(item.info) ? 'van-tab__title__numberwrap' : 'van-tab__title__textwrap'}}">
+											<text class="van-tab__title__info">{{getters.isNumber(item.info) ? getters.bigThan99(item.info) : item.info}}</text>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
 
-      <slot name="nav-right" />
-    </view>
-  </van-sticky>
+			<slot name="nav-right" />
+		</view>
+	</van-sticky>
 
-  <view
-    class="van-tabs__content"
-    bind:touchstart="onTouchStart"
-    bind:touchmove="onTouchMove"
-    bind:touchend="onTouchEnd"
-    bind:touchcancel="onTouchEnd"
-  >
-    <view
-      class="{{ utils.bem('tabs__track', [{ animated }]) }} van-tabs__track"
-      style="{{ getters.trackStyle({ duration, currentIndex, animated }) }}"
-    >
-      <slot />
-    </view>
-  </view>
+	<view
+	 class="van-tabs__content"
+	 bind:touchstart="onTouchStart"
+	 bind:touchmove="onTouchMove"
+	 bind:touchend="onTouchEnd"
+	 bind:touchcancel="onTouchEnd"
+	>
+		<view class="{{ utils.bem('tabs__track', [{ animated }]) }} van-tabs__track" style="{{ getters.trackStyle({ duration, currentIndex, animated }) }}">
+			<slot/>
+		</view>
+	</view>
 </view>
+

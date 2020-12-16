@@ -91,18 +91,6 @@ Page({
 });
 ```
 
-### 样式风格
-
-`Tab`支持两种样式风格：`line`和`card`，默认为`line`样式，可以通过`type`属性修改样式风格
-
-```html
-<van-tabs type="card">
-  <van-tab title="标签 1">内容 1</van-tab>
-  <van-tab title="标签 2">内容 2</van-tab>
-  <van-tab title="标签 3">内容 3</van-tab>
-</van-tabs>
-```
-
 ### 点击事件
 
 可以在`van-tabs`上绑定`click`事件，在回调参数的`event.detail`中可以取得被点击标签的标题和标识符
@@ -190,7 +178,6 @@ Page({
 | active | 当前选中标签的标识符 | _string \| number_ | `0` | - |
 | color | 标签颜色 | _string_ | `#ee0a24` | - |
 | z-index | z-index 层级 | _number_ | `1` | - |
-| type | 样式风格，可选值为`card` | _string_ | `line` | - |
 | border | 是否展示外边框，仅在 `line` 风格下生效 | _boolean_ | `false` | - |
 | duration | 动画时间 (单位秒) | _number_ | `0.3` | - |
 | line-width | 底部条宽度 (px) | _string \| number_ | `40px` | - |
@@ -199,6 +186,7 @@ Page({
 | animated | 是否使用动画切换 Tabs | _boolean_ | `false` | - |
 | ellipsis | 是否省略过长的标题文字 | _boolean_ | `true` | - |
 | sticky | 是否使用粘性定位布局 | _boolean_ | `false` | - |
+| justify-content | tab 使用 flex 布局 | _string_ | `flex-start,center,flex-end` | - |
 | swipeable | 是否开启手势滑动切换 | _boolean_ | `false` | - |
 | lazy-render | 是否开启标签页内容延迟渲染 | _boolean_ | `true` | - |
 | offset-top | 粘性定位布局下与顶部的最小距离，单位`px` | _number_ | - | - |

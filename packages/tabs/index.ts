@@ -94,6 +94,10 @@ VantComponent({
       type: Boolean,
       value: true,
     },
+    justifyContent: {
+      type: String,
+      value: 'start',
+    },
   },
 
   data: {
