@@ -28,3 +28,27 @@
   >
   </van-notice-bar>
 </demo-block>
+
+
+<demo-block title="四种type">
+  <van-notice-bar
+    type="info"
+    scrollable="{{ false }}"
+    text="{{ text }}"
+  />
+  <van-notice-bar
+    type="error"
+    scrollable="{{ false }}"
+    text="{{ text }}"
+  />
+  <van-notice-bar
+    type="success"
+    scrollable="{{ false }}"
+    text="{{ text }}"
+  />
+  <van-notice-bar
+    type="warning"
+    scrollable="{{ false }}"
+    text="{{ text }}"
+  />
+</demo-block>

@@ -67,6 +67,43 @@ Page({
       });
   },
 
+  onClickCustomButtons() {
+    Dialog.alert({
+      title: '自定义按钮',
+    });
+  },
+
+  onClickConfirmColumn() {
+    Dialog.confirm({
+      title: '标题',
+      message,
+      footerDirection: 'column',
+    });
+  },
+
+  onClickThreeColumnButtons() {
+    const consoleLog = (args) => console.log(args);
+    Dialog.alert({
+      title: '标题',
+      message,
+      customButtons: [
+        {
+          type: 'primary',
+          command: 'command1',
+          text: '主要按钮',
+        },
+        {
+          command: 'command2',
+          text: '辅助按钮',
+        },
+        {
+          command: 'command2',
+          text: '辅助按钮',
+        },
+      ],
+    }).then(consoleLog);
+  },
+
   onClose() {
     this.setData({
       show: false,

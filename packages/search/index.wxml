@@ -2,9 +2,12 @@
 
 <view
   class="{{ utils.bem('search', { withaction: showAction || useActionSlot }) }} custom-class"
-  style="background: {{ background }}"
+  style="background: {{ background }};"
 >
-  <view class="{{ utils.bem('search__content', [shape]) }}">
+  <view 
+    class="{{ utils.bem('search__content', [shape]) }}" 
+    style="{{ inputRadius ?  'border-radius:' +  inputRadius  + ';' : '' }} {{ 'background:' + inputBackground + ';' }}"
+  >
     <view class="van-search__label" wx:if="{{ label }}">{{ label }}</view>
     <slot wx:else name="label" />
 
@@ -25,6 +28,7 @@
       input-align="{{ inputAlign }}"
       input-class="input-class"
       placeholder="{{ placeholder }}"
+      title-width="0px"
       placeholder-style="{{ placeholderStyle }}"
       custom-style="padding: 5px 10px 5px 0; background-color: transparent;"
       bind:blur="onBlur"

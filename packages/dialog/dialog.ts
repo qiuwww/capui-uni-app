@@ -1,5 +1,17 @@
 let queue: WechatMiniprogram.Component.TrivialInstance[] = [];
 
+enum CustomButtonType {
+  primary = 'primary',
+  default = 'default',
+}
+
+interface CustomButton {
+  type?: CustomButtonType;
+  onClick?: () => unknown;
+  command: string;
+  text: string;
+}
+
 interface DialogOptions {
   lang?: string;
   show?: boolean;
@@ -33,6 +45,8 @@ interface DialogOptions {
   showCancelButton?: boolean;
   closeOnClickOverlay?: boolean;
   confirmButtonOpenType?: string;
+  customButtons?: CustomButton[];
+  footerDirection: string;
 }
 
 const defaultOptions: DialogOptions = {
@@ -56,6 +70,7 @@ const defaultOptions: DialogOptions = {
   showCancelButton: false,
   closeOnClickOverlay: false,
   confirmButtonOpenType: '',
+  footerDirection: 'row',
 };
 
 let currentOptions: DialogOptions = { ...defaultOptions };

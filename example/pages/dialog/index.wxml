@@ -17,8 +17,11 @@
 </demo-block>
 
 <demo-block title="确认弹窗" padding>
-  <van-button type="primary" bind:click="onClickConfirm">
+  <van-button class="demo-margin-right" type="primary" bind:click="onClickConfirm">
     确认弹窗
+  </van-button>
+  <van-button type="primary" bind:click="onClickConfirmColumn">
+    确认弹窗纵向
   </van-button>
 </demo-block>
 
@@ -46,6 +49,10 @@
       src="https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg"
     />
   </van-dialog>
+</demo-block>
+
+<demo-block title="使用customButtons进行调用" padding>
+  <van-button type="primary" bind:click="onClickThreeColumnButtons">三行</van-button>
 </demo-block>
 
 <van-dialog id="van-dialog" />

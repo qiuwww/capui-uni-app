@@ -1,3 +1,18 @@
 .icon {
   color: #1989fa;
 }
+.fix-btn {
+  position: fixed;
+  bottom: 80rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  overflow: hidden;
+  color: white;
+  background: #1989fa;
+  z-index: 99990;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
