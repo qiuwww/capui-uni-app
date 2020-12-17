@@ -67,7 +67,7 @@
 @success-color: #52c41a;
 @success-bg-color: #f6ffed;
 @error-color: #ff4e47;
-@error-bg-color: #ff4e47;
+@error-bg-color: #ffeeeb;
 
 // Padding
 @padding-base: 4px;
@@ -284,11 +284,13 @@
 @dialog-header-font-weight: @font-weight-bold;
 @dialog-header-line-height: 24px;
 @dialog-header-padding-top: @padding-lg;
+@dialog-header-color: @gray-8;
 @dialog-header-isolated-padding: @padding-lg 0;
 @dialog-message-padding: @padding-lg;
 @dialog-message-font-size: @font-size-md;
 @dialog-message-line-height: 20px;
 @dialog-message-max-height: 60vh;
+@dialog-message-color: @gray-6;
 @dialog-has-title-message-text-color: @gray-7;
 @dialog-has-title-message-padding-top: @padding-xs;
 
@@ -380,6 +382,15 @@
 @notice-bar-background-color: @orange-light;
 @notice-bar-icon-size: 16px;
 @notice-bar-icon-min-width: 22px;
+
+@notice-bar-info-color: @link-color;
+@notice-bar-info-bg-color: @link-bg-color;
+@notice-bar-warning-color: @warning-color;
+@notice-bar-warning-bg-color: @warning-bg-color;
+@notice-bar-error-color: @error-color;
+@notice-bar-error-bg-color: @error-bg-color;
+@notice-bar-success-color: @success-color;
+@notice-bar-success-bg-color: @success-bg-color;
 
 // Notify
 @notify-padding: 6px 15px;
@@ -479,9 +490,10 @@
 @share-sheet-cancel-button-background: @white;
 
 // Search
-@search-background-color: @gray-1;
-@search-padding: 10px @padding-sm;
+@search-background-color: @gray-2;
+@search-padding: 4px @padding-sm;
 @search-input-height: 34px;
+@search-input-height-large: 36px;
 @search-label-padding: 0 5px;
 @search-label-color: @text-color;
 @search-label-font-size: @font-size-md;

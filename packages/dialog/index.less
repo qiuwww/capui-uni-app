@@ -18,6 +18,7 @@
     .theme(padding-top, '@dialog-header-padding-top');
     .theme(font-weight, '@dialog-header-font-weight');
     .theme(line-height, '@dialog-header-line-height');
+    .theme(color, '@dialog-header-color');
 
     &--isolated {
       .theme(padding, '@dialog-header-isolated-padding');
@@ -35,6 +36,7 @@
 
     &-text {
       word-wrap: break-word;
+      .theme(color, '@dialog-message-color');
     }
 
     &--hasTitle {
@@ -57,8 +59,16 @@
   }
 
   &__footer {
+    position: relative;
     display: flex;
 
+    &--column {
+      flex-direction: column;
+    }
+
+    &--column-reverse {
+      flex-direction: column-reverse;
+    }
     &--round-button {
       position: relative !important;
       padding: @padding-xs @padding-lg @padding-md !important;

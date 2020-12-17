@@ -45,6 +45,7 @@ VantComponent({
       type: String,
       value: '',
     },
+    type: String,
     color: String,
     backgroundColor: String,
     background: String,
@@ -53,6 +54,12 @@ VantComponent({
 
   data: {
     show: true,
+    typeIconEnum: {
+      info: 'info-o',
+      warning: 'warning-o',
+      error: 'close',
+      success: 'passed',
+    },
   },
 
   created() {

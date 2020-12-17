@@ -181,6 +181,8 @@ Page({
 | context | 选择器的选择范围，可以传入自定义组件的 this 作为上下文 | _object_ | 当前页面 | - |
 | transition | 动画名称，可选值为`fade` `none` | _string_ | `scale` | - |
 | confirmButtonOpenType | 确认按钮的微信开放能力，具体支持可参考 [微信官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html) | _string_ | - | - |
+| footerDirection | 底部按钮的排布只作用于confirm类型 | row / column | `column` | - |
+| customButtons | 自定义底部按钮（排布方式默认是纵向） | 参考下面`CustomButtons[]` | `null` | - |
 
 ### OpenType Options
 
@@ -196,6 +198,17 @@ Page({
 | sendMessagePath | 会话内消息卡片点击跳转小程序路径 | _string_ | 当前分享路径 | `contact` |
 | sendMessageImg | sendMessageImg | _string_ | 截图 | `contact` |
 | showMessageCard | 显示会话内消息卡片 | _string_ | `false` | `contact` |
+
+### CustomButtons
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| type | 按钮类型 | `primary` & `default` | `default` |
+| onClick | 触发的点击事件 | `({ index: number, command: string }) => viod` | `() => {}` |
+| command | 按钮的标记位 | `string` | - |
+| text | 按钮的文字 | `string` | - |
+
+注意：使用`api`传入`customButtons`的话，不管点击哪一个`return`都是 `Promise<resolve>`，`then`的返回值包括按钮的索引和`command`同上述`click`返回值
 
 ### Props
 
@@ -226,6 +239,8 @@ Page({
 | async-close | 是否异步关闭弹窗，开启后需要手动控制弹窗的关闭 | _boolean_ | `false` |
 | transition | 动画名称，可选值为`fade` | _string_ | `scale` |
 | confirm-button-open-type | 确认按钮的微信开放能力，具体支持可参考 [微信官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html) | _string_ | - |
+| footerDirection | 底部按钮的排布只作用于confirm类型 | row / column | `column` | - |
+| customButtons | 自定义底部按钮（排布方式默认是纵向） | 参考下面`CustomButtons[]` | `null` | - |
 
 ### OpenType Props
 

@@ -5,13 +5,22 @@
   position: relative;
   -webkit-tap-highlight-color: transparent;
 
+  &__outblock {
+    display: flex;
+  }
+
+  &__innerblock {
+    display: inline-block;
+    padding: 0 8px;
+  }
+
   &__wrap {
     display: flex;
     overflow: hidden;
-
+    background: @white;
     &--scrollable {
       .van-tab {
-        flex: 0 0 22%;
+        // flex: 0 0 22%;
 
         &--complete {
           flex: 1 0 auto !important;
@@ -118,10 +127,10 @@
 
 .van-tab {
   position: relative;
-  flex: 1;
+  // flex: 1;
   box-sizing: border-box;
-  min-width: 0; /* hack for flex ellipsis */
-  padding: 0 5px;
+  // min-width: 0; /* hack for flex ellipsis */
+  // padding: 0 5px;
   text-align: center;
   cursor: pointer;
   .theme(color, '@tab-text-color');
@@ -141,11 +150,13 @@
     &__wrap {
       position: relative;
       display: inline-block;
+      margin: 0 8px;
     }
 
     &__common {
       position: absolute;
-      left: 100%;
+      z-index: 2;
+      // left: 100%;
       display: inline-block;
       background-color: @red;
       border: 0;
@@ -153,24 +164,20 @@
     }
 
     &__infowrap {
-      top: 20px;
-      right: unset;
-    }
-
-    &__textwrap {
+      top: 16px;
+      right: -8px;
       height: 14px;
       padding: 0 2px;
       font-size: 8px;
+      border-radius: 7px;
+    }
+
+    &__textwrap {
       line-height: 14px;
-      border-radius: 7px 7px 7px 0;
     }
 
     &__numberwrap {
-      height: 16px;
-      padding: 0 4px;
-      font-size: 10px;
-      line-height: 15px;
-      border-radius: 8px;
+      line-height: 10px;
     }
 
     &__info {
@@ -180,11 +187,12 @@
     }
 
     &__dot {
-      top: 16px;
-      width: 10px;
-      height: 10px;
+      top: 18px;
+      right: -5px;
+      width: 8px;
+      height: 8px;
       padding: 0;
-      border-radius: 5px;
+      border-radius: 4px;
     }
   }
 }

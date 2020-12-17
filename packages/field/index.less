@@ -10,10 +10,10 @@
   .theme(--cell-icon-size,  '@field-icon-size');
 
   &__label {
-    // .theme(margin-top, '@field-label-margin-top');
-    height: @field-input-height;
     display: flex;
     align-items: center;
+    // .theme(margin-top, '@field-label-margin-top');
+    height: @field-input-height;
     .theme(color, '@field-label-color');
 
     &--disabled {
@@ -28,32 +28,32 @@
   }
 
   &__label--moreline__label {
-    width: 100%;
-    height: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 16px;
     .theme(margin-top, '@field-label-margin-top');
   }
 
   &__body {
+    position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
-    position: relative;
 
     &--textarea {
-      width: 100%;
       display: block;
       box-sizing: border-box;
+      width: 100%;
       padding: 8px 0;
     }
   }
   &__input_wrapper {
     display: flex;
     align-items: center;
-    height: @field-input-height;
     width: 100%;
+    height: @field-input-height;
     vertical-align: middle;
   }
 
@@ -66,13 +66,13 @@
     position: relative;
     display: flex;
     width: 100%;
+    height: @field-input-height; // 不闪烁
     margin: 0;
     padding: 0;
+    padding-right: 28px; // 44-16
     text-align: left;
     background-color: transparent;
     border: 0;
-    padding-right: 28px; // 44-16
-    height: @field-input-height; // 不闪烁
 
     .theme(color, '@field-input-text-color');
     .theme(font-size,  '@font-size-md');
@@ -139,14 +139,14 @@
 
   &__clear-root,
   &__icon-container {
-    line-height: inherit;
-    height: @field-input-height;
-    width: @field-input-height;
-    display: flex;
-    justify-content: center;
     position: absolute;
     top: 0;
     right: -12px;
+    display: flex;
+    justify-content: center;
+    width: @field-input-height;
+    height: @field-input-height;
+    line-height: inherit;
     // .theme(padding, '0 @padding-xs');
     // .theme(margin-right, '-@padding-xs');
   }
@@ -180,9 +180,9 @@
   }
 
   &__error-message {
-    background: #ffeeeb;
     padding: 3px 16px;
     text-align: left;
+    background: #ffeeeb;
     .theme(font-size, '@field-error-message-text-font-size');
     .theme(color, '@field-error-message-color');
     .theme(line-height, '@field-error-line-height');
@@ -209,6 +209,17 @@
 
     &--full {
       .theme(color, '@field-word-num-full-color');
+    }
+  }
+}
+.van-search-field {
+  .van-field {
+    padding: 0 !important;
+    &__input {
+      height: 36px;
+    }
+    &__input_wrapper {
+      height: 36px;
     }
   }
 }
