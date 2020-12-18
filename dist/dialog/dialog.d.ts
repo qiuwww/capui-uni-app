@@ -1,4 +1,14 @@
 /// <reference types="miniprogram-api-typings" />
+declare enum CustomButtonType {
+  primary = 'primary',
+  default = 'default',
+}
+interface CustomButton {
+  type?: CustomButtonType;
+  onClick?: () => unknown;
+  command: string;
+  text: string;
+}
 interface DialogOptions {
   lang?: string;
   show?: boolean;
@@ -32,6 +42,8 @@ interface DialogOptions {
   showCancelButton?: boolean;
   closeOnClickOverlay?: boolean;
   confirmButtonOpenType?: string;
+  customButtons?: CustomButton[];
+  footerDirection: string;
 }
 declare const Dialog: {
   (options: DialogOptions): Promise<

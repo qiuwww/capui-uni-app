@@ -224,6 +224,12 @@
         },
         {
           "id": -1,
+          "name": "dot",
+          "pathName": "pages/dot/index",
+          "query": ""
+        },
+        {
+          "id": -1,
           "name": "progress",
           "pathName": "pages/progress/index",
           "query": ""
