@@ -6,10 +6,12 @@ export default [
       {
         path: '/button',
         title: 'Button 按钮',
+        desc: '一期',
       },
       {
         path: '/cell',
         title: 'Cell 单元格',
+        desc: '一期',
       },
       {
         path: '/icon',
@@ -22,6 +24,7 @@ export default [
       {
         path: '/dot',
         title: 'Dot 徽标',
+        desc: '一期',
       },
       {
         path: '/col',
@@ -30,6 +33,7 @@ export default [
       {
         path: '/popup',
         title: 'Popup 弹出层',
+        desc: '一期',
       },
       {
         path: '/transition',
@@ -56,10 +60,12 @@ export default [
       {
         path: '/field',
         title: 'Field 输入框',
+        desc: '一期',
       },
       {
         path: '/picker',
         title: 'Picker 选择器',
+        desc: '一期',
       },
       {
         path: '/radio',
@@ -72,6 +78,7 @@ export default [
       {
         path: '/search',
         title: 'Search 搜索',
+        desc: '一期',
       },
       {
         path: '/slider',
@@ -84,6 +91,7 @@ export default [
       {
         path: '/switch',
         title: 'Switch 开关',
+        desc: '一期',
       },
       {
         path: '/uploader',
@@ -98,14 +106,17 @@ export default [
       {
         path: '/action-sheet',
         title: 'ActionSheet 上拉菜单',
+        desc: '一期',
       },
       {
         path: '/modal-sheet',
         title: 'ModalSheet 模态框',
+        desc: '一期',
       },
       {
         path: '/dialog',
         title: 'Dialog 弹出框',
+        desc: '一期',
       },
       {
         path: '/dropdown-menu',
@@ -122,6 +133,7 @@ export default [
       {
         path: '/overlay',
         title: 'Overlay 遮罩层',
+        desc: '一期',
       },
       {
         path: '/share-sheet',
@@ -160,10 +172,12 @@ export default [
       {
         path: '/empty',
         title: 'Empty 空状态',
+        desc: '一期',
       },
       {
         path: '/notice-bar',
         title: 'NoticeBar 通告栏',
+        desc: '一期',
       },
       {
         path: '/panel',
@@ -214,10 +228,12 @@ export default [
       {
         path: '/nav-bar',
         title: 'NavBar 导航栏',
+        desc: '一期',
       },
       {
         path: '/tab',
         title: 'Tab 标签页',
+        desc: '一期',
       },
       {
         path: '/tabbar',

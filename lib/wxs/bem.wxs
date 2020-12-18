@@ -4,7 +4,7 @@ var PREFIX = 'van-';
 
 function join(name, mods) {
   name = PREFIX + name;
-  mods = mods.map(function(mod) {
+  mods = mods.map(function (mod) {
     return name + '--' + mod;
   });
   mods.unshift(name);
@@ -19,11 +19,11 @@ function traversing(mods, conf) {
   if (typeof conf === 'string' || typeof conf === 'number') {
     mods.push(conf);
   } else if (array.isArray(conf)) {
-    conf.forEach(function(item) {
+    conf.forEach(function (item) {
       traversing(mods, item);
     });
   } else if (typeof conf === 'object') {
-    object.keys(conf).forEach(function(key) {
+    object.keys(conf).forEach(function (key) {
       conf[key] && mods.push(key);
     });
   }

@@ -25,7 +25,7 @@ VantComponent({
       let val = this.data.value;
       if (this.data.type === 'num') {
         if (this.data.num > 99) {
-          val = '...';
+          val = '···';
         } else {
           val = this.data.num;
         }
