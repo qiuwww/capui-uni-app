@@ -20,6 +20,10 @@ export default [
         title: 'Image 图片',
       },
       {
+        path: '/dot',
+        title: 'Dot 徽标',
+      },
+      {
         path: '/col',
         title: 'Layout 布局',
       },

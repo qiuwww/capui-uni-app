@@ -1,7 +1,9 @@
 import { VantComponent } from '../common/component';
 import { button } from '../mixins/button';
 import { openType } from '../mixins/open-type';
-import { GRAY, RED } from '../common/color';
+// import { GRAY, RED } from '../common/color';
+const PRIMARY_COLOR = '#1E8DFF';
+const DEFAULT_COLOR = '#595959';
 VantComponent({
   mixins: [button, openType],
   props: {
@@ -42,11 +44,11 @@ VantComponent({
     },
     confirmButtonColor: {
       type: String,
-      value: RED,
+      value: PRIMARY_COLOR,
     },
     cancelButtonColor: {
       type: String,
-      value: GRAY,
+      value: DEFAULT_COLOR,
     },
     showConfirmButton: {
       type: Boolean,
@@ -59,6 +61,14 @@ VantComponent({
     transition: {
       type: String,
       value: 'scale',
+    },
+    customButtons: {
+      type: Array,
+      value: null,
+    },
+    footerDirection: {
+      type: String,
+      value: 'row',
     },
   },
   data: {
@@ -111,6 +121,21 @@ VantComponent({
       if (callback) {
         callback(this);
       }
+    },
+    onClickCustomButtons(e) {
+      const index = e.target.dataset.key;
+      const buttons = this.customButtons || this.data.customButtons;
+      const triggeredButton = buttons[index];
+      const params = {
+        index,
+        command: triggeredButton.command,
+        triggeredButton,
+      };
+      if (typeof triggeredButton.onClick === 'function') {
+        triggeredButton.onClick(params);
+      }
+      this.close();
+      this.data.onConfirm(params);
     },
   },
 });

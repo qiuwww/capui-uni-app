@@ -6,18 +6,17 @@
   top: 0;
   right: 0;
   box-sizing: border-box;
-  line-height: 1.2;
   white-space: nowrap;
   text-align: center;
   transform: translate(50%, -50%);
   transform-origin: 100%;
-
+  .theme(height, '@info-height');
+  .theme(line-height, '@info-line-height');
   .theme(min-width, '@info-size');
   .theme(padding, '@info-padding');
   .theme(color, '@info-color');
   .theme(font-weight, '@info-font-weight');
   .theme(font-size, '@info-font-size');
-  .theme(font-family, '@info-font-family');
   .theme(background-color, '@info-background-color');
   .theme(border, '@info-border-width solid @white');
   .theme(border-radius, '@info-size');
@@ -28,5 +27,9 @@
     .theme(width, '@info-dot-size');
     .theme(height, '@info-dot-size');
     .theme(background-color, '@info-dot-color');
+  }
+
+  &--num {
+    .theme(font-size, '@info-num-font-size');
   }
 }
