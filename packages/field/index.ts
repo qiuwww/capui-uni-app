@@ -111,6 +111,9 @@ VantComponent({
       this.setData({ innerValue: '' });
       this.value = '';
       this.setShowClear();
+      this.setData({
+        isHidePlaceholder: false,
+      });
 
       wx.nextTick(() => {
         this.emitChange();
