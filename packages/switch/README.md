@@ -95,9 +95,9 @@ Page({
 | checked        | 开关选中状态           | _any_     | `false`   | -    |
 | loading        | 是否为加载状态         | _boolean_ | `false`   | -    |
 | disabled       | 是否为禁用状态         | _boolean_ | `false`   | -    |
-| size           | 开关尺寸               | _string_  | `30px`    | -    |
-| active-color   | 打开时的背景色         | _string_  | `#1989fa` | -    |
-| inactive-color | 关闭时的背景色         | _string_  | `#fff`    | -    |
+| size           | 开关尺寸               | _string_  | `24px`    | -    |
+| active-color   | 打开时的背景色         | _string_  | `#1e8dff` | -    |
+| inactive-color | 关闭时的背景色         | _string_  | `#eeeeee` | -    |
 | active-value   | 打开时的值             | _any_     | `true`    | -    |
 | inactive-value | 关闭时的值             | _any_     | `false`   | -    |
 

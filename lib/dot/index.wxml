@@ -1,0 +1,5 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+<view class="van-dot">
+  <van-info wx:if="{{endVal!==''}}" dot="{{ false }}" type="{{type}}" info="{{ endVal }}" custom-class="{{customClass}}" custom-style="{{customStyle}}" />
+  <van-info wx:else dot="{{ true }}" custom-class="{{customClass}}" custom-style="{{customStyle}}" />
+</view>

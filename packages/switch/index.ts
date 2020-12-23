@@ -20,7 +20,7 @@ VantComponent({
     inactiveColor: String,
     size: {
       type: String,
-      value: '30px',
+      value: '26px',
     },
     activeValue: {
       type: null,

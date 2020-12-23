@@ -68,6 +68,7 @@
 @success-bg-color: #f6ffed;
 @error-color: #ff4e47;
 @error-bg-color: #ffeeeb;
+@dot-bg-color: #fa4b4b;
 
 // Padding
 @padding-base: 4px;
@@ -344,16 +345,21 @@
 @image-error-icon-color: @gray-4;
 
 // Info
-@info-size: 16px;
+@info-size: 14px;
 @info-color: @white;
 @info-padding: 0 3px;
-@info-font-size: 12px;
-@info-font-weight: 500;
+@info-font-size: 8px;
+@info-num-font-size: 10px;
+@info-font-weight: 400;
 @info-border-width: 1px;
-@info-background-color: @red;
-@info-dot-color: @red;
+@info-background-color: @dot-bg-color;
+@info-dot-color: @dot-bg-color;
 @info-dot-size: 8px;
-@info-font-family: -apple-system-font, Helvetica Neue, Arial, sans-serif;
+@info-height: 14px;
+@info-line-height: 12px;
+
+// dot
+@dot-padding: 0 15px;
 
 // Loading
 @loading-text-color: @gray-6;
@@ -459,18 +465,19 @@
 @rate-icon-size: 20px;
 
 // Switch
-@switch-width: 2em;
-@switch-height: 1em;
-@switch-node-size: 1em;
+@switch-width: 48px;
+@switch-height: 28px;
+@switch-node-width: 28px;
+@switch-node-size: 24px;
 @switch-node-z-index: 1;
 @switch-node-background-color: @white;
-@switch-node-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05),
-  0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
-@switch-background-color: @white;
-@switch-on-background-color: @blue;
+@switch-background-color: @gray-3;
+@switch-on-background-color: @primary-6;
 @switch-transition-duration: 0.3s;
-@switch-disabled-opacity: 0.4;
-@switch-border: 1px solid rgba(0, 0, 0, 0.1);
+@switch-disabled-opacity: 0.45;
+@switch-border-radius: 17px;
+@switch-node-border: 1px solid #e5e5e5;
+@switch-node-margin: 1px;
 
 // ShareSheet
 @share-sheet-header-padding: @padding-sm @padding-md @padding-base;
