@@ -1,10 +1,19 @@
 @import '../common/style/var.less';
 @import '../common/style/theme.less';
 
+.van-field--moreline {
+  display: block !important;
+}
+
 .van-field {
+  padding: 6px 16px !important;
   .theme(--cell-icon-size,  '@field-icon-size');
 
   &__label {
+    display: flex;
+    align-items: center;
+    // .theme(margin-top, '@field-label-margin-top');
+    height: @field-input-height;
     .theme(color, '@field-label-color');
 
     &--disabled {
@@ -12,40 +21,72 @@
     }
   }
 
-  &__body {
+  &__action {
+    height: 16px;
+    line-height: 16px;
+    .theme(color, '@primary-color');
+  }
+
+  &__label--moreline__label {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 16px;
+    .theme(margin-top, '@field-label-margin-top');
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
     &--textarea {
+      display: block;
       box-sizing: border-box;
-      padding: 3.6px 0;
-      line-height: 1.2em;
-      .theme(min-height, '@cell-line-height');
+      width: 100%;
+      padding: 8px 0;
     }
+  }
+  &__input_wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: @field-input-height;
+    vertical-align: middle;
+  }
+
+  &__textarea_wrapper {
+    position: relative;
+    width: calc(100% - 24px);
   }
 
   &__input {
     position: relative;
-    display: block;
-    box-sizing: border-box;
+    display: flex;
     width: 100%;
+    height: @field-input-height; // 不闪烁
     margin: 0;
     padding: 0;
-    line-height: inherit;
+    padding-right: 28px; // 44-16
     text-align: left;
     background-color: transparent;
     border: 0;
-    resize: none;
+
     .theme(color, '@field-input-text-color');
-    .theme(height, '@cell-line-height');
+    .theme(font-size,  '@font-size-md');
     .theme(min-height, '@cell-line-height');
 
     &--textarea {
+      .theme(line-height, '@field-text-area-min-height');
       .theme(height, '@field-text-area-min-height');
       .theme(min-height, '@field-text-area-min-height');
     }
 
     &--error {
+      width: 100%;
+      .theme(font-size, '@field-input-error-text-color');
       .theme(color, '@field-input-error-text-color');
     }
 
@@ -77,6 +118,19 @@
     }
   }
 
+  &__placeholder_textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    .theme(line-height, '@field-text-area-min-height');
+    .theme(color, '@field-placeholder-text-color');
+
+    &--error {
+      .theme(color, '@field-error-message-color');
+    }
+  }
+
   &__icon-root {
     display: flex;
     align-items: center;
@@ -85,10 +139,16 @@
 
   &__clear-root,
   &__icon-container {
+    position: absolute;
+    top: 0;
+    right: -12px;
+    display: flex;
+    justify-content: center;
+    width: @field-input-height;
+    height: @field-input-height;
     line-height: inherit;
-    vertical-align: middle;
-    .theme(padding, '0 @padding-xs');
-    .theme(margin-right, '-@padding-xs');
+    // .theme(padding, '0 @padding-xs');
+    // .theme(margin-right, '-@padding-xs');
   }
 
   &__clear-root,
@@ -120,9 +180,12 @@
   }
 
   &__error-message {
+    padding: 3px 16px;
     text-align: left;
+    background: #ffeeeb;
     .theme(font-size, '@field-error-message-text-font-size');
     .theme(color, '@field-error-message-color');
+    .theme(line-height, '@field-error-line-height');
 
     &--center {
       text-align: center;
@@ -146,6 +209,17 @@
 
     &--full {
       .theme(color, '@field-word-num-full-color');
+    }
+  }
+}
+.van-search-field {
+  .van-field {
+    padding: 0 !important;
+    &__input {
+      height: 36px;
+    }
+    &__input_wrapper {
+      height: 36px;
     }
   }
 }

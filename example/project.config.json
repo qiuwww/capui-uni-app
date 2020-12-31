@@ -38,8 +38,8 @@
 	},
 	"compileType": "miniprogram",
 	"cloudfunctionRoot": "functions/",
-	"libVersion": "2.3.0",
-	"appid": "wxab2f9a4af54b22e4",
+	"libVersion": "2.12.2",
+	"appid": "wxfb3a2ed783a19e35",
 	"projectname": "CapUi-Mini-Program",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -391,6 +391,19 @@
 					"pathName": "pages/share-sheet/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "modal-sheet",
+					"pathName": "pages/modal-sheet/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dot",
+					"pathName": "pages/dot/index",
+					"query": ""
 				}
 			]
 		}

@@ -48,6 +48,7 @@
     display: none;
   }
 
+  // 颜色模块
   &--default {
     .theme(color, '@button-default-color');
     .theme(background, '@button-default-background-color');
@@ -78,6 +79,23 @@
     .theme(border, '@button-border-width solid @button-warning-border-color');
   }
 
+  &--text {
+    .theme(color, '@button-text-color');
+    .theme(background, '@button-text-background-color');
+    &.van-button--normal,
+    &.van-button--large {
+      .theme(padding, '0');
+    }
+    &.van-button--middle,
+    &.van-button--small,
+    &.van-button--mini {
+      .theme(padding, '0');
+    }
+    &.van-button--active::before {
+      opacity: 0;
+    }
+  }
+
   &--plain {
     .theme(background, '@button-plain-background-color');
 
@@ -104,21 +122,27 @@
   }
 
   &--normal {
-    padding: 0 15px;
+    padding: 0 32px;
     .theme(font-size, '@button-normal-font-size');
+  }
+
+  &--middle {
+    padding: 0 16px;
+    .theme(height, '@button-middle-height');
   }
 
   &--small {
     .theme(min-width, '@button-small-min-width');
     .theme(height, '@button-small-height');
-    .theme(padding, '0 @padding-xs');
+    .theme(padding, '0 @padding-md');
     .theme(font-size, '@button-small-font-size');
   }
 
   // mini图标默认宽度50px，文字不能超过4个
   &--mini {
-    display: inline-block;
+    // display: inline-block;
     .theme(min-width, '@button-mini-min-width');
+    .theme(padding, '0 @padding-md');
     .theme(height, '@button-mini-height');
     .theme(font-size, '@button-mini-font-size');
 
@@ -157,6 +181,14 @@
     min-width: 1em;
     line-height: inherit !important;
     vertical-align: top;
+  }
+
+  &--middle,
+  &--small {
+    .van-button__icon {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &--hairline {

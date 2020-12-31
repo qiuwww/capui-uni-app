@@ -7,6 +7,7 @@ export declare const commonProps: {
       value: string
     ): void;
   };
+  action: StringConstructor;
   placeholder: StringConstructor;
   placeholderStyle: StringConstructor;
   placeholderClass: StringConstructor;
@@ -49,7 +50,10 @@ export declare const inputProps: {
   confirmHold: BooleanConstructor;
 };
 export declare const textareaProps: {
-  autoHeight: BooleanConstructor;
+  autoHeight: {
+    type: BooleanConstructor;
+    value: boolean;
+  };
   fixed: BooleanConstructor;
   showConfirmBar: {
     type: BooleanConstructor;

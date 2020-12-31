@@ -10,6 +10,7 @@ VantComponent({
     disabled: Boolean,
     readonly: Boolean,
     inputAlign: String,
+    inputRadius: String,
     showAction: Boolean,
     useActionSlot: Boolean,
     useLeftIconSlot: Boolean,
@@ -28,6 +29,10 @@ VantComponent({
     background: {
       type: String,
       value: '#ffffff',
+    },
+    inputBackground: {
+      type: String,
+      value: '#f5f5f5',
     },
     maxlength: {
       type: Number,

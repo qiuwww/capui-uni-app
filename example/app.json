@@ -17,6 +17,7 @@
     "pages/notify/index",
     "pages/panel/index",
     "pages/popup/index",
+    "pages/dot/index",
     "pages/progress/index",
     "pages/stepper/index",
     "pages/steps/index",
@@ -51,11 +52,12 @@
     "pages/divider/index",
     "pages/empty/index",
     "pages/calendar/index",
-    "pages/share-sheet/index"
+    "pages/share-sheet/index",
+    "pages/modal-sheet/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#f8f8f8",
-    "navigationBarTitleText": "Vant Weapp",
+    "navigationBarTitleText": "CapUi Mini Program",
     "navigationBarTextStyle": "black",
     "backgroundTextStyle": "dark",
     "backgroundColor": "#f8f8f8"
@@ -87,6 +89,7 @@
     "van-notify": "./dist/notify/index",
     "van-panel": "./dist/panel/index",
     "van-popup": "./dist/popup/index",
+    "van-dot": "./dist/dot/index",
     "van-progress": "./dist/progress/index",
     "van-radio": "./dist/radio/index",
     "van-radio-group": "./dist/radio-group/index",
@@ -125,7 +128,8 @@
     "van-dropdown-item": "./dist/dropdown-item/index",
     "van-skeleton": "./dist/skeleton/index",
     "van-calendar": "./dist/calendar/index",
-    "van-share-sheet": "./dist/share-sheet/index"
+    "van-share-sheet": "./dist/share-sheet/index",
+    "van-modal-sheet": "./dist/modal-sheet/index"
   },
   "sitemapLocation": "sitemap.json"
 }
