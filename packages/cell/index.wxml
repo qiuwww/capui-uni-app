@@ -20,7 +20,7 @@
     class="van-cell__right-icon-wrap right-icon-class"
     custom-class="van-cell__right-icon"
   /> -->
-  <view wx:if="{{ isLink }}" class="cap-icon iconnoticebararrow" name="arrow-left" custom-class="van-cell__right-icon" style="size: 16px; color: #8C8C8C"></view>
+  <view wx:if="{{ isLink }}" class="vant-icon van-icon-cap-arrow" name="arrow-left" custom-class="van-cell__right-icon" style="size: 16px; color: #8C8C8C"></view>
   <slot wx:else name="right-icon" />
   <slot name="extra" />
 </view>
