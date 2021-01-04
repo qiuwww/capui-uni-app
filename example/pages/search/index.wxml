@@ -1,6 +1,7 @@
 <demo-block title="基本用法">
   <van-search
     model:value="{{ value }}"
+    show-action
     placeholder="请输入搜索关键词"
     bind:search="onSearch"
   />
@@ -9,7 +10,6 @@
 <demo-block title="事件监听">
   <van-search
     model:value="{{ value }}"
-    show-action
     placeholder="请输入搜索关键词"
     bind:search="onSearch"
     bind:cancel="onCancel"
