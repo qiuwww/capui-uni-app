@@ -1,5 +1,6 @@
 
-<demo-block  title="** 基础样式，符合设计规范，优先使用 **" custom-class="demo-margin-bottom">
+<view style="font-size: 16px; font-weight:600; padding: 12px 16px">基础样式，符合设计规范，优先使用</view>
+
   <demo-block title="基本用法">
     <van-search
       model:value="{{ value }}"
@@ -31,11 +32,11 @@
   <demo-block title="设置透明度，使用Rgba">
     <view style="background: #4fc08d">
       <van-search
-      model:value="{{ value }}"
-      shape="round"
-      background="rgba(255, 255, 255, 0.4)"
-      placeholder="请输入搜索关键词"
-    />
+        model:value="{{ value }}"
+        shape="round"
+        background="rgba(255, 255, 255, 0.7)"
+        placeholder="请输入搜索关键词"
+      />
     </view>
   </demo-block>
 
@@ -58,11 +59,11 @@
       placeholder="请输入搜索关键词"
     />
   </demo-block>
-</demo-block>
 
 
 
-<demo-block title="** 额外支持功能，但未经过设计规范 **">
+
+<view style="font-size: 16px; font-weight:600; padding: 12px 16px; margin-top: 36px">以下额外支持功能，但未经过设计规范</view>
   <demo-block title="搜索框内容对齐">
     <van-search
       model:value="{{ value }}"
@@ -91,7 +92,7 @@
       <view slot="action" bind:tap="onClick">搜索</view>
     </van-search>
   </demo-block>
-</demo-block>
+
 
 
 
