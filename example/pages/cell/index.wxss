@@ -3,3 +3,11 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+.text {
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #262626;
+  text-align: left;
+}
