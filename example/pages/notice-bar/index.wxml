@@ -1,7 +1,9 @@
-<demo-block title="基础用法">
+<demo-block title="用法">
   <van-notice-bar
     text="{{ text }}"
     left-icon="volume-o"
+    mode="closeable"
+    scrollable="{{ false }}"
   />
 </demo-block>
 
