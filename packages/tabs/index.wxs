@@ -106,10 +106,16 @@ function lineStyle(data) {
     .join(';');
 }
 
+function isNumber(i) {
+  if (typeof i === 'number') return true;
+  return !isNaN(i);
+}
+
 module.exports = {
   tabClass: tabClass,
   tabStyle: tabStyle,
   trackStyle: trackStyle,
   lineStyle: lineStyle,
   tabCardTypeBorderStyle: tabCardTypeBorderStyle,
+  isNumber: isNumber,
 };

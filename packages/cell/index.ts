@@ -22,7 +22,10 @@ VantComponent({
     isLink: Boolean,
     required: Boolean,
     clickable: Boolean,
-    titleWidth: String,
+    titleWidth: {
+      type: String,
+      value: '112px',
+    },
     customStyle: String,
     arrowDirection: String,
     useLabelSlot: Boolean,
