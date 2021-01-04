@@ -10,4 +10,30 @@
   font-weight: 400;
   color: #262626;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag {
+  width: 24px;
+  height: 14px;
+  background: #fa4b4b;
+  border-radius: 8px;
+  font-size: 8px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 14px;
+  text-align: center;
+}
+
+.value-left {
+  height: 16px;
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #bfbfbf;
+  line-height: 16px;
+  text-align: left;
 }

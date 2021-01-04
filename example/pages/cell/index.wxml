@@ -1,9 +1,42 @@
-<demo-block title="基础用法">
+<demo-block title="未选择">
   <van-cell-group>
-    <van-cell title="单元选择" value="辅助文案" />
-    <van-cell title="标题文案过长" value="辅助文案" label="示文本描述或示例展示较长文本" border="{{ false }}" />
+    <van-cell title="单元选择" title-width="80px" is-link>
+      <view class="value-left">提示文案</view>
+    </van-cell>
   </van-cell-group>
 </demo-block>
+<demo-block title="过长设置">
+  <van-cell-group>
+    <van-cell title-width="240px" title="标题文案过长" value="辅助文案" label="示文本描述或示例展示较长文本" is-link />
+  </van-cell-group>
+</demo-block>
+<demo-block title="已选择">
+  <van-cell title="单元选择" title-width="80px" is-link>
+    <view class="text">选中选项</view>
+  </van-cell>
+  <van-cell title="选择过长" title-width="80px" is-link>
+    <view class="text">选中选项文本超长情况使用选中选项文本超长情况使用</view>
+  </van-cell>
+</demo-block>
+<demo-block title="必填">
+  <van-cell-group>
+    <van-cell title="单元选择" title-width="80px" is-link required>
+      <view class="value-left">提示文案</view>
+    </van-cell>
+  </van-cell-group>
+</demo-block>
+<demo-block title="使用插槽">
+  <van-cell value="辅助文案" icon="shop-o" is-link>
+    <view slot="title" style="display: flex">
+      <view class="title">单元选择</view>
+      <view class="tag">标签</view>
+    </view>
+  </van-cell>
+  <van-cell title="单元选择" border="{{ false }}">
+    <van-icon slot="right-icon" name="search" />
+  </van-cell>
+</demo-block>
+<van-divider contentPosition="center">UI走查分割线</van-divider>
 <demo-block title="单元选择大小">
   <van-cell-group>
     <van-cell title="单元选择" value="辅助文案" size="large" />
@@ -32,17 +65,6 @@
   <van-cell-group title="分组 2">
     <van-cell title="单元选择" value="辅助文案" />
   </van-cell-group>
-</demo-block>
-<demo-block title="使用插槽">
-  <van-cell value="辅助文案" icon="shop-o" is-link>
-    <view slot="title" style="display: flex">
-      <view class="title">单元选择</view>
-      <van-tag type="danger" round>标签</van-tag>
-    </view>
-  </van-cell>
-  <van-cell title="单元选择" border="{{ false }}">
-    <van-icon slot="right-icon" name="search" />
-  </van-cell>
 </demo-block>
 <demo-block title="垂直居中">
   <van-cell center title="单元选择" value="辅助文案" label="描述信息" />
