@@ -68,16 +68,6 @@ VantComponent({
   methods: {
     onInput(event: WechatMiniprogram.Input | WechatMiniprogram.TextareaInput) {
       const { value = '' } = event.detail || {};
-
-      if (value) {
-        this.setData({
-          isHidePlaceholder: true,
-        });
-      } else {
-        this.setData({
-          isHidePlaceholder: false,
-        });
-      }
       this.value = value;
       this.setShowClear();
       this.emitChange();
