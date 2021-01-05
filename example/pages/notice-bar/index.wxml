@@ -1,17 +1,8 @@
+<view style="">一期用法，经过设计规范，优先使用</view>
 <demo-block title="基础用法">
   <van-notice-bar
     text="{{ text }}"
-    left-icon="volume-o"
   />
-</demo-block>
-
-<demo-block title="滚动模式">
-  <van-notice-bar scrollable text="{{ shortText }}" custom-class="demo-margin-bottom" />
-  <van-notice-bar scrollable="{{ false }}" text="{{ text }}" custom-class="demo-margin-bottom" />
-</demo-block>
-
-<demo-block title="多行展示">
-  <van-notice-bar wrapable scrollable="{{ false }}" text="{{ text }}" />
 </demo-block>
 
 <demo-block title="通知栏模式">
@@ -19,36 +10,79 @@
   <van-notice-bar custom-class="margin-top" mode="link" text="{{ shortText }}" />
 </demo-block>
 
-<demo-block title="自定义样式">
+<demo-block title="配置图标">
   <van-notice-bar
     text="{{ shortText }}"
-    color="#1989fa"
-    background="#ecf9ff"
-    left-icon="info-o"
+    left-icon="volume-o"
   >
   </van-notice-bar>
+
+  <van-notice-bar
+    custom-class="margin-top"
+    mode="closeable"
+    text="{{ shortText }}"
+    left-icon="volume-o"
+  >
+  </van-notice-bar>
+
+  <van-notice-bar
+    custom-class="margin-top"
+    mode="link"
+    text="{{ shortText }}"
+    left-icon="volume-o"
+  >
+  </van-notice-bar>
+</demo-block>
+
+<demo-block title="文本、背景色可配置">
+  <van-notice-bar
+    text="{{ text }}"
+    color="#1E8DFF"
+    background="#EBF8FF"
+  />
+</demo-block>
+
+<demo-block title="多行展示">
+  <van-notice-bar wrapable scrollable="{{ false }}" text="{{ text }}" />
 </demo-block>
 
 
 <demo-block title="四种type">
   <van-notice-bar
+    custom-class="margin-top"
     type="info"
     scrollable="{{ false }}"
     text="{{ text }}"
   />
   <van-notice-bar
+    custom-class="margin-top"
     type="error"
     scrollable="{{ false }}"
     text="{{ text }}"
   />
   <van-notice-bar
+    custom-class="margin-top"
     type="success"
     scrollable="{{ false }}"
     text="{{ text }}"
   />
   <van-notice-bar
+    custom-class="margin-top"
     type="warning"
     scrollable="{{ false }}"
     text="{{ text }}"
   />
 </demo-block>
+
+<view style="margin-top: 36px">额外支持功能，但未经设计规范</view>
+
+<demo-block title="滚动模式">
+  <van-notice-bar scrollable text="{{ shortText }}" custom-class="demo-margin-bottom" />
+</demo-block>
+
+
+
+
+
+
+

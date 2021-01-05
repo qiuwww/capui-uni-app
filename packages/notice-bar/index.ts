@@ -39,7 +39,7 @@ VantComponent({
     },
     scrollable: {
       type: Boolean,
-      value: true,
+      value: false,
     },
     leftIcon: {
       type: String,
