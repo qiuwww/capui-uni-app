@@ -13,11 +13,6 @@
     <van-field value="{{ username }}" label="用户名" placeholder="请输入用户名" right-icon="setting-o" required bind:click-icon="onClickIcon" />
   </van-cell-group>
 </demo-block>
-<demo-block title="多行文本">
-  <van-cell-group>
-    <van-field value="{{ username }}" type="textarea" label="用户名" action="保存" placeholder="请输入用户名" right-icon="setting-o" required bind:click-icon="onClickIcon" />
-  </van-cell-group>
-</demo-block>
 <demo-block title="禁用输入框">
   <van-cell-group>
     <van-field value="输入框已禁用" label="用户名" left-icon="contact" disabled border="{{ false }}" />
@@ -29,14 +24,19 @@
     <van-field value="{{ phone }}" label="手机号" placeholder="请输入手机号" error-message="手机号格式错误" border="{{ false }}" />
   </van-cell-group>
 </demo-block>
+<demo-block title="多行文本">
+  <van-cell-group>
+    <van-field value="{{ username }}" type="textarea" label="用户名" action="保存" placeholder="请输入用户名" right-icon="setting-o" required bind:click-icon="onClickIcon" />
+  </van-cell-group>
+</demo-block>
 <demo-block title="多行错误提示">
   <van-cell-group>
-    <van-field type="textarea" value="这是文本，这是文本" label="标题标题" action="重新编辑" placeholder="请输入手机号" error-message="手机号格式错误" border="{{ false }}" />
+    <van-field type="textarea" value="{{ username }}" label="标题标题" action="重新编辑" placeholder="请输入手机号" error-message="手机号格式错误" required border="{{ false }}" />
   </van-cell-group>
 </demo-block>
 <demo-block title="文本输入字数限制">
   <van-cell-group>
-    <van-field type="textarea" value="{{ username3 }}" clearable label="用户名" placeholder="请输入用户名" showWordLimit maxlength="5" />
+    <van-field type="textarea" value="{{ username3 }}" clearable label="用户名" placeholder="请输入用户名" required showWordLimit maxlength="5" />
   </van-cell-group>
 </demo-block>
 <demo-block title="内容对齐方式">
