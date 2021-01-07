@@ -46,7 +46,7 @@
       display: block;
       box-sizing: border-box;
       width: 100%;
-      padding: 8px 0;
+      padding: 12px 0 8px 0;
     }
   }
   &__input_wrapper {
@@ -153,6 +153,12 @@
     line-height: inherit;
     // .theme(padding, '0 @padding-xs');
     // .theme(margin-right, '-@padding-xs');
+  }
+
+  .van-field__body--textarea {
+    .van-field__icon-container {
+      top: 2px;
+    }
   }
 
   &__clear-root,
