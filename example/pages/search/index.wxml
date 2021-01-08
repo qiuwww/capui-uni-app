@@ -24,16 +24,17 @@
     <van-search
       model:value="{{ value }}"
       shape="round"
-      background="#4fc08d"
+      background="#1E8DFF"
       input-background="#ffffff"
       placeholder="请输入搜索关键词"
     />
   </demo-block>
   <demo-block title="设置透明度，使用Rgba">
-    <view style="background: #4fc08d">
+    <view style="background: #1E8DFF">
       <van-search
         model:value="{{ value }}"
         shape="round"
+        input-background="#ffffff"
         background="rgba(255, 255, 255, 0.7)"
         placeholder="请输入搜索关键词"
       />
@@ -44,7 +45,7 @@
     <van-search
       model:value="{{ value }}"
       shape="round"
-      background="#4fc08d"
+      background="#1E8DFF"
       left-icon="location-o"
       placeholder="请输入搜索关键词"
     />
@@ -54,7 +55,7 @@
     <van-search
       model:value="{{ value }}"
       input-radius="8px"
-      background="#4fc08d"
+      background="#1E8DFF"
       left-icon="location-o"
       placeholder="请输入搜索关键词"
     />
