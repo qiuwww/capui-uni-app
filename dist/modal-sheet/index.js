@@ -26,6 +26,10 @@ VantComponent({
       type: Boolean,
       value: true,
     },
+    type: {
+      type: String,
+      value: '',
+    },
   },
   methods: {
     onClose() {

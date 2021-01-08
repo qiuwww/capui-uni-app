@@ -19,6 +19,7 @@
     title="标题"
     show="{{ show }}"
     bind:close="toggle"
+    type="mini"
   >
     <van-icon slot="headLeft" name="cross" bind:click="toggle"/>
     <view slot="headRight" bind:tap="showSummary">使用说明</view>
@@ -67,6 +68,7 @@ Page({
 | close-on-click-overlay | 点击遮罩是否关闭菜单 | _boolean_ | - | - |
 | safe-area-inset-bottom | 是否为 iPhoneX 留出底部安全距离 | _boolean_ | `true` | - |
 | customClass | 自定义样式 | _string_ | - | - |
+| type|弹框高度|string｜-（'mini、normal、large'）｜
 
 ### Slots
 | 名称    | 说明                       |

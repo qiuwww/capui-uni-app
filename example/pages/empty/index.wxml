@@ -29,7 +29,19 @@
 
 <demo-block title="底部内容" padding>
   <van-empty description="描述文字">
-    <van-button round type="danger" custom-class="bottom-button">
+    <van-button type="primary" custom-class="bottom-button">
+      按钮
+    </van-button>
+  </van-empty>
+</demo-block>
+
+
+<demo-block title="底部内容" padding>
+  <van-empty description="描述文字">
+    <van-button type="default" custom-class="bottom-button-xs" style="margin-right: 12px">
+      按钮
+    </van-button>
+    <van-button type="primary" custom-class="bottom-button-xs">
       按钮
     </van-button>
   </van-empty>
