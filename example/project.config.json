@@ -41,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "cloudfunctionRoot": "functions/",
-  "libVersion": "2.12.2",
+  "libVersion": "2.14.3",
   "appid": "wxfb3a2ed783a19e35",
   "projectname": "CapUi-Mini-Program",
   "debugOptions": {

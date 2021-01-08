@@ -23,8 +23,8 @@ VantComponent({
   methods: {
     getEndVal() {
       let val = this.data.value;
-      let num = this.data.num ? Number(this.data.num) : '';
-      console.log(num, typeof num == 'number');
+      const num = this.data.num ? Number(this.data.num) : '';
+      console.log(num, typeof num === 'number');
       if (num && num > 99) {
         val = '···';
       } else if (num) {
