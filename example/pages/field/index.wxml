@@ -51,3 +51,8 @@
     </van-field>
   </van-cell-group>
 </demo-block>
+<demo-block title="超长">
+  <van-cell-group>
+    <van-field type="textarea" value="{{ longValue }}" label="标题标题过长" border="{{ false }}"></van-field>
+  </van-cell-group>
+</demo-block>
