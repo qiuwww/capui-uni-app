@@ -13,11 +13,15 @@ VantComponent({
       icon: String,
       label: String,
       error: Boolean,
+      action: String,
       center: Boolean,
       isLink: Boolean,
       leftIcon: String,
       rightIcon: String,
-      autosize: [Boolean, Object],
+      autosize: {
+        type: [Boolean, Object],
+        value: true,
+      },
       required: Boolean,
       iconClass: String,
       clickable: Boolean,
@@ -41,7 +45,7 @@ VantComponent({
       },
       titleWidth: {
         type: String,
-        value: '6.2em',
+        value: '80px',
       },
     }
   ),
@@ -49,10 +53,14 @@ VantComponent({
     focused: false,
     innerValue: '',
     showClear: false,
+    isHidePlaceholder: false,
   },
   created() {
     this.value = this.data.value;
-    this.setData({ innerValue: this.value });
+    this.setData({
+      innerValue: this.value,
+      isHidePlaceholder: !!this.data.value,
+    });
   },
   methods: {
     onInput(event) {
@@ -74,10 +82,16 @@ VantComponent({
     onClickIcon() {
       this.$emit('click-icon');
     },
+    onClickAction() {
+      this.$emit('click-action');
+    },
     onClear() {
       this.setData({ innerValue: '' });
       this.value = '';
       this.setShowClear();
+      this.setData({
+        isHidePlaceholder: false,
+      });
       wx.nextTick(() => {
         this.emitChange();
         this.$emit('clear', '');

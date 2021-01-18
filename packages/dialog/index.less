@@ -9,6 +9,8 @@
   .theme(border-radius, '@dialog-border-radius');
   .theme(background-color, '@dialog-background-color');
 
+  --button-border-radius: 0;
+
   @media (max-width: 321px) {
     .theme(width, '@dialog-small-screen-width');
   }
@@ -19,6 +21,7 @@
     .theme(font-weight, '@dialog-header-font-weight');
     .theme(line-height, '@dialog-header-line-height');
     .theme(color, '@dialog-header-color');
+    .theme(font-size, '@dialog-header-font-size');
 
     &--isolated {
       .theme(padding, '@dialog-header-isolated-padding');
@@ -77,6 +80,9 @@
 
   &__button {
     flex: 1;
+    button {
+      font-size: @font-size-md !important;
+    }
   }
 
   &__confirm,

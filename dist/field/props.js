@@ -8,6 +8,7 @@ export const commonProps = {
       }
     },
   },
+  action: String,
   placeholder: String,
   placeholderStyle: String,
   placeholderClass: String,
@@ -50,7 +51,10 @@ export const inputProps = {
   confirmHold: Boolean,
 };
 export const textareaProps = {
-  autoHeight: Boolean,
+  autoHeight: {
+    type: Boolean,
+    value: true,
+  },
   fixed: Boolean,
   showConfirmBar: {
     type: Boolean,

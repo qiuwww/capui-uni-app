@@ -9,13 +9,14 @@
     position: relative;
     display: flex;
     justify-content: center;
-    height: 36px;
+    height: 48px;
 
     &--title {
       display: flex;
       align-items: center;
       color: @gray-8;
-      font-size: @font-size-md;
+      font-weight: bold;
+      font-size: @font-size-lg;
     }
 
     &--left {
@@ -30,6 +31,16 @@
       top: 50%;
       right: 12px;
       transform: translateY(-50%);
+    }
+  }
+
+  &__container {
+    &.mini {
+      height: 54px;
+    }
+
+    &.normal {
+      height: 273px;
     }
   }
 }

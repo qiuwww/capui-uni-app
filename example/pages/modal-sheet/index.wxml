@@ -1,43 +1,66 @@
 <demo-block title="icon按钮+文字按钮" padding>
-  <van-button type="primary" bind:click="toggleActionSheet1">弹出菜单</van-button>
-  <van-modal-sheet
-    title="这里是标题"
-    show="{{ show1 }}"
-    bind:close="toggleActionSheet1"
-  >
-    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet1"/>
+  <van-button type="primary" bind:click="toggleActionSheet1">弹出mini菜单</van-button>
+  <van-modal-sheet title="这里是标题" show="{{ show1 }}" type="mini" bind:close="toggleActionSheet1">
+    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet1" />
     <view slot="headRight" bind:tap="showSummary">使用说明</view>
-    <view>我是内容，不爽自己改</view>
+    <view>我是一段文案,Hello World</view>
   </van-modal-sheet>
 </demo-block>
-
 <demo-block title="文字按钮+文字按钮" padding>
-  <van-button type="primary" bind:click="toggleActionSheet2">弹出菜单</van-button>
-  <van-modal-sheet
-    title="这里是标题"
-    show="{{ show2 }}"
-    bind:close="toggleActionSheet2"
-  >
+  <van-button type="primary" bind:click="toggleActionSheet2">弹出normal菜单</van-button>
+  <van-modal-sheet title="这里是标题" show="{{ show2 }}" type="normal" bind:close="toggleActionSheet2">
     <view slot="headLeft" bind:tap="toggleActionSheet2">取消</view>
     <view slot="headRight" class="confirm" bind:tap="confirmMsg">确认</view>
     <view>我是一段文案,Hello World</view>
   </van-modal-sheet>
 </demo-block>
-
-
 <demo-block title="icon按钮" padding>
-  <van-button type="primary" bind:click="toggleActionSheet3">弹出菜单</van-button>
-  <van-modal-sheet
-    title="这里是标题"
-    show="{{ show3 }}"
-    bind:close="toggleActionSheet3"
-  >
-    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet3"/>
-    <view>我是一段文案,Hello World，you can edit it</view>
-    <view>我是一段文案,Hello World，you can edit it</view>
-    <view>我是一段文案,Hello World，you can edit it</view>
-    <view>我是一段文案,Hello World，you can edit it</view>
-    <view>我是一段文案,Hello World，you can edit it</view>
-    <view>我是一段文案,Hello World，you can edit it</view>
+  <van-button type="primary" bind:click="toggleActionSheet4">弹出custom菜单</van-button>
+  <van-modal-sheet title="这里是标题" show="{{ show4 }}" bind:close="toggleActionSheet4">
+    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet4" />
+    <view class="custom-container">
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+      <view>我是一段文案,Hello World，you can edit it</view>
+    </view>
   </van-modal-sheet>
 </demo-block>

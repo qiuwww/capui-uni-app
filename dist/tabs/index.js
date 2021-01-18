@@ -37,7 +37,7 @@ VantComponent({
     },
     lineWidth: {
       type: [String, Number],
-      value: 40,
+      value: 20,
       observer: 'setLine',
     },
     lineHeight: {
@@ -85,6 +85,10 @@ VantComponent({
     lazyRender: {
       type: Boolean,
       value: true,
+    },
+    justifyContent: {
+      type: String,
+      value: 'start',
     },
   },
   data: {
