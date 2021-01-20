@@ -85,7 +85,7 @@ Page({
     const consoleLog = (args) => console.log(args);
     Dialog.alert({
       title: '标题',
-      message,
+      message: '这是一行的代码',
       customButtons: [
         {
           type: 'primary',
