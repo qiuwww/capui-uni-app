@@ -3,12 +3,16 @@
   <van-dot custom-style="background:green;" />
 </demo-block>
 <demo-block title="数字角标">
-  <van-dot type="num" num="9" />
-  <van-dot type="num" num="99" />
+  <van-dot type="num" num="8" />
+  <van-dot type="num" num="32" />
   <van-dot type="num" num="999" />
 </demo-block>
 <demo-block title="文本角标">
+  <van-dot value="9" />
+  <van-dot value="99+" />
   <van-dot value="单" custom-style="background:blue;" />
+</demo-block>
+<demo-block title="文本角标">
   <van-dot value="两字" />
   <van-dot value="三个字" />
   <van-dot value="五位截取啊" />

@@ -129,11 +129,12 @@
 @action-sheet-item-disabled-text-color: @gray-5;
 @action-sheet-subname-color: @gray-6;
 @action-sheet-subname-font-size: @font-size-sm;
-@action-sheet-subname-line-height: 20px;
+@action-sheet-subname-line-height: 14px;
+@action-sheet-name-line-height: 18px;
 @action-sheet-close-icon-size: 22px;
 @action-sheet-close-icon-color: @gray-5;
 @action-sheet-close-icon-padding: 0 @padding-md;
-@action-sheet-cancel-text-color: @gray-7;
+@action-sheet-cancel-text-color: @gray-8;
 @action-sheet-cancel-padding-top: @padding-xs;
 @action-sheet-cancel-padding-color: @background-color;
 
@@ -143,13 +144,14 @@
 @button-mini-font-size: @font-size-xs;
 @button-small-height: 32px;
 @button-small-font-size: @font-size-sm;
+@button-middle-font-size: @font-size-md;
 @button-small-min-width: 60px;
 @button-normal-font-size: @font-size-md;
 @button-large-height: 48px;
 @button-middle-height: 40px;
 @button-default-color: @text-color;
 @button-default-height: 48px;
-@button-default-font-size: @font-size-md;
+@button-default-font-size: @font-size-lg;
 @button-default-background-color: @white;
 @button-default-border-color: @border-color;
 @button-primary-color: @white;
@@ -166,7 +168,7 @@
 @button-warning-border-color: @orange;
 @button-text-color: @primary-color;
 @button-text-background-color: transparent;
-@button-line-height: 20px;
+@button-line-height: 18px;
 @button-border-width: 1px;
 @button-border-radius: @border-radius-lg;
 @button-round-border-radius: @border-radius-max;
@@ -221,14 +223,15 @@
 // Cell
 @cell-font-size: @font-size-md;
 @cell-line-height: @font-size-md;
-@cell-require-top: 20px;
+@cell-require-top: 16px;
 @cell-vertical-padding: 18px;
 @cell-horizontal-padding: 16px;
 @cell-text-color: @text-color;
 @cell-background-color: @white;
 @cell-border-color: @border-color;
 @cell-active-color: @active-color;
-@cell-required-color: @red;
+@cell-required-color: #ff4e47;
+@cell-required-font-size: 12px;
 @cell-label-color: @gray-6;
 @cell-label-font-size: @font-size-sm;
 @cell-label-line-height: 18px;
@@ -277,35 +280,39 @@
 @count-down-line-height: 20px;
 
 // Dialog
-@dialog-width: 320px;
+@dialog-width: 270px;
 @dialog-small-screen-width: 90%;
 @dialog-font-size: @font-size-lg;
-@dialog-border-radius: 16px;
+@dialog-border-radius: 8px;
 @dialog-background-color: @white;
 @dialog-header-font-weight: @font-weight-bold;
+@dialog-header-font-size: @font-size-md;
 @dialog-header-line-height: 24px;
-@dialog-header-padding-top: @padding-lg;
+@dialog-header-padding-top: 20px;
 @dialog-header-color: @gray-8;
 @dialog-header-isolated-padding: @padding-lg 0;
-@dialog-message-padding: @padding-lg;
-@dialog-message-font-size: @font-size-md;
-@dialog-message-line-height: 20px;
+@dialog-message-padding: 8px 22px 20px 22px;
+@dialog-message-font-size: @font-size-sm;
+@dialog-message-line-height: 22px;
 @dialog-message-max-height: 60vh;
 @dialog-message-color: @gray-6;
 @dialog-has-title-message-text-color: @gray-7;
 @dialog-has-title-message-padding-top: @padding-xs;
+@dialog-button-radius: 0 0 8px 8px;
 
 // Field
 @field-label-color: @gray-7;
 @field-cell-padding: 16px;
 @field-label-margin-top: 12px;
-@field-input-text-color: @text-color;
+@field-input-text-color: @gray-8;
 @field-input-height: 40px;
 @field-input-error-text-color: @red;
-@field-input-disabled-text-color: @gray-5;
+@field-input-disabled-text-color: @gray-6;
+@field-input-disabled-label-color: @gray-7;
 @field-placeholder-text-color: @gray-5;
 @field-icon-size: 16px;
 @field-clear-icon-size: 16px;
+@padding-required-left: 5px;
 
 @field-clear-icon-color: @gray-5;
 @field-icon-container-color: @gray-6;
@@ -347,16 +354,15 @@
 // Info
 @info-size: 14px;
 @info-color: @white;
-@info-padding: 0 3px;
+@info-padding: 0 4px;
 @info-font-size: 8px;
 @info-num-font-size: 10px;
 @info-font-weight: 400;
-@info-border-width: 1px;
 @info-background-color: @dot-bg-color;
 @info-dot-color: @dot-bg-color;
 @info-dot-size: 8px;
 @info-height: 14px;
-@info-line-height: 12px;
+@info-line-height: 14px;
 
 // dot
 @dot-padding: 0 15px;
@@ -382,12 +388,12 @@
 @notice-bar-height: 40px;
 @notice-bar-padding: 0 @padding-md;
 @notice-bar-wrapable-padding: @padding-xs @padding-md;
-@notice-bar-font-size: @font-size-md;
-@notice-bar-text-color: @orange-dark;
-@notice-bar-line-height: 24px;
-@notice-bar-background-color: @orange-light;
+@notice-bar-font-size: @font-size-sm;
+@notice-bar-text-color: @warning-color;
+@notice-bar-line-height: 22px;
+@notice-bar-background-color: @warning-bg-color;
 @notice-bar-icon-size: 16px;
-@notice-bar-icon-min-width: 22px;
+@notice-bar-icon-min-width: 16px;
 
 @notice-bar-info-color: @link-color;
 @notice-bar-info-bg-color: @link-bg-color;
@@ -424,7 +430,7 @@
 @picker-confirm-action-color: @primary-color;
 @picker-cancel-action-color: @gray-8;
 @picker-option-font-size: @padding-md;
-@picker-title-font-size: @font-size-lg;
+@picker-title-font-color: @gray-8;
 @picker-option-text-color: @black;
 @picker-loading-icon-color: @blue;
 @picker-loading-mask-color: rgba(255, 255, 255, 0.85);
@@ -465,18 +471,18 @@
 @rate-icon-size: 20px;
 
 // Switch
-@switch-width: 48px;
-@switch-height: 28px;
-@switch-node-width: 28px;
-@switch-node-size: 24px;
+@switch-width: 40px;
+@switch-height: 24px;
+@switch-node-width: 24px;
+@switch-node-size: 20px;
 @switch-node-z-index: 1;
 @switch-node-background-color: @white;
-@switch-background-color: @gray-3;
+@switch-background-color: @gray-5;
 @switch-on-background-color: @primary-6;
 @switch-transition-duration: 0.3s;
 @switch-disabled-opacity: 0.45;
 @switch-border-radius: 17px;
-@switch-node-border: 1px solid #e5e5e5;
+@switch-node-border: 1px solid #fff;
 @switch-node-margin: 1px;
 
 // ShareSheet
@@ -498,16 +504,17 @@
 
 // Search
 @search-background-color: @gray-2;
-@search-padding: 4px @padding-sm;
+@search-padding: 4px @padding-md;
 @search-input-height: 34px;
 @search-input-height-large: 36px;
 @search-label-padding: 0 5px;
 @search-label-color: @text-color;
 @search-label-font-size: @font-size-md;
 @search-left-icon-color: @gray-6;
-@search-action-padding: 0 @padding-xs;
-@search-action-text-color: @text-color;
+@search-action-padding: 0 @padding-md;
+@search-action-text-color: @gray-8;
 @search-action-font-size: @font-size-md;
+@search-left-icon-color: @gray-5;
 
 // Sidebar
 @sidebar-width: 80px;
@@ -591,14 +598,14 @@
 
 // TabbarItem
 @tabbar-item-font-size: @font-size-sm;
-@tabbar-item-text-color: @gray-7;
+@tabbar-item-text-color: @gray-6;
 @tabbar-item-active-color: @blue;
 @tabbar-item-line-height: 1;
 @tabbar-item-icon-size: 22px;
 @tabbar-item-margin-bottom: 4px;
 
 // Tab
-@tab-text-color: @gray-7;
+@tab-text-color: @gray-6;
 @tab-active-text-color: @primary-6;
 @tab-disabled-text-color: @gray-5;
 @tab-font-size: @font-size-md;

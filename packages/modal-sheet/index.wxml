@@ -20,5 +20,7 @@
       <slot name="headRight"/>
     </view>
   </view>
-  <slot />
+  <scroll-view scroll-y class="van-modal-sheet__container {{type}}">
+    <slot />
+  </scroll-view>
 </van-popup>

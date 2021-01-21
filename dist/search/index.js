@@ -40,7 +40,7 @@ VantComponent({
     },
     shape: {
       type: String,
-      value: 'square',
+      value: 'round',
     },
     clearable: {
       type: Boolean,

@@ -5,3 +5,7 @@
 .confirm{
   color:#1e8dff;
 }
+
+.custom-container{
+  height: 400px;
+}

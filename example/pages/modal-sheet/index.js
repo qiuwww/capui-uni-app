@@ -5,6 +5,7 @@ Page({
     show1: false,
     show2: false,
     show3: false,
+    show4: false,
   },
 
   toggle(type) {
@@ -23,6 +24,10 @@ Page({
 
   toggleActionSheet3() {
     this.toggle('show3');
+  },
+
+  toggleActionSheet4() {
+    this.toggle('show4');
   },
 
   showSummary() {

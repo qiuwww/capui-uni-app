@@ -10,8 +10,8 @@
   <van-button type="info" plain>朴素按钮</van-button>
 </demo-block>
 <demo-block title="细边框" padding>
-  <van-button type="primary" plain hairline class="demo-margin-right">细边框按钮</van-button>
-  <van-button type="info" plain hairline>细边框按钮</van-button>
+  <van-button type="primary" plain hairline class="demo-margin-right">细边框</van-button>
+  <van-button type="info" plain hairline>细边框</van-button>
 </demo-block>
 <demo-block title="文字按钮" padding>
   <van-button type="text" class="demo-margin-right">文字按钮</van-button>

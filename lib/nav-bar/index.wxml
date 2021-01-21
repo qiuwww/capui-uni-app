@@ -5,7 +5,7 @@
   <view class="van-nav-bar__content">
     <view class="van-nav-bar__left" bind:tap="onClickLeft">
       <block wx:if="{{ leftArrow || leftText }}">
-        <view wx:if="{{ leftArrow }}" class="cap-icon iconnavbarback" name="arrow-left" custom-class="van-nav-bar__arrow" style="font-size: 24px; color: {{leftArrowColor}}"></view>
+        <view wx:if="{{ leftArrow }}" class="vant-icon van-icon-cap-back" name="arrow-left" custom-class="van-nav-bar__arrow" style="font-size: 24px; color: {{leftArrowColor}}"></view>
         <view wx:if="{{ leftText }}" class="van-nav-bar__text">
           <text style="color: {{leftTextColor}}">{{ leftText }}</text>
         </view>
