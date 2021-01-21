@@ -1,5 +1,7 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 @import '../common/style/var.less';
 @import '../common/style/theme.less';
+@import '../common/style/icon.less';
 
 .van-nav-bar {
   position: relative;
@@ -29,7 +31,7 @@
   &__arrow {
     vertical-align: middle;
     .theme(font-size, '@nav-bar-arrow-size') !important;
-    .theme(color, '@nav-bar-icon-color') !important;
+    // .theme(color, '@nav-bar-icon-color') !important;
 
     + .van-nav-bar__text {
       margin-left: -20px;
@@ -45,9 +47,14 @@
   }
 
   &__title {
-    max-width: 60%;
+    width: 120px;
+    // max-width: 60%;
     margin: 0 auto;
-    .theme(color, '@nav-bar-title-text-color');
+    overflow: hidden;
+    font-family: PingFangSC-Medium, PingFang SC;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    // .theme(color, '@nav-bar-title-text-color');
     .theme(font-weight, '@font-weight-bold');
     .theme(font-size, '@nav-bar-title-font-size');
   }

@@ -2,14 +2,14 @@
 
 <view
   wx:if="{{ show }}"
-  class="custom-class {{ utils.bem('notice-bar', { withicon: mode, wrapable }) }}"
+  class="custom-class {{ utils.bem('notice-bar', [type, { withicon: mode, wrapable }]) }}"
   style="color: {{ color }}; background-color: {{ backgroundColor }}; background: {{ background }}"
   bind:tap="onClick"
 >
   <van-icon
-    wx:if="{{ leftIcon }}"
+    wx:if="{{ leftIcon || type }}"
     size="16px"
-    name="{{ leftIcon }}"
+    name="{{ type ? typeIconEnum[type] : leftIcon }}"
     class="van-notice-bar__left-icon"
   />
   <slot wx:else name="left-icon" />

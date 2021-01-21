@@ -27,7 +27,23 @@
     <text class="van-dialog__message-text">{{ message }}</text>
   </view>
 
-  <van-goods-action wx:if="{{ theme === 'round-button' }}" custom-class="van-dialog__footer--round-button">
+  <view class="van-dialog__footer van-dialog__footer--column" wx:if="{{customButtons}}">
+    <van-button
+      data-key="{{index}}"
+      bind:click="onClickCustomButtons"
+      size="large"
+      class="van-dialog__button van-hairline--top"
+      wx:for="{{customButtons}}"
+      wx:for-index="index"
+      wx:key="index"
+      hairline="{{false}}"
+      wx:for-item="item"
+      custom-class="van-dialog__cancel"
+      custom-style="color: {{ item.type === 'primary' ? confirmButtonColor : cancelButtonColor }}"
+    >{{item.text}}</van-button>
+  </view>
+
+  <van-goods-action wx:elif="{{ theme === 'round-button' }}" custom-class="van-dialog__footer--round-button">
     <van-goods-action-button
       wx:if="{{ showCancelButton }}"
       size="large"
@@ -69,12 +85,12 @@
     </van-goods-action-button>
   </van-goods-action>
 
-  <view wx:else class="van-hairline--top van-dialog__footer">
+  <view wx:else class="van-dialog__footer {{footerDirection === 'column' ? 'van-dialog__footer--column-reverse' : 'van-hairline--top'}}">
     <van-button
       wx:if="{{ showCancelButton }}"
       size="large"
       loading="{{ loading.cancel }}"
-      class="van-dialog__button van-hairline--right"
+      class="van-dialog__button {{footerDirection === 'column' ? 'van-hairline--top' : 'van-hairline--right'}}"
       custom-class="van-dialog__cancel"
       custom-style="color: {{ cancelButtonColor }}"
       bind:click="onCancel"
@@ -84,7 +100,7 @@
     <van-button
       wx:if="{{ showConfirmButton }}"
       size="large"
-      class="van-dialog__button"
+      class="van-dialog__button {{footerDirection === 'column' ? 'van-hairline--top' : ''}}"
       loading="{{ loading.confirm }}"
       custom-class="van-dialog__confirm"
       custom-style="color: {{ confirmButtonColor }}"

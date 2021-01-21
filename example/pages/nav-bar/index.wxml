@@ -1,15 +1,26 @@
+<van-nav-bar wx:if="{{active === 0}}" title="基础用法基础用法基础用法" bind:click-left="onClickLeft" bind:click-right="onClickRight" />
+<van-nav-bar wx:elif="{{active === 1}}" title="左侧箭头" left-arrow>
+  <van-icon name="search" slot="right" custom-class="icon" size="18" />
+</van-nav-bar>
+<van-nav-bar wx:elif="{{active === 2}}" title="标题" left-arrow customStyle="background: red;" titleColor="white" leftTextColor="white" leftArrowColor="white"></van-nav-bar>
+<van-nav-bar wx:elif="{{active === 3}}" title="标题" left-arrow customStyle="background: linear-gradient(135deg, #49B2FD 0%, #4991FD 100%);" titleColor="white" leftTextColor="white" leftArrowColor="white"></van-nav-bar>
+<van-nav-bar wx:elif="{{active === 4}}" title="无分割线" left-arrow border="{{false}}" customStyle="background: #4991FD;" titleColor="white" leftTextColor="white" leftArrowColor="white"></van-nav-bar>
 <demo-block title="基础用法">
-  <van-nav-bar
-    title="标题"
-    right-text="按钮"
-    left-arrow
-    bind:click-left="onClickLeft"
-    bind:click-right="onClickRight"
-  />
+  <van-nav-bar title="基础用法" bind:click-left="onClickLeft" bind:click-right="onClickRight" />
 </demo-block>
-
-<demo-block title="高级用法">
-  <van-nav-bar title="标题" left-text="返回" left-arrow>
-    <van-icon name="search" slot="right" custom-class="icon" size="18" />
-  </van-nav-bar>
+<demo-block title="左侧箭头">
+  <van-nav-bar title="基础用法" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />
 </demo-block>
+<demo-block title="纯色背景">
+  <van-nav-bar title="标题" left-arrow customStyle="background: red;" titleColor="white" leftTextColor="white" leftArrowColor="white"></van-nav-bar>
+</demo-block>
+<demo-block title="渐变背景">
+  <van-nav-bar title="标题" left-arrow customStyle="background: linear-gradient(135deg, #49B2FD 0%, #4991FD 100%);" titleColor="white" leftTextColor="white" leftArrowColor="white"></van-nav-bar>
+</demo-block>
+<demo-block title="无分割线">
+  <view style="background: #4991FD;padding-bottom: 20px;">
+    <van-nav-bar title="无分割线" left-arrow border="{{false}}" customStyle="background: #4991FD;padding-bottom: 20px;" titleColor="white" leftTextColor="white" leftArrowColor="white"></van-nav-bar>
+  </view>
+</demo-block>
+<view class="fix-btn" bind:tap="onClickShow">切换</view>
+<van-action-sheet show="{{ showActionSheet }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />

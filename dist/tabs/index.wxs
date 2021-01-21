@@ -106,10 +106,31 @@ function lineStyle(data) {
     .join(';');
 }
 
+function isNumber(i) {
+  if (typeof i === 'number') return true;
+  return !isNaN(i);
+}
+
+function bigThan99(num) {
+  return num > 99 ? '...' : num;
+}
+
+function flexStyle(jusitifyContent = 'flex-start') {
+  return 'justify-content: ' + jusitifyContent + ';';
+}
+
+function isSpaceAround(jusitifyContent) {
+  return jusitifyContent.indexOf('space-around') > -1 ? 'flex:1;' : '';
+}
+
 module.exports = {
   tabClass: tabClass,
   tabStyle: tabStyle,
   trackStyle: trackStyle,
   lineStyle: lineStyle,
   tabCardTypeBorderStyle: tabCardTypeBorderStyle,
+  isNumber: isNumber,
+  bigThan99: bigThan99,
+  flexStyle: flexStyle,
+  isSpaceAround: isSpaceAround,
 };

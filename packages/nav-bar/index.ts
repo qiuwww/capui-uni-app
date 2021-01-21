@@ -30,6 +30,18 @@ VantComponent({
       type: Boolean,
       value: true,
     },
+    titleColor: {
+      type: String,
+      value: '#262626',
+    },
+    leftTextColor: {
+      type: String,
+      value: '#262626',
+    },
+    leftArrowColor: {
+      type: String,
+      value: '#262626',
+    },
   },
 
   data: {

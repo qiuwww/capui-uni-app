@@ -10,6 +10,7 @@ VantComponent({
     disabled: Boolean,
     readonly: Boolean,
     inputAlign: String,
+    inputRadius: String,
     showAction: Boolean,
     useActionSlot: Boolean,
     useLeftIconSlot: Boolean,
@@ -29,13 +30,17 @@ VantComponent({
       type: String,
       value: '#ffffff',
     },
+    inputBackground: {
+      type: String,
+      value: '#f5f5f5',
+    },
     maxlength: {
       type: Number,
       value: -1,
     },
     shape: {
       type: String,
-      value: 'square',
+      value: 'round',
     },
     clearable: {
       type: Boolean,

@@ -1,4 +1,9 @@
 let queue = [];
+var CustomButtonType;
+(function (CustomButtonType) {
+  CustomButtonType['primary'] = 'primary';
+  CustomButtonType['default'] = 'default';
+})(CustomButtonType || (CustomButtonType = {}));
 const defaultOptions = {
   show: false,
   title: '',
@@ -20,6 +25,7 @@ const defaultOptions = {
   showCancelButton: false,
   closeOnClickOverlay: false,
   confirmButtonOpenType: '',
+  footerDirection: 'row',
 };
 let currentOptions = Object.assign({}, defaultOptions);
 function getContext() {
