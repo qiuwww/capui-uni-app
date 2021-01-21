@@ -6,7 +6,7 @@
     type="mini"
     bind:close="toggleActionSheet1"
   >
-    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet1"/>
+    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet1" size="24px"/>
     <view slot="headRight" bind:tap="showSummary">使用说明</view>
     <view>我是内容，不爽自己改</view>
   </van-modal-sheet>
@@ -34,7 +34,7 @@
     show="{{ show4 }}"
     bind:close="toggleActionSheet4"
   >
-    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet4"/>
+    <van-icon slot="headLeft" name="cross" bind:click="toggleActionSheet4" size="24px"/>
     <view class="custom-container">
       <view>我是一段文案,Hello World，you can edit it</view>
       <view>我是一段文案,Hello World，you can edit it</view>
