@@ -31,21 +31,22 @@ export default {
     },
 
     simulator() {
-      let prefix = '';
+      let prefix = 'https://capsule-mobile.91jkys.com';
       const { path } = this.$route.meta;
 
-      if (
-        location.hostname === '0.0.0.0' ||
-        location.hostname === 'localhost'
-      ) {
-        prefix = 'https://youzan.github.io';
-      }
+      // if (
+      //   location.hostname === '0.0.0.0' ||
+      //   location.hostname === 'localhost'
+      // ) {
+      //   prefix = 'https://youzan.github.io';
+      // }
 
       if (!UNSHARED.includes(path)) {
-        return `${prefix}/vant/mobile.html?hide_nav=1&weapp=1#/zh-CN/${path}`;
+        return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
       }
 
-      return `./preview.html#${path}`;
+      return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
+      // return `./preview.html#${path}`;
     },
   },
 
