@@ -1,101 +1,31 @@
-
-<view style="font-size: 16px; font-weight:600; padding: 12px 16px">基础样式，符合设计规范，优先使用</view>
-
-  <demo-block title="基本用法">
-    <van-search
-      model:value="{{ value }}"
-      placeholder="请输入搜索关键词"
-      bind:search="onSearch"
-    />
-  </demo-block>
-
-  <demo-block title="事件监听">
-    <van-search
-      model:value="{{ value }}"
-      show-action
-      placeholder="请输入搜索关键词"
-      bind:search="onSearch"
-      bind:cancel="onCancel"
-      bind:clear="onClear"
-    />
-  </demo-block>
-
-  <demo-block title="自定义背景色">
-    <van-search
-      model:value="{{ value }}"
-      shape="round"
-      background="#1E8DFF"
-      input-background="#ffffff"
-      placeholder="请输入搜索关键词"
-    />
-  </demo-block>
-  <demo-block title="设置透明度，使用Rgba">
-    <view style="background: #1E8DFF">
-      <van-search
-        model:value="{{ value }}"
-        shape="round"
-        input-background="#ffffff"
-        background="rgba(255, 255, 255, 0.7)"
-        placeholder="请输入搜索关键词"
-      />
-    </view>
-  </demo-block>
-
-  <demo-block title="自定义图标">
-    <van-search
-      model:value="{{ value }}"
-      shape="round"
-      background="#1E8DFF"
-      left-icon="location-o"
-      placeholder="请输入搜索关键词"
-    />
-  </demo-block>
-
-  <demo-block title="自定义Input圆角大小, 8px">
-    <van-search
-      model:value="{{ value }}"
-      input-radius="8px"
-      background="#1E8DFF"
-      left-icon="location-o"
-      placeholder="请输入搜索关键词"
-    />
-  </demo-block>
-
-
-
-
-<view style="font-size: 16px; font-weight:600; padding: 12px 16px; margin-top: 36px">以下额外支持功能，但未经过设计规范</view>
-  <demo-block title="搜索框内容对齐">
-    <van-search
-      model:value="{{ value }}"
-      input-align="center"
-      placeholder="请输入搜索关键词"
-    />
-  </demo-block>
-
-  <demo-block title="禁用搜索框">
-    <van-search
-      disabled
-      model:value="{{ value }}"
-      placeholder="请输入搜索关键词"
-    />
-  </demo-block>
-
-  <demo-block title="自定义按钮">
-    <van-search
-      model:value="{{ value }}"
-      label="地址"
-      shape="round"
-      placeholder="请输入搜索关键词"
-      use-action-slot
-      bind:search="onSearch"
-    >
-      <view slot="action" bind:tap="onClick">搜索</view>
-    </van-search>
-  </demo-block>
-
-
-
-
-
-
+<demo-block title="基本用法">
+  <van-search model:value="{{ value }}" placeholder="请输入搜索关键词" bind:search="onSearch" />
+</demo-block>
+<demo-block title="事件监听">
+  <van-search model:value="{{ value }}" show-action placeholder="请输入搜索关键词" bind:search="onSearch" bind:cancel="onCancel" bind:clear="onClear" />
+</demo-block>
+<demo-block title="自定义背景色">
+  <van-search model:value="{{ value }}" shape="round" background="#1E8DFF" input-background="#ffffff" placeholder="请输入搜索关键词" />
+</demo-block>
+<demo-block title="设置透明度，使用Rgba">
+  <view style="background: #1E8DFF">
+    <van-search model:value="{{ value }}" shape="round" input-background="#ffffff" background="rgba(255, 255, 255, 0.7)" placeholder="请输入搜索关键词" />
+  </view>
+</demo-block>
+<demo-block title="自定义图标">
+  <van-search model:value="{{ value }}" shape="round" background="#1E8DFF" left-icon="location-o" placeholder="请输入搜索关键词" />
+</demo-block>
+<demo-block title="自定义Input圆角大小, 8px">
+  <van-search model:value="{{ value }}" input-radius="8px" background="#1E8DFF" left-icon="location-o" placeholder="请输入搜索关键词" />
+</demo-block>
+<demo-block title="搜索框内容对齐">
+  <van-search model:value="{{ value }}" input-align="center" placeholder="请输入搜索关键词" />
+</demo-block>
+<demo-block title="禁用搜索框">
+  <van-search disabled model:value="{{ value }}" placeholder="请输入搜索关键词" />
+</demo-block>
+<demo-block title="自定义按钮">
+  <van-search model:value="{{ value }}" label="地址" shape="round" placeholder="请输入搜索关键词" use-action-slot bind:search="onSearch">
+    <view slot="action" bind:tap="onClick">搜索</view>
+  </van-search>
+</demo-block>

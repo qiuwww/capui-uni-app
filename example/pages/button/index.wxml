@@ -34,7 +34,7 @@
 <demo-block title="图标按钮" padding>
   <van-button type="primary" icon="star-o" class="demo-margin-right" />
   <van-button type="primary" icon="star-o" class="demo-margin-right">默认按钮</van-button>
-  <van-button plain type="primary" class="demo-margin-right" icon="https://img.yzcdn.cn/vant/logo.png">
+  <van-button plain type="primary" class="demo-margin-right" icon="https://capsule.91jkys.com/cap-logo-blk.png">
     按钮
   </van-button>
   <van-button type="primary" icon="star-o" size="middle" class="demo-margin-right">中型按钮</van-button>

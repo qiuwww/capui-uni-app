@@ -36,7 +36,6 @@
     <van-icon slot="right-icon" name="search" />
   </van-cell>
 </demo-block>
-<van-divider contentPosition="center">UI走查分割线</van-divider>
 <demo-block title="单元选择大小">
   <van-cell-group>
     <van-cell title="单元选择" value="辅助文案" size="large" />
