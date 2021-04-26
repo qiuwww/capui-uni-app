@@ -98,10 +98,11 @@ VantComponent({
         this.children.map(
           (anchor: WechatMiniprogram.Component.TrivialInstance) =>
             getRect.call(anchor, '.van-index-anchor-wrapper').then((rect) => {
-              Object.assign(anchor, {
-                height: rect.height,
-                top: rect.top + this.scrollTop,
-              });
+              rect &&
+                Object.assign(anchor, {
+                  height: rect.height,
+                  top: rect.top + this.scrollTop,
+                });
             })
         )
       );
@@ -109,19 +110,21 @@ VantComponent({
 
     setListRect() {
       return getRect.call(this, '.van-index-bar').then((rect) => {
-        Object.assign(this, {
-          height: rect.height,
-          top: rect.top + this.scrollTop,
-        });
+        rect &&
+          Object.assign(this, {
+            height: rect.height,
+            top: rect.top + this.scrollTop,
+          });
       });
     },
 
     setSiderbarRect() {
       return getRect.call(this, '.van-index-bar__sidebar').then((res) => {
-        this.sidebar = {
-          height: res.height,
-          top: res.top,
-        };
+        res &&
+          (this.sidebar = {
+            height: res.height,
+            top: res.top,
+          });
       });
     },
 
