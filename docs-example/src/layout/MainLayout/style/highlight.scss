@@ -1,0 +1,80 @@
+@import './variable';
+
+code {
+  position: relative;
+  margin-top: 20px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  overflow-x: auto;
+  line-height: 24px;
+  word-break: break-all;
+  white-space: pre-wrap;
+  color: $van-doc-code-color;
+  font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
+}
+
+pre {
+  margin: 0;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fff;
+}
+
+.hljs-subst {
+  color: $van-doc-code-color;
+}
+
+.hljs-string,
+.hljs-meta,
+.hljs-symbol,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition {
+  color: #5758bb;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #999;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-bullet,
+.hljs-link {
+  color: #07c160;
+}
+
+.hljs-deletion,
+.hljs-variable {
+  color: #88f;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-doctag,
+.hljs-type,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-strong {
+  color: #1889f9;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-attribute {
+  color: #e6550d;
+}

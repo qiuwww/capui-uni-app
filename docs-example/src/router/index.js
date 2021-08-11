@@ -2,6 +2,12 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
+import slideNav from "./slide-nav";
+
+import registerRoute from "./register-route";
+
+console.log("slideNav", slideNav, registerRoute(slideNav));
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -19,6 +25,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  ...registerRoute(slideNav),
 ];
 
 const router = new VueRouter({

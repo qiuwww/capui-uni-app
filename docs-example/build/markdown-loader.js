@@ -1,5 +1,10 @@
 const loaderUtils = require("loader-utils");
 const MarkdownIt = require("markdown-it");
+// 处理锚点
+const markdownItAnchor = require("markdown-it-anchor");
+// 用于获取拼音https://www.npmjs.com/package/transliteration
+const { slugify } = require("transliteration");
+
 module.exports = function loader(source) {
   const loaderContext = this;
   const { resourcePath, resourceQuery } = loaderContext;
@@ -12,19 +17,24 @@ module.exports = function loader(source) {
     breaks: true,
     linkify: true,
     ...options.markdownConfig,
+  }).use(markdownItAnchor, {
+    level: 2,
+    slugify,
   });
-
-  // 获取options参数
-  console.log("##################md-loader：", source);
-
-  console.log("resourcePath, resourceQuery", resourceQuery);
-
-  console.log("##################options", options);
 
   var mtParse = markdownItContent.render("# markdown-it rulezz!");
   var mtParse2 = markdownItContent.render(source);
 
-  console.log("markdownItContent", markdownItContent, mtParse);
+  // 获取options参数
+  // console.log("##################md-loader：", source);
+
+  // console.log("resourcePath, resourceQuery", resourceQuery);
+
+  // console.log("##################options", options);
+
+  // console.log("mtParse", mtParse);
+
+  console.log("mtParse2", mtParse2);
 
   // the final return
   const ret = `

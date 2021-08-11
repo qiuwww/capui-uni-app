@@ -26,9 +26,11 @@
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^9.5.0",
     "markdown-it": "^12.2.0",
+    "markdown-it-anchor": "^8.1.2",
     "prettier": "^2.2.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "transliteration": "^2.2.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
