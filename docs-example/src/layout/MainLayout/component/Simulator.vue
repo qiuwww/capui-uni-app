@@ -1,87 +1,78 @@
 <template>
-  <div :class="['van-doc-simulator', { 'van-doc-simulator-fixed': isFixed }]">
-    <iframe ref="iframe" :src="src" :style="simulatorStyle" frameborder="0" />
-  </div>
+  <section class="simulator">
+    <div class="model-content">
+      <iframe
+        scrolling="auto"
+        frameborder="0"
+        :src="src"
+        class="iframe"
+      ></iframe>
+    </div>
+  </section>
 </template>
 
 <script>
+const iframeBaseSrc = "http://localhost:8181/#/";
+
 export default {
-  name: "van-doc-simulator",
-
-  props: {
-    src: String,
-  },
-
-  data() {
-    return {
-      scrollTop: window.scrollY,
-      windowHeight: window.innerHeight,
-    };
-  },
-
-  mounted() {
-    window.addEventListener("scroll", () => {
-      this.scrollTop = window.scrollY;
-    });
-    window.addEventListener("resize", () => {
-      this.windowHeight = window.innerHeight;
-    });
-  },
-
-  computed: {
-    isFixed() {
-      return this.scrollTop > 60;
-    },
-
-    simulatorStyle() {
-      const height = Math.min(640, this.windowHeight - 90);
-      return {
-        height: height + "px",
-      };
-    },
-  },
+  props: ["src"],
 };
 </script>
 
-<style lang="postcss">
+<style lang="scss" scoped>
 @import "../style/variable";
 
-.van-doc-simulator {
+.simulator {
+  // position: absolute;
+  // border-radius: 6px;
+  // background: #fafafa;
+  // box-sizing: border-box;
+  // right: $doc-padding;
+
+  // box-sizing: border-box;
+  // // width: 500px;
+  // background-color: thistle;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // // padding: 20px 0;
+
   z-index: 1;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   border-radius: 6px;
-  background: #fafafa;
+  // background: #fafafa;
   box-sizing: border-box;
-  right: $van-doc-padding;
-  width: $van-doc-simulator-width;
-  min-width: $van-doc-simulator-width;
-  top: calc($van-doc-padding + $van-doc-header-top-height);
-  box-shadow: #ebedf0 0 4px 12px;
+  right: $doc-padding;
+  width: $doc-simulator-width;
+  min-width: $doc-simulator-width;
+  top: $doc-padding + $doc-header-top-height;
+  // box-shadow: #ebedf0 0 4px 12px;
 
-  @media (max-width: 1300px) {
-    width: $van-doc-simulator-small-width;
-    min-width: $van-doc-simulator-small-width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .model-content {
+    box-sizing: border-box;
+    // border-bottom-left-radius: 30px;
+    font-size: 16px;
+    // background-color: #fff;
+    width: 300px;
+    height: 609px;
+    // background-color: red;
+
+    background-image: url(https://gitee.com/qiuwww/imgs/raw/master/md/iPhoneX_model.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    border-radius: 30px;
+    padding: 43px 23px 38px 16px;
   }
-
-  @media (max-width: 1100px) {
-    left: 750px;
-    right: auto;
-  }
-
-  @media (min-width: $van-doc-row-max-width) {
-    right: 50%;
-    margin-right: calc(-$van-doc-row-max-width/2 + 40px);
-  }
-
-  &-fixed {
-    position: fixed;
-    top: $van-doc-padding;
-  }
-
   iframe {
+    height: 100%;
     width: 100%;
-    display: block;
+    border-radius: 30px;
   }
 }
 </style>

@@ -4,12 +4,11 @@ const markdownItAnchor = require("markdown-it-anchor");
 const frontMatter = require("front-matter");
 const highlight = require("./highlight");
 const linkOpen = require("./link-open");
-const cardWrapper = require("./card-wrapper");
+const htmlTransform = require("./html-transform");
 const { slugify } = require("transliteration");
 
-// 这里给处理成vue组件
 function wrapper(content) {
-  content = cardWrapper(content);
+  content = htmlTransform(content);
   content = escape(content);
 
   return `
@@ -49,6 +48,11 @@ export default {
 const parser = new MarkdownIt({
   html: true,
   highlight,
+  linkify: true,
+  xhtmlOut: true,
+  breaks: true,
+  // 必须下边的值有的情况下highlight才有效果
+  langPrefix: "hljs-",
 }).use(markdownItAnchor, {
   level: 2,
   slugify,
@@ -74,8 +78,6 @@ module.exports = function (source) {
   if (options.linkOpen) {
     linkOpen(parser);
   }
-
-  console.log("$$$$$$", source, parser.render(source));
 
   return options.wrapper(parser.render(source), fm);
 };

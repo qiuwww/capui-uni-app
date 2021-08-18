@@ -134,6 +134,9 @@
                 "enable" : false
             }
         },
-        "title" : "uView UI"
+        "title" : "uView UI",
+        "devServer" : {
+            "port" : 8181
+        }
     }
 }

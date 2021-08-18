@@ -1,8 +1,8 @@
 <template>
-  <div class="van-doc-header">
-    <div class="van-doc-row">
-      <div class="van-doc-header__top">
-        <a class="van-doc-header__logo" :href="config.logo.href">
+  <div class="doc-header">
+    <div class="doc-row">
+      <div class="doc-header__top">
+        <a class="doc-header__logo" :href="config.logo.href">
           <img :src="config.logo.image" />
           <span>{{ config.logo.title }}</span>
         </a>
@@ -13,36 +13,28 @@
           :search-config="searchConfig"
         />
 
-        <ul class="van-doc-header__top-nav">
+        <ul class="doc-header__top-nav">
           <li
             v-for="item in config.nav.logoLink"
-            class="van-doc-header__top-nav-item"
+            class="doc-header__top-nav-item"
           >
-            <a
-              class="van-doc-header__logo-link"
-              target="_blank"
-              :href="item.url"
-            >
+            <a class="doc-header__logo-link" target="_blank" :href="item.url">
               <img :src="item.image" />
             </a>
           </li>
 
-          <li
-            ref="version"
-            v-if="versions"
-            class="van-doc-header__top-nav-item"
-          >
+          <li ref="version" v-if="versions" class="doc-header__top-nav-item">
             <span
-              class="van-doc-header__cube van-doc-header__version"
+              class="doc-header__cube doc-header__version"
               @click="toggleVersionPop"
             >
               {{ versions[0] }}
 
-              <transition name="van-doc-dropdown">
-                <div v-if="showVersionPop" class="van-doc-header__version-pop">
+              <transition name="doc-dropdown">
+                <div v-if="showVersionPop" class="doc-header__version-pop">
                   <div
                     v-for="item in versions"
-                    class="van-doc-header__version-pop-item"
+                    class="doc-header__version-pop-item"
                     @click="onSwitchVersion(item)"
                   >
                     {{ item }}
@@ -52,8 +44,8 @@
             </span>
           </li>
 
-          <li v-if="config.nav.lang" class="van-doc-header__top-nav-item">
-            <a class="van-doc-header__cube" :href="langLink">
+          <li v-if="config.nav.lang" class="doc-header__top-nav-item">
+            <a class="doc-header__cube" :href="langLink">
               {{ config.nav.lang.text }}
             </a>
           </li>
@@ -67,7 +59,7 @@
 import SearchInput from "./SearchInput";
 
 export default {
-  name: "van-doc-header",
+  name: "doc-header",
 
   components: {
     SearchInput,
@@ -127,7 +119,7 @@ export default {
 <style lang="scss">
 @import "../style/variable";
 
-.van-doc-header {
+.doc-header {
   width: 100%;
   user-select: none;
   box-shadow: 0 4px 12px #ebedf0;
@@ -136,9 +128,9 @@ export default {
     display: flex;
     align-items: center;
     background-color: #001938;
-    padding: 0 $van-doc-padding;
-    height: $van-doc-header-top-height;
-    line-height: $van-doc-header-top-height;
+    padding: 0 $doc-padding;
+    height: $doc-header-top-height;
+    line-height: $doc-header-top-height;
 
     &-nav {
       flex: 1;
@@ -213,7 +205,7 @@ export default {
         transition: 0.2s;
 
         &:hover {
-          color: $van-doc-blue;
+          color: $doc-blue;
         }
       }
     }
@@ -253,7 +245,7 @@ export default {
   }
 }
 
-.van-doc-dropdown {
+.doc-dropdown {
   &-enter,
   &-leave-active {
     opacity: 0;

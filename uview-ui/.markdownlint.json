@@ -1,0 +1,52 @@
+{
+  "no-inline-html": {
+    "allowed_elements": [
+      "a",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "HR",
+      "p",
+      "img",
+      "span",
+      "details",
+      "summary",
+      "pre",
+      "code",
+      "script",
+      "form",
+      "area",
+      "br",
+      "u",
+      "div"
+    ]
+  },
+  "MD033": {
+    "allowed_elements": [
+      "a",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "HR",
+      "p",
+      "img",
+      "span",
+      "details",
+      "summary",
+      "pre",
+      "code",
+      "script",
+      "form",
+      "area",
+      "br",
+      "u"
+    ]
+  },
+  "line_length": false
+}

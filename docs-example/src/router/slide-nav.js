@@ -1,59 +1,97 @@
-// import docConfig from "./doc.config";
-
-// 左侧导航与顶部导航的配置
+// 用来渲染左侧nav，用来生成路由
+// 三级结构，保持两边结构一致
 export default [
   {
-    name: "开发指南",
+    title: "开发指南",
+    path: "/guide",
     children: [
       {
-        path: "/intro",
-        title: "介绍",
-        md: true,
+        children: [
+          {
+            path: "/intro",
+            title: "介绍",
+            views: "guide",
+          },
+          {
+            path: "/install",
+            title: "安装",
+            views: "guide",
+            example: "pages/componentsC/button/index",
+          },
+          {
+            path: "/quickstart",
+            title: "快速上手",
+            views: "guide",
+          },
+          {
+            path: "/changelog",
+            title: "更新日志",
+            views: "guide",
+          },
+          // {
+          //   path: "/common",
+          //   title: "内置样式",
+          //   views: "guide",
+          // },
+          {
+            path: "/custom-style",
+            title: "样式覆盖",
+            views: "guide",
+          },
+          {
+            path: "/theme",
+            title: "定制主题",
+            views: "guide",
+          },
+          {
+            path: "/demo",
+            title: "demo",
+            views: "guide",
+          },
+        ],
       },
-      {
-        path: "/quickstart",
-        title: "快速上手",
-        md: true,
-      },
-      {
-        path: "/changelog",
-        title: "更新日志",
-        md: true,
-      },
-      // {
-      //   path: "/common",
-      //   title: "内置样式",
-      // },
-      // {
-      //   path: "/custom-style",
-      //   title: "样式覆盖",
-      //   md: true,
-      // },
-      // {
-      //   path: "/theme",
-      //   title: "定制主题",
-      //   md: true,
-      // },
     ],
   },
-  // {
-  //   name: "基础组件",
-  //   groups: components,
-  // },
-  // {
-  //   name: "表单组件",
-  //   groups: components,
-  // },
-  // ...components,
+
   {
-    name: "基础组件",
-    icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
+    title: "组件",
+    path: "/component",
     children: [
       {
-        path: "/u-button",
-        title: "Button 按钮",
-        desc: "一期",
-        demoPath: "pages/componentsC/button/index",
+        title: "基础组件",
+        path: "/base",
+        icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
+        children: [
+          {
+            path: "/color",
+            title: "Color 色彩",
+            desc: "一期",
+            views: "components",
+            example: "pages/componentsC/button/index",
+          },
+          {
+            path: "/u-button",
+            title: "Button 按钮",
+            desc: "一期",
+            example: "pages/componentsC/button/index",
+          },
+        ],
+      },
+      {
+        title: "表单组件",
+        path: "/form",
+        icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
+        children: [
+          {
+            path: "/u-input",
+            title: "Input 输入框",
+          },
+          {
+            path: "/u-form",
+            title: "Form 表单",
+            example: "pages/componentsA/form/index",
+          },
+        ],
       },
     ],
   },
@@ -73,6 +111,12 @@ const config = [
       {
         path: "/u-cell",
         title: "Cell 单元格",
+        desc: "一期",
+        demoPath: "pages/componentsC/cell/index",
+      },
+      {
+        path: "/u-row",
+        title: "Cell 单元格222",
         desc: "一期",
         demoPath: "pages/componentsC/cell/index",
       },

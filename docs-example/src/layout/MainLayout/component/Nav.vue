@@ -1,34 +1,17 @@
 <template>
-  <div class="van-doc-nav" :style="style">
-    <div
-      class="van-doc-nav__item"
-      v-for="(item, index) in navConfig"
-      :key="index"
-    >
-      <van-doc-nav-link :item="item" :base="base" />
-      <div v-if="item.children">
-        <div
-          class="nav-item"
-          v-for="(navItem, index) in item.children"
-          :key="index"
-        >
-          <van-doc-nav-link :item="navItem" :base="base" />
-        </div>
-      </div>
-      <div
-        v-if="item.groups"
-        v-for="(group, index) in item.groups"
-        :key="index"
-      >
-        <div class="van-doc-nav__group-title">{{ group.groupName }}</div>
+  <div class="doc-nav" :style="style">
+    <div class="doc-nav__item" v-for="group in navConfig" :key="group.title">
+      <NavLink :title="group.title" :path="group.path" :base="base" />
+
+      <div v-for="(subGroup, index) in group.children" :key="index">
+        <div class="doc-nav__group-title">{{ subGroup.title }}</div>
         <div>
           <div
             :key="index"
-            class="van-doc-nav__subitem"
-            v-for="(navItem, index) in group.list"
-            v-if="!navItem.disabled"
+            class="doc-nav__subitem"
+            v-for="(navItem, index) in subGroup.children"
           >
-            <van-doc-nav-link :item="navItem" :base="base" />
+            <NavLink :title="navItem.title" :path="navItem.path" :base="base" />
           </div>
         </div>
       </div>
@@ -40,10 +23,10 @@
 import NavLink from "./NavLink.vue";
 
 export default {
-  name: "van-doc-nav",
+  name: "doc-nav",
 
   components: {
-    [NavLink.name]: NavLink,
+    NavLink,
   },
 
   props: {
@@ -71,6 +54,8 @@ export default {
   },
 
   created() {
+    console.log("Nav", this.navConfig);
+
     window.addEventListener("scroll", this.onScroll);
     this.onScroll();
   },
@@ -87,7 +72,7 @@ export default {
 <style lang="scss">
 @import "../style/variable";
 
-.van-doc-nav {
+.doc-nav {
   left: 0;
   top: 60px;
   bottom: 0;
@@ -96,14 +81,14 @@ export default {
   overflow-y: scroll;
   padding: 25px 0 75px;
   background-color: #fff;
-  min-width: $van-doc-nav-width;
-  max-width: $van-doc-nav-width;
+  min-width: $doc-nav-width;
+  max-width: $doc-nav-width;
   box-shadow: 0 8px 12px #ebedf0;
-  border-right: 1px solid $van-doc-border-color;
+  border-right: 1px solid $doc-border-color;
 
-  @media (min-width: $van-doc-row-max-width) {
+  @media (min-width: $doc-row-max-width) {
     left: 50%;
-    margin-left: calc(-$van-doc-row-max-width/2);
+    margin-left: -($doc-row-max-width * 0.5);
   }
 
   &::-webkit-scrollbar {
@@ -128,12 +113,12 @@ export default {
       display: block;
       color: #455a64;
       font-size: 16px;
-      padding: 10px 10px 10px $van-doc-padding;
+      padding: 10px 10px 10px $doc-padding;
       line-height: 24px;
       transition: all 0.3s;
 
       &.active {
-        color: $van-doc-blue;
+        color: $doc-blue;
       }
     }
   }
@@ -149,7 +134,7 @@ export default {
       font-size: 14px;
 
       &:hover {
-        color: $van-doc-blue;
+        color: $doc-blue;
       }
     }
 
@@ -161,8 +146,8 @@ export default {
   &__group-title {
     font-size: 12px;
     line-height: 40px;
-    padding-left: $van-doc-padding;
-    color: $van-doc-text-light-blue;
+    padding-left: $doc-padding;
+    color: $doc-text-light-blue;
   }
 
   @media (max-width: 1300px) {

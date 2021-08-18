@@ -1,12 +1,12 @@
 <template>
-  <section class="van-doc-demo-section" :class="`demo-${demoName}`" :style="style">
+  <section class="doc-demo-section" :class="`demo-${demoName}`" :style="style">
     <slot />
   </section>
 </template>
 
 <script>
 export default {
-  name: 'van-doc-demo-section',
+  name: 'doc-demo-section',
 
   props: {
     name: String,
@@ -39,7 +39,7 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.van-doc-demo-section {
+.doc-demo-section {
   min-height: 100vh;
   padding-bottom: 20px;
   box-sizing: border-box;
@@ -52,8 +52,8 @@ export default {
     font-weight: normal;
     text-transform: capitalize;
 
-    + .van-doc-demo-block {
-      .van-doc-demo-block__title {
+    + .doc-demo-block {
+      .doc-demo-block__title {
         padding-top: 0;
       }
     }

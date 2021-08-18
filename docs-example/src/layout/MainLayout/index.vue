@@ -1,25 +1,24 @@
 <template>
-  <div class="van-doc">
+  <div class="doc">
     <Header
       :lang="lang"
       :github="github"
       :versions="versions"
-      :config="config.header"
+      :config="docsConfig.header"
       :search-config="searchConfig"
       @switch-version="$emit('switch-version', $event)"
     />
 
     <Nav :nav-config="slideNav" :base="base" />
 
-    <Container :has-simulator="!!(simulator || simulators.length)">
+    <Container :has-simulator="!!simulator">
       <Content>
-        <slot />
+        <router-view />
       </Content>
     </Container>
 
-    <!-- <van-doc-simulator v-if="simulator" :src="simulator" />
-
-    <van-doc-simulator
+    <Simulator v-if="simulator" :src="simulator" />
+    <!-- <doc-simulator
       v-for="(url, index) in simulators"
       v-show="index === currentSimulator"
       :src="url"
@@ -36,54 +35,66 @@ import Nav from "./component/Nav";
 import Header from "./component/Header";
 import Content from "./component/Content";
 import Container from "./component/Container";
-// import Simulator from "./component/Simulator";
+import Simulator from "./component/Simulator";
 // import DemoBlock from "./component/DemoBlock";
 // import DemoSection from "./component/DemoSection";
 
+// import MainLayout from "@/layout/MainLayout/index.vue";
+import docsConfig, { github, versions } from "@/docs.config";
+import slideNav from "@/router/slide-nav";
+
 export default {
-  name: "van-doc",
+  name: "MainLayout",
   components: {
     Header,
     Nav,
     Container,
     Content,
-  },
-  props: {
-    lang: String,
-    github: String,
-    versions: Array,
-    searchConfig: Object,
-    currentSimulator: Number,
-    simulator: String,
-    config: {
-      type: Object,
-      required: true,
-    },
-    simulators: {
-      type: Array,
-      default: () => [],
-    },
-    base: {
-      type: String,
-      default: "",
-    },
-    slideNav: {
-      type: Array,
-      default: () => [],
-    },
+    Simulator,
   },
 
   data() {
     return {
+      lang: "zh-cn",
+      searchConfig: {},
+      base: "",
       nav: [],
       currentPath: null,
       leftNav: null,
       rightNav: null,
+      docsConfig,
+      github,
+      versions,
+      slideNav,
+      currentSimulator: 0,
     };
   },
 
+  computed: {
+    simulator() {
+      let prefix = "https://capsule-mobile.91jkys.com";
+      const { path, example } = this.$route.meta;
+      if (
+        location.hostname === "0.0.0.0" ||
+        location.hostname === "localhost"
+      ) {
+        // prefix = 'https://youzan.github.io';
+        prefix = "http://0.0.0.0:8181/#/";
+      }
+
+      return prefix;
+      // if (!UNSHARED.includes(path)) {
+      //   return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
+      // }
+
+      return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
+      // return `./preview.html#${path}`;
+    },
+  },
+
   watch: {
-    "$route.path"() {
+    "$route.path"(value) {
+      console.log(value);
       // this.setNav();
       // this.updateNav();
     },
@@ -144,6 +155,11 @@ export default {
             break;
         }
       });
+    },
+    onSwitchVersion(version) {
+      if (version !== pkgJson.version) {
+        location.href = `https://youzan.github.io/vant-weapp/${version}`;
+      }
     },
   },
 };

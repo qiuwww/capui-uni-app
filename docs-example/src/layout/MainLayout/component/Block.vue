@@ -1,19 +1,19 @@
 <template>
-  <div class="van-doc-block">
+  <div class="doc-block">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'van-doc-block'
+  name: 'doc-block'
 };
 </script>
 
 <style lang="postcss">
 @import '../style/variable';
 
-.van-doc-block {
+.doc-block {
   display: flex;
   margin-bottom: 20px;
 

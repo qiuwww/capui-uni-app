@@ -10,7 +10,7 @@ code {
   line-height: 24px;
   word-break: break-all;
   white-space: pre-wrap;
-  color: $van-doc-code-color;
+  color: $doc-code-color;
   font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
 }
 
@@ -26,7 +26,7 @@ pre {
 }
 
 .hljs-subst {
-  color: $van-doc-code-color;
+  color: $doc-code-color;
 }
 
 .hljs-string,

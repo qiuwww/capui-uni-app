@@ -10,28 +10,15 @@ module.exports = {
   },
 
   chainWebpack: (config, resolve) => {
+    // markdown-loader
     config.module
-      // 规则名称
       .rule("md")
-      // 匹配的方式
       .test(/\.md$/)
-
       .use("vue")
       .loader("vue-loader")
       .end()
-
-      // .use("loader2")
-      // .loader("loader2")
-      // .end()
-
-      .use("md-loader")
-      .loader(path.resolve(__dirname, "./build/markdown-loader.js"))
-      .options({
-        demoWrapperClass: "vue-demo-wrapper",
-        templateClass: "vue-demo-container",
-        descWrapperClass: "vue-demo-desc",
-        highlightClass: "vue-demo-highlight",
-      })
+      .use("markdown-loader")
+      .loader(path.resolve(__dirname, "./build/markdown-loader/index.js"))
       .end();
 
     // txt-loader
@@ -45,17 +32,3 @@ module.exports = {
       });
   },
 };
-
-// {
-//   test: /\.txt$/,
-//   use: {
-//     loader: path.resolve(__dirname, './txt-loader.js'),
-//     options: {
-//       name: 'kelly',
-//     },
-//   },
-// },
-
-// new MyPlugin({
-//   name: "MyPlugin"
-// })

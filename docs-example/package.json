@@ -1,6 +1,6 @@
 {
   "name": "docs-example",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -24,6 +24,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
+    "front-matter": "^4.0.2",
     "lint-staged": "^9.5.0",
     "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.1.2",

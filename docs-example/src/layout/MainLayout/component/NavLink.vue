@@ -1,26 +1,30 @@
 <template>
   <router-link
-    v-if="item.path"
+    v-if="path"
     active-class="active"
-    :to="base + item.path"
+    :to="base + path"
     v-html="itemName"
   />
-  <a v-else-if="item.link" :href="item.link" v-html="itemName" />
+  <!-- <a v-else-if="item.link" :href="item.link" v-html="itemName" /> -->
   <a v-else v-html="itemName" />
 </template>
 
 <script>
 export default {
-  name: "van-doc-nav-link",
+  name: "doc-nav-link",
 
   props: {
     base: String,
-    item: Object,
+    // 有path的就可以跳转
+    path: String,
+    // 展示的title
+    title: String,
   },
 
   computed: {
     itemName() {
-      const name = (this.item.title || this.item.name).split(" ");
+      // 为了处理这样的，Button 按钮，前面14px，后边13px
+      const name = this.title.split(" ");
       return `${name[0]} <span>${name.slice(1).join(" ")}</span>`;
     },
   },

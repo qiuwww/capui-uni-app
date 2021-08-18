@@ -1,18 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "@/views/Home.vue";
+import MainLayout from "@/layout/MainLayout/index.vue";
 
 import slideNav from "./slide-nav";
-
-import registerRoute from "./register-route";
-
-console.log("slideNav", slideNav, registerRoute(slideNav));
+import RegisterRoute from "./RegisterRoute";
+console.log("slideNav", slideNav);
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/home",
     name: "Home",
     component: Home,
   },
@@ -25,11 +24,20 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
-  ...registerRoute(slideNav),
+  {
+    path: "/",
+    redirect: "/docs",
+  },
+  {
+    path: "/docs",
+    name: "docs",
+    component: MainLayout,
+    children: [...new RegisterRoute(slideNav)],
+  },
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
 });

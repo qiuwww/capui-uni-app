@@ -1,12 +1,12 @@
 <template>
-  <div :class="['van-doc-content', `van-doc-content--${currentPage}`]">
+  <div :class="['doc-content', `doc-content--${currentPage}`]">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: "van-doc-content",
+  name: "DocContent",
 
   computed: {
     currentPage() {
@@ -22,13 +22,21 @@ export default {
 
 <style lang="scss">
 @import "../style/variable";
+// 这里自己定制md文件转换到html的时候的样式控制
 
-.van-doc-content {
+// md文件转换为html的过程中会添加各种标签及class等，需要这里进行样式控制
+// 这里是一个通用的处理方式
+
+.doc-content {
   flex: 1;
   position: relative;
   padding: 0 0 75px;
 
-  .card {
+  h1 {
+    font-size: 50;
+  }
+
+  .block {
     padding: 24px;
     margin-bottom: 24px;
     border-radius: 6px;
@@ -37,7 +45,7 @@ export default {
   }
 
   a {
-    color: $van-doc-blue;
+    color: $doc-blue;
   }
 
   h1,
@@ -48,22 +56,33 @@ export default {
   h6 {
     line-height: 1.5;
     font-weight: normal;
-    color: $van-doc-black;
+    color: $doc-black;
 
     &[id] {
       cursor: pointer;
+      position: relative;
+
+      &:hover:before {
+        content: "#";
+        display: inline-block;
+        color: #2d8cf0;
+        position: absolute;
+        left: -14px;
+        bottom: 0;
+        top: 0;
+      }
     }
   }
 
   h1 {
     margin: 0 0 30px;
-    font-size: 30px;
+    font-size: 26px;
     cursor: default;
   }
 
   h2 {
-    font-size: 22px;
-    margin: 45px 0 20px;
+    font-size: 20px;
+    margin: 0 0 10px;
   }
 
   h3 {
@@ -87,7 +106,7 @@ export default {
   p {
     font-size: 14px;
     line-height: 26px;
-    color: $van-doc-text-color;
+    color: $doc-text-color;
   }
 
   table {
@@ -97,7 +116,7 @@ export default {
     line-height: 1.5;
     border-radius: 6px;
     border-collapse: collapse;
-    color: $van-doc-text-color;
+    color: $doc-text-color;
 
     th {
       padding: 8px 10px;
@@ -115,7 +134,7 @@ export default {
 
     td {
       padding: 8px;
-      border-top: 1px solid $van-doc-code-background-color;
+      border-top: 1px solid $doc-code-background-color;
 
       &:first-child {
         padding-left: 0;
@@ -136,7 +155,7 @@ export default {
 
   ul li,
   ol li {
-    color: $van-doc-text-color;
+    color: $doc-text-color;
     font-size: 14px;
     line-height: 22px;
     margin: 5px 0 5px 10px;
@@ -153,7 +172,7 @@ export default {
       margin-top: 8px;
       border-radius: 50%;
       box-sizing: border-box;
-      border: 1px solid $van-doc-dark-grey;
+      border: 1px solid $doc-dark-grey;
     }
   }
 
@@ -182,10 +201,14 @@ export default {
     padding: 16px;
     margin: 20px 0 0;
     font-size: 14px;
-    border-radius: 4px;
     background-color: #ecf9ff;
     color: rgba(52, 73, 94, 0.8);
-    border-left: 5px solid #50bfff;
+    border-left: 8px solid #42b983;
+  }
+
+  // 匹配到唯一子元素
+  .block > blockquote:only-child {
+    margin: 0;
   }
 
   img {
@@ -194,6 +217,7 @@ export default {
     box-shadow: 0 2px 4px #ebedf0;
   }
 
+  // 特殊处理的部分
   &--changelog {
     strong {
       display: block;
@@ -211,6 +235,42 @@ export default {
 
       a {
         color: inherit;
+      }
+    }
+  }
+
+  // 这里处理pre>code的嵌套
+  pre.hljs > code {
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    position: relative;
+    padding: 10px;
+  }
+
+  .hljs {
+    padding: 0;
+  }
+
+  // 引用
+  .danger {
+    blockquote {
+      background-color: #ffe6e6;
+      border-color: #c00;
+      color: #4d0000;
+      p:first-child {
+        color: #c00;
+      }
+    }
+  }
+
+  .warning {
+    blockquote {
+      background-color: #fff;
+      border-color: #e7c000;
+      color: #6b5900;
+      p:first-child {
+        color: #e7c000;
+        font-weight: 600;
       }
     }
   }

@@ -1,0 +1,33 @@
+.doc-content--intro {
+  padding-top: 20px;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      text-align: center;
+      width: 100%;
+    }
+    .title {
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 60px;
+    }
+
+    .overview {
+      margin-bottom: 20px;
+      color: #455a64;
+      font-size: 15px;
+    }
+  }
+}
+
+.block {
+  h2 ~ h3 {
+    margin-top: 20px;
+  }
+}
