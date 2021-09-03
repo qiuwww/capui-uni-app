@@ -1,6 +1,8 @@
 // 引入公共基础类
+// 这里只有预设的样式，一些padding/margin，以及一些颜色值；
 @import "./libs/css/common.scss";
 @import "./libs/css/color.scss";
+// style.components，是一个混合样式方法，每个文件都会引入
 
 // 非nvue的样式
 /* #ifndef APP-NVUE */

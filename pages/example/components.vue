@@ -1,5 +1,6 @@
 <template>
 	<view class="wrap">
+    <p class="test u-font-xxs">test</p>
 		<page-nav :desc="desc" title="nav.components"></page-nav>
 		<view class="list-wrap">
 			<u-cell-group title-bg-color="rgb(243, 244, 246)" :title="getGroupTitle(item)" v-for="(item, index) in list" :key="index">

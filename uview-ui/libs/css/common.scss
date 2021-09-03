@@ -1,3 +1,4 @@
+// 这里生成的是预设的样式
 .u-relative,
 .u-rela {
 	position: relative;
@@ -115,6 +116,8 @@ text {
 	}
 }
 
+// 这里的字体设计大小有点问题，会发现设置.u-font-10和.u-font-20是一样大的，会让人很迷惑
+
 // 定义字体(px)单位，小于20都为px单位字体
 @for $i from 9 to 20 {
 	.u-font-#{$i} {
@@ -126,6 +129,13 @@ text {
 @for $i from 20 through 40 {
 	.u-font-#{$i} {
 		font-size: $i + rpx;
+	}
+}
+
+// 根据字体的意义来设置字体大小，.u-font-bg，.u-font-md
+@each $key, $value in bg 48, xl 40, lg 36, md 32, sm 28, xs 24, xxs 20  {
+  .u-font-#{$key} {
+		font-size: $value + rpx;
 	}
 }
 
@@ -145,12 +155,12 @@ text {
 		
 		@each $short, $long in l left, t top, r right, b bottom {
 			// 缩写版，结果如： u-m-l-30
-			// 定义外边距
 			.u-m-#{$short}-#{$i} {
 				margin-#{$long}: $i + rpx!important;
 			}
 			
 			// 定义内边距
+      // 文本边距使用原则
 			.u-p-#{$short}-#{$i} {
 				padding-#{$long}: $i + rpx!important;
 			}
@@ -173,4 +183,18 @@ text {
 .u-reset-nvue {
 	flex-direction: row;
 	align-items: center;
+}
+
+// 添加自定义的预设样式
+
+// 定义预设阴影
+
+// 弥散
+.u-box-shadow-dis{
+  box-shadow: 0 0 16rpx rgba(0, 0, 0, 0.1);
+}
+
+// 光源
+.u-box-shadow-light{
+  box-shadow: 0 8rpx 16rpx rgba(0, 0, 0, 0.1);
 }

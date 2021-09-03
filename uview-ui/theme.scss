@@ -11,7 +11,7 @@ $u-bg-color: #f3f4f6;
 
 $u-type-primary: #2979ff;
 $u-type-primary-light: #ecf5ff;
-$u-type-primary-disabled: #a0cfff;
+// $u-type-primary-disabled: #a0cfff;
 $u-type-primary-dark: #2b85e4;
 
 $u-type-warning: #ff9900;
@@ -36,3 +36,109 @@ $u-type-info-light: #f4f4f5;
 
 $u-form-item-height: 70rpx;
 $u-form-item-border-color: #dcdfe6;
+
+// uview-ui的自定义的变量值，如果不引用这个文件，直接使用组件，组件引用的变量就找不到，就会报错
+
+// 如下是基于设计添加的，可以在项目内直接使用
+
+// 这里的字体大小，可以通过直接使用class来控制，也可以使用变量来在scss中使用，在common.scss
+$font-size-xxs: 20rpx; // 特殊搭配图形样式，用于角标或特定场景
+$font-size-xs: 24rpx; // 提示性标题，用于辅助文案，警示文案或用于小标签字体大小
+$font-size-sm: 28rpx; // 副标题/描述文本，辅助文本，可单独使用或搭配标题使用
+$font-size-md: 32rpx; // 标题/正文/描述文本，常规文本或正文，输入文案，描述文案，首选字号
+$font-size-lg: 36rpx; // 重要标题，用于主标题或列表标题
+$font-size-xl: 40rpx; // 重要标题/独立使用，重点且突出的标题，可搭配或单独使用
+$font-size-bg: 48rpx; // 特殊标题，独立页面或结构简单数字或需强调文本
+
+// Color Palette
+$black: #000;
+$white: #fff;
+$red: #ee0a24;
+$blue: #1989fa;
+$orange: #ff976a;
+$orange-dark: #ed6a0c;
+$orange-light: #fffbe8;
+$green: #07c160;
+
+// 中性色板
+$gray-1: #ffffff; // 模块背景
+$gray-2: #f5f5f5; // 默认背景/界面背景
+$gray-3: #eeeeee; // 分割线/占位图
+$gray-4: #d9d9d9; // 边框
+$gray-5: #bfbfbf; // 暗文本/未输入
+$gray-6: #8c8c8c; // 副标题/辅助文案
+$gray-7: #595959; // 描述文本/正文
+$gray-8: #262626; // 主标题/重要标题
+
+// 品牌色，蓝色
+$primary-1: #ebf8ff; // 背景
+$primary-2: #c2e9ff;
+$primary-3: #99d6ff;
+$primary-4: #70c1ff;
+$primary-5: #47a9ff; // 点击
+$primary-6: #1e8dff; // 默认
+$primary-7: #0f6dd9;
+$primary-8: #044fb3;
+$primary-9: #00388c;
+$primary-10: #002566;
+
+// $secondary-color:
+// 辅色
+$secondary-1: #fff7e6; // 背景
+$secondary-2: #ffdfa3;
+$secondary-3: #ffcc7a;
+$secondary-4: #ffb752;
+$secondary-5: #ff9f29;
+$secondary-6: #ff8200; // 默认
+$secondary-7: #d96900; // 点击
+$secondary-8: #b35000;
+$secondary-9: #8c3a00;
+$secondary-10: #8c3a00;
+
+
+// Component Colors
+$text-color: $gray-7;
+$active-color: $gray-2;
+$active-opacity: 0.7;
+$disabled-opacity: 0.45;
+$background-color: $gray-2;
+$background-color-light: #fafafa;
+$text-link-color: #576b95;
+
+$primary-color: $primary-6; // 主色
+$primary-color-disable: $primary-1;
+$secondary-color: $secondary-6; // 辅色
+
+// 功能色 ，跟设计师沟通功能色的确定可能不在颜色的10个色阶中，所以有的颜色是直接写死了颜色的
+$link-color: $primary-color;
+$link-bg-color: $primary-1;
+
+$warning-color: $secondary-color;
+$warning-bg-color: $secondary-1;
+
+$success-color: #52c41a;
+$success-bg-color: #f6ffed;
+
+$error-color: #ff4e47;
+$error-bg-color: #ffeeeb;
+
+$dot-bg-color: #fa4b4b;
+
+// Gradient Colors
+$gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+$gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+
+// 字体颜色， 
+$text-primary-color: $gray-8; // 主标题/重要标题
+$text-default-color: $gray-7; // 常规文本/辅助文本/描述文本/正文
+$text-sub-title-color: $gray-6; // 副标题/次级标题
+$text-disable-color: $gray-5; // 暗文本/未输入
+
+// 新增
+
+// button
+$u-type-primary-dark-hover: $primary-7;
+$u-type-primary-disabled: rgba($primary-6, $disabled-opacity);
+
+$u-type-default: $primary-6;
+$u-type-default-tap: $primary-1;

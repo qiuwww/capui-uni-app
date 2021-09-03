@@ -3,7 +3,9 @@
 		<view class="u-demo-wrap">
 			<view class="u-demo-title">演示效果</view>
 			<view class="u-demo-area">
-				<u-button @click="btnClick" data-name="3333" :loading="loading" :plain="plain" :shape="shape" :size="size" :ripple="ripple" :hairLine="hairLine" :type="type">山川异域，风月同天</u-button>
+				<u-button @click="btnClick" data-name="3333" :loading="loading" :plain="plain" :shape="shape" :size="size" :ripple="ripple" :hairLine="hairLine" :type="type" :disabled="disabled">
+          <u-icon v-if="isShowIcon" name="checkbox-mark"></u-icon>
+          山川异域，风月同天</u-button>
 			</view>
 		</view>
 		<view class="u-config-wrap">
@@ -12,11 +14,11 @@
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">主题选择</view>
-				<u-subsection :list="['default', 'primary', 'error', 'warning', 'success']" @change="typeChange"></u-subsection>
+				<u-subsection :list="['default', 'primary', 'error', 'warning', 'success', 'text']" @change="typeChange"></u-subsection>
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">尺寸大小</view>
-				<u-subsection :list="['默认', '中等', '迷你']" @change="sizeChange"></u-subsection>
+				<u-subsection :list="['默认', '大尺寸', '中等', '小', '迷你']" @change="sizeChange"></u-subsection>
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">形状</view>
@@ -25,6 +27,10 @@
 			<view class="u-config-item">
 				<view class="u-item-title">镂空</view>
 				<u-subsection :current="1" :list="['是', '否']" @change="plainChange"></u-subsection>
+			</view>
+      <view class="u-config-item">
+				<view class="u-item-title">是否可用</view>
+				<u-subsection :current="0" :list="['是', '否']" @change="disabledChange"></u-subsection>
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">水波纹(感觉哪里有问题？点击顶部的按钮试试)</view>
@@ -37,6 +43,11 @@
 			<view class="u-config-item">
 				<view class="u-item-title">加载中</view>
 				<u-subsection :current="1" :list="['是', '否']" @change="loadingChange"></u-subsection>
+			</view>
+
+      <view class="u-config-item">
+				<view class="u-item-title">展示icon</view>
+				<u-subsection :current="1" :list="['是', '否']" @change="showIcon"></u-subsection>
 			</view>
 		</view>
 	</view>
@@ -53,6 +64,8 @@
 				plain: false,
 				ripple: false,
 				loading: false,
+        disabled: false,
+        isShowIcon: false
 			}
 		},
 		methods: {
@@ -72,7 +85,10 @@
 						break;
 					case 4:
 						this.type = 'success';
-						break;s
+						break;
+          case 5:
+						this.type = 'text';
+						break;
 				}
 			},
 			sizeChange(e) {
@@ -80,10 +96,16 @@
 					case 0:
 						this.size = 'default';
 						break;
-					case 1:
-						this.size = 'medium';
+            case 1:
+						this.size = 'large';
 						break;
 					case 2:
+						this.size = 'medium';
+						break;
+					case 3:
+						this.size = 'small';
+						break;
+          case 4:
 						this.size = 'mini';
 						break;
 				}
@@ -97,6 +119,9 @@
 			rippleChange(e) {
 				this.ripple = e == 0 ? true : false;
 			},
+      disabledChange(e) {
+        this.disabled = e == 1 ? true : false;
+      },
 			hairLineChange(e) {
 				this.hairLine = e == 0 ? true : false;
 			},
@@ -106,6 +131,9 @@
 			btnClick() {
 				this.$u.toast('按钮被点击')
 			},
+      showIcon(index) {
+        this.isShowIcon = index == 0 ? true : false;
+      }
 		}
 	}
 </script>
