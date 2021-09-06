@@ -3,6 +3,7 @@
 		disabled ? 'u-disabled' : '',
 		'u-size-' + size,
 		'u-shape-' + shape,
+    'u-mode-' + mode,
 		'u-mode-' + mode + '-' + type
 	]"
 	 class="u-tag" :style="[customStyle]" @tap="clickTag">
@@ -87,10 +88,10 @@
 				type: [Number, String],
 				default: ''
 			},
-			// 模式选择，dark|light|plain
+			// 模式选择，dark|default|plain
 			mode: {
 				type: String,
-				default: 'light'
+				default: 'plain'
 			},
 			// 是否可关闭
 			closeable: {
@@ -125,7 +126,7 @@
 				let style = {};
 				if(this.size == 'mini') style.fontSize = '20rpx';
 				else style.fontSize = '22rpx';
-				if(this.mode == 'plain' || this.mode == 'light') style.color = this.type;
+				if(this.mode == 'plain' || this.mode == 'default') style.color = this.type;
 				else if(this.mode == 'dark')  style.color = "#ffffff";
 				if(this.closeColor) style.color = this.closeColor;
 				return style;
@@ -163,7 +164,7 @@
 	.u-tag {
 		box-sizing: border-box;
 		align-items: center;
-		border-radius: 6rpx;
+		border-radius: 4rpx;
 		/* #ifndef APP-NVUE */
 		display: inline-block;
 		/* #endif */
@@ -171,99 +172,111 @@
 	}
 	
 	.u-size-default {
-		font-size: 22rpx;
-		padding: 12rpx 22rpx;
+		font-size: 28rpx;
+		padding: 4rpx 12rpx;
 	}
 	
 	.u-size-mini {
-		font-size: 20rpx;
-		padding: 6rpx 12rpx;
+		font-size: 28rpx;
+		padding: 0rpx 8rpx;
 	}
 
-	.u-mode-light-primary {
-		background-color: $u-type-primary-light;
+  .u-size-large {
+		font-size: 32rpx;
+		padding: 8rpx 16rpx;
+    border-radius: 8rpx;
+	}
+
+  .u-mode-plain{
+    border: 1rpx solid $u-mode-plain-border-color;
+    color: $u-mode-plain-text-color;
+    font-weight: 400;
+  }
+
+	.u-mode-default-primary {
+		// background-color: $u-type-primary-light;
 		color: $u-type-primary;
-		border: 1px solid $u-type-primary-disabled;
+    border: 1rpx solid $u-type-primary;
 	}
 	
-	.u-mode-light-success {
-		background-color: $u-type-success-light;
+	.u-mode-default-success {
+		// background-color: $u-type-success-light;
 		color: $u-type-success;
-		border: 1px solid $u-type-success-disabled;
+    border: 1rpx solid $u-type-success;
 	}
 	
-	.u-mode-light-error {
-		background-color: $u-type-error-light;
+	.u-mode-default-error {
+		// background-color: $u-type-error-light;
 		color: $u-type-error;
-		border: 1px solid $u-type-error-disabled;
+    border: 1rpx solid $u-type-error;
 	}
 	
-	.u-mode-light-warning {
-		background-color: $u-type-warning-light;
+	.u-mode-default-warning {
+		// background-color: $u-type-warning-light;
 		color: $u-type-warning;
-		border: 1px solid $u-type-warning-disabled;
+    border: 1rpx solid $u-type-warning;
 	}
 	
-	.u-mode-light-info {
-		background-color: $u-type-info-light;
+	.u-mode-default-info {
+		// background-color: $u-type-info-light;
 		color: $u-type-info;
-		border: 1px solid $u-type-info-disabled;
+    border: 1rpx solid $u-type-info;
 	}
 	
 	.u-mode-dark-primary {
 		background-color: $u-type-primary;
-		color: #FFFFFF;
+		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-success {
 		background-color: $u-type-success;
-		color: #FFFFFF;
+		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-error {
 		background-color: $u-type-error;
-		color: #FFFFFF;
+		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-warning {
 		background-color: $u-type-warning;
-		color: #FFFFFF;
+		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-info {
 		background-color: $u-type-info;
-		color: #FFFFFF;
+		color: $u-mode-dark-text-color;
 	}
 	
-	.u-mode-plain-primary {
-		background-color: #FFFFFF;
-		color: $u-type-primary;
-		border: 1px solid $u-type-primary;
-	}
+	// .u-mode-plain-primary {
+	// 	background-color: #FFFFFF;
+	// 	color: $u-type-primary;
+	// 	border: 1px solid $u-type-primary;
+	// }
 	
-	.u-mode-plain-success {
-		background-color: #FFFFFF;
-		color: $u-type-success;
-		border: 1px solid $u-type-success;
-	}
+	// .u-mode-plain-success {
+	// 	background-color: #FFFFFF;
+	// 	color: $u-type-success;
+	// 	border: 1px solid $u-type-success;
+	// }
 	
-	.u-mode-plain-error {
-		background-color: #FFFFFF;
-		color: $u-type-error;
-		border: 1px solid $u-type-error;
-	}
+	// .u-mode-plain-error {
+	// 	background-color: #FFFFFF;
+	// 	color: $u-type-error;
+	// 	border: 1px solid $u-type-error;
+	// }
 	
-	.u-mode-plain-warning {
-		background-color: #FFFFFF;
-		color: $u-type-warning;
-		border: 1px solid $u-type-warning;
-	}
+	// .u-mode-plain-warning {
+	// 	background-color: #FFFFFF;
+	// 	color: $u-type-warning;
+	// 	border: 1px solid $u-type-warning;
+	// }
 	
-	.u-mode-plain-info {
-		background-color: #FFFFFF;
-		color: $u-type-info;
-		border: 1px solid $u-type-info;
-	}
+	// .u-mode-plain-info {
+	// 	background-color: #FFFFFF;
+	// 	color: $u-type-info;
+	// 	border: 1px solid $u-type-info;
+	// }
 	
 	.u-disabled {
 		opacity: 0.55;

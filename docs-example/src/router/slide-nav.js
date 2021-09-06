@@ -75,6 +75,12 @@ export default [
             desc: "一期",
             example: "pages/componentsC/button/index",
           },
+          {
+            path: "/u-tag",
+            title: "Tag 标签",
+            desc: "一期",
+            demoPath: "pages/componentsA/tag/index",
+          },
         ],
       },
       {
@@ -109,16 +115,10 @@ const config = [
         demoPath: "pages/componentsC/button/index",
       },
       {
-        path: "/u-cell",
-        title: "Cell 单元格",
+        path: "/u-tag",
+        title: "Tag 标签",
         desc: "一期",
-        demoPath: "pages/componentsC/cell/index",
-      },
-      {
-        path: "/u-row",
-        title: "Cell 单元格222",
-        desc: "一期",
-        demoPath: "pages/componentsC/cell/index",
+        demoPath: "pages/componentsA/tag/index",
       },
       //     {
       //       path: '/icon',

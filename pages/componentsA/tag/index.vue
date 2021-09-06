@@ -11,7 +11,7 @@
 			<view class="u-config-title u-border-bottom">参数配置</view>
 			<view class="u-config-item">
 				<view class="u-item-title">模式选择</view>
-				<u-subsection :list="['light', 'dark', 'plain']" @change="modeChange"></u-subsection>
+				<u-subsection :list="['default', 'dark', 'plain']" @change="modeChange"></u-subsection>
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">显示内容</view>
@@ -27,7 +27,7 @@
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">尺寸</view>
-				<u-subsection :list="['default', 'mini']" @change="sizeChange"></u-subsection>
+				<u-subsection :list="['default', 'mini', 'large']" @change="sizeChange"></u-subsection>
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">关闭图标</view>
@@ -42,7 +42,7 @@ export default {
 	data() {
 		return {
 			text: '蒹葭苍苍',
-			mode: 'light',
+			mode: 'default',
 			type: 'error',
 			size: 'default',
 			shape: 'square',
@@ -52,7 +52,7 @@ export default {
 	},
 	methods: {
 		modeChange(index) {
-			this.mode = index == 0 ? 'light' : index == 1 ? 'dark' : 'plain';
+			this.mode = ['default', 'dark', 'plain'][index];
 		},
 		textChange(index) {
 			this.text = index == 0 ? '蒹葭苍苍' : index == 1 ? '白露为霜' : '在水一方';
@@ -64,7 +64,7 @@ export default {
 			this.shape = index == 0 ? 'square' : index == 1 ? 'circle' : index == 2 ? 'circleLeft' : 'circleRight';
 		},
 		sizeChange(index) {
-			this.size = index == 0 ? 'default' : 'mini';
+			this.size = ['default', 'mini', 'large'][index];
 		},
 		closeableChange(index) {
 			this.closeable = index == 0 ? true : false;
