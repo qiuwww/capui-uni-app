@@ -224,26 +224,31 @@
 	}
 	
 	.u-mode-dark-primary {
+    border: 1px solid $u-type-primary;
 		background-color: $u-type-primary;
 		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-success {
+    border: 1px solid $u-type-success;
 		background-color: $u-type-success;
 		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-error {
+    border: 1px solid $u-type-error;
 		background-color: $u-type-error;
 		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-warning {
+    border: 1px solid $u-type-warning;
 		background-color: $u-type-warning;
 		color: $u-mode-dark-text-color;
 	}
 	
 	.u-mode-dark-info {
+    border: 1px solid $u-type-info;
 		background-color: $u-type-info;
 		color: $u-mode-dark-text-color;
 	}
