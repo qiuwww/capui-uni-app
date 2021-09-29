@@ -111,7 +111,7 @@
 			// 单个tab的左或右内边距（各占一半），单位rpx
 			gutter: {
 				type: [Number, String],
-				default: 40
+				default: 32
 			},
 			// 如果是绝对定位，添加z-index值
 			zIndex: {
@@ -483,6 +483,6 @@
 
 	.u-scroll-bar {
 		position: absolute;
-		bottom: 4rpx;
+		bottom: 0rpx;
 	}
 </style>
