@@ -1,6 +1,7 @@
 <template>
 	<view class="u-search" @tap="clickHandler" :style="{
 		margin: margin,
+    backgroundColor: searchBgColor
 	}">
 		<view
 			class="u-content"
@@ -36,6 +37,7 @@
 				}, inputStyle]"
 			/>
 			<view class="u-close-wrap" v-if="keyword && clearabled && focused" @tap="clear">
+        <!-- 这里的关闭按钮的光标需要调整 -->
 				<u-icon class="u-clear-icon" name="close-circle-fill" size="34" color="#c0c4cc"></u-icon>
 			</view>
 		</view>
@@ -87,11 +89,15 @@ export default {
 			type: String,
 			default: 'round'
 		},
-		// 搜索框背景色，默认值#f2f2f2
+		// 搜索框背景色，默认值#f5f5f5
 		bgColor: {
 			type: String,
-			default: '#f2f2f2'
+			default: '#f5f5f5'
 		},
+    searchBgColor: {
+      type: String,
+      default: 'transparent'
+    },
 		// 占位提示文字
 		placeholder: {
 			type: String,
@@ -174,7 +180,7 @@ export default {
 		// 输入框字体颜色
 		color: {
 			type: String,
-			default: '#606266'
+			default: '#bfbfbf'
 		},
 		// placeholder的颜色
 		placeholderColor: {
@@ -310,6 +316,7 @@ export default {
 	line-height: 1;
 	margin: 0 10rpx;
 	color: $u-tips-color;
+  margin-left: 16rpx;
 }
 
 .u-close-wrap {

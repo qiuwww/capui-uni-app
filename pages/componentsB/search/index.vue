@@ -5,12 +5,20 @@
 			<view class="u-demo-area">
 				<u-toast ref="uToast"></u-toast>
 				<u-search v-model="value" @change="change" @custom="custom" @search="search" :shape="shape" :clearabled="clearabled" 
+        :searchBgColor="searchBgColor"
 				:show-action="showAction" :input-align="inputAlign" @clear="clear"></u-search>
 			</view>
 		</view>
 		<view class="u-config-wrap">
 			<view class="u-config-title u-border-bottom">
 				参数配置
+			</view>
+      <view class="u-config-item">
+				<view class="u-item-title">设置整体背景颜色</view>
+				<text :style="{color: searchBgColor}">当前的颜色：{{searchBgColor}}</text>
+        <!-- 这里需要一个颜色选择器 -->
+        <u-button type="text" @click="openColorPicker" >打开颜色选择器</u-button>
+        <t-color-picker ref="colorPicker" :color="color" @confirm="confirm"></t-color-picker>
 			</view>
 			<view class="u-config-item">
 				<view class="u-item-title">初始值</view>
@@ -44,7 +52,9 @@
 				shape: 'round',
 				clearabled: true,
 				showAction: true,
-				inputAlign: 'left'
+				inputAlign: 'left',
+        searchBgColor: '#ccc',
+        color: {r: 255,g: 255,b: 255,a: 0}
 			}
 		},
 		watch: {
@@ -86,7 +96,17 @@
 			},
 			clear() {
 				// console.log(this.value);
-			}
+			},
+
+      // 颜色选择器
+      openColorPicker(item) {
+        // 打开颜色选择器
+        this.$refs.colorPicker.open();
+      },
+      confirm(e) {
+        console.log('颜色选择器返回值：'+ JSON.stringify(e))
+        this.searchBgColor = e.hex;
+      }
 		}
 	}
 </script>

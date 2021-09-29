@@ -89,6 +89,12 @@ export default [
         icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
         children: [
           {
+            path: '/u-search',
+            title: "Search 搜索",
+            desc: "一期",
+            demoPath: "pages/componentsB/search/index",
+          },
+          {
             path: "/u-input",
             title: "Input 输入框",
           },
