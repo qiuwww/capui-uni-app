@@ -267,6 +267,8 @@ export default {
 <style scoped lang="scss">
 @import "../../libs/css/style.components.scss";
 @import '../../iconfont.css';
+// 依据capui的标准的图标
+@import '../../capui-iconfont.scss';
 
 .u-icon {
 	display: inline-flex;

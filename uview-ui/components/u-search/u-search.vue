@@ -13,7 +13,7 @@
 			}"
 		>
 			<view class="u-icon-wrap">
-				<u-icon class="u-clear-icon" :size="30" :name="searchIcon" :color="searchIconColor ? searchIconColor : color"></u-icon>
+				<u-icon class="u-clear-icon" :size="30" :name="searchIcon" :custom-prefix="searchIconPrefix" :color="searchIconColor ? searchIconColor : color"></u-icon>
 			</view>
 			<input
 				confirm-type="search"
@@ -195,7 +195,11 @@ export default {
 		// 左边输入框的图标，可以为uView图标名称或图片路径
 		searchIcon: {
 			type: String,
-			default: 'search'
+			default: 'searchbaricon'
+		},
+    searchIconPrefix: {
+			type: String,
+			default: 'capui'
 		}
 	},
 	data() {

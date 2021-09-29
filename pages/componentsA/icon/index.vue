@@ -2,7 +2,7 @@
 	<view class="wrap">
 		<view class="u-border-left u-border-top inner-wrap">
 			<view @tap="selectIcon(item.name)" class="u-icon-item u-border-bottom u-border-right" v-for="(item, index) in iconList" :key="index">
-				<u-icon :name="item.name" size="40" color="#909399"></u-icon>
+				<u-icon :name="item.name" size="40" :color="item.prefix ?'red' :'#909399'" :custom-prefix="item.prefix ? item.prefix  : ''"></u-icon>
 				<text class="u-icon-name">{{item.name}}</text>
 			</view>
 		</view>
@@ -599,6 +599,100 @@
 					{
 						name: 'zhuanfa'
 					},
+
+          // capui的图标
+          {
+            name: 'toastshibai',
+            prefix: 'capui'
+          },
+          {
+            name: 'toastchenggong',
+            prefix: 'capui'
+          },
+          {
+            name: 'searchbaricon',
+            prefix: 'capui'
+          },
+          {
+            name: 'biaodanyoujiantou',
+            prefix: 'capui'
+          },
+          {
+            name: 'noticebarerror',
+            prefix: 'capui'
+          },
+          {
+            name: 'noticebartips',
+            prefix: 'capui'
+          },
+          {
+            name: 'noticebarwarning',
+            prefix: 'capui'
+          },
+          {
+            name: 'noticebardelete',
+            prefix: 'capui'
+          },
+          {
+            name: 'noticebarcorrect',
+            prefix: 'capui'
+          },
+          {
+            name: 'noticebarnews',
+            prefix: 'capui'
+          },
+          {
+            name: 'navbarback',
+            prefix: 'capui'
+          },
+          {
+            name: 'listmust',
+            prefix: 'capui'
+          },
+          {
+            name: 'navbarclose',
+            prefix: 'capui'
+          },
+          {
+            name: 'navbarnews',
+            prefix: 'capui'
+          },
+          {
+            name: 'navbaradd',
+            prefix: 'capui'
+          },
+          {
+            name: 'kejian',
+            prefix: 'capui'
+          },
+          {
+            name: 'yincang',
+            prefix: 'capui'
+          },
+          {
+            name: 'share',
+            prefix: 'capui'
+          },
+          {
+            name: 'down',
+            prefix: 'capui'
+          },
+          {
+            name: 'up',
+            prefix: 'capui'
+          },
+          {
+            name: 'switch',
+            prefix: 'capui'
+          },
+          {
+            name: 'right',
+            prefix: 'capui'
+          },
+          {
+            name: 'delete',
+            prefix: 'capui'
+          }
 				]
 			};
 		},

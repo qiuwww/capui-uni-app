@@ -1,5 +1,17 @@
 # Search 搜索
 
+## 修改了默认的搜索按钮
+
+	// 左边输入框的图标，可以为uView图标名称或图片路径
+		searchIcon: {
+			type: String,
+			default: 'searchbaricon'
+		},
+    searchIconPrefix: {
+			type: String,
+			default: 'capui'
+		}
+
 ## 引入
 
 在`app.json`或`index.json`中引入组件，详细介绍见[快速上手](#/quickstart#yin-ru-zu-jian)

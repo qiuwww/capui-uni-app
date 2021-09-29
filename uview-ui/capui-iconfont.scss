@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'capui-iconfont';  /* Project id 2843205 */
+  src: url('//at.alicdn.com/t/font_2843205_r2pfae562r.woff2?t=1632909518869') format('woff2'),
+       url('//at.alicdn.com/t/font_2843205_r2pfae562r.woff?t=1632909518869') format('woff'),
+       url('//at.alicdn.com/t/font_2843205_r2pfae562r.ttf?t=1632909518869') format('truetype');
+}
+
+.capui {
+	position: relative;
+	display: flex;
+	font: normal normal normal 14px/1 "capui-iconfont";
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+  &::before {
+    display: flex;
+    align-items: center;
+  }
+
+  &-toastshibai:before {
+    content: "\e700";
+  }
+
+  &-toastchenggong:before {
+    content: "\e701";
+  }
+
+  &-searchbaricon:before {
+    content: "\e711";
+  }
+
+  &-biaodanyoujiantou:before {
+    content: "\e712";
+  }
+
+  &-noticebarerror:before {
+    content: "\e71b";
+  }
+
+  &-noticebarerror:before {
+    content: "\e71c";
+  }
+
+  &-noticebartips:before {
+    content: "\e71d";
+  }
+
+  &-noticebarwarning:before {
+    content: "\e71f";
+  }
+
+  &-noticebardelete:before {
+    content: "\e71f";
+  }
+
+  &-noticebarcorrect:before {
+    content: "\e720";
+  }
+
+  &-noticebarnews:before {
+    content: "\e721";
+  }
+
+  &-navbarback:before {
+    content: "\e722";
+  }
+
+  &-listmust:before {
+    content: "\e723";
+  }
+
+  &-navbarclose:before {
+    content: "\e724";
+  }
+
+  &-navbarnews:before {
+    content: "\e725";
+  }
+
+  &-navbaradd:before {
+    content: "\e726";
+  }
+
+  &-kejian:before {
+    content: "\e738";
+  }
+
+  &-yincang:before {
+    content: "\e739";
+  }
+
+  &-share:before {
+    content: "\e674";
+  }
+  &-down:before {
+    content: "\e728";
+  }
+  &-up:before {
+    content: "\e727";
+  }
+  &-switch:before {
+    content: "\e6b0";
+  }
+  &-right:before {
+    content: "\e6b3";
+  }
+  &-delete:before {
+    content: "\e6f4";
+  }
+}
