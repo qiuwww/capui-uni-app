@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'capui-iconfont';  /* Project id 2843205 */
-  src: url('//at.alicdn.com/t/font_2843205_r2pfae562r.woff2?t=1632909518869') format('woff2'),
-       url('//at.alicdn.com/t/font_2843205_r2pfae562r.woff?t=1632909518869') format('woff'),
-       url('//at.alicdn.com/t/font_2843205_r2pfae562r.ttf?t=1632909518869') format('truetype');
+  src: url('//at.alicdn.com/t/font_2843205_f5g99rtroya.woff2?t=1633659841143') format('woff2'),
+       url('//at.alicdn.com/t/font_2843205_f5g99rtroya.woff?t=1633659841143') format('woff'),
+       url('//at.alicdn.com/t/font_2843205_f5g99rtroya.ttf?t=1633659841143') format('truetype');
 }
 
 .capui {
@@ -108,5 +108,8 @@
   }
   &-delete:before {
     content: "\e6f4";
+  }
+  &-sousuokuangshanchu:before {
+    content: "\e710";
   }
 }

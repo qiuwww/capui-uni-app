@@ -38,10 +38,10 @@
 			/>
 			<view class="u-close-wrap" v-if="keyword && clearabled && focused" @tap="clear">
         <!-- 这里的关闭按钮的光标需要调整 -->
-				<u-icon class="u-clear-icon" name="close-circle-fill" size="34" color="#c0c4cc"></u-icon>
+				<u-icon class="u-clear-icon" name="sousuokuangshanchu" custom-prefix="capui" size="30" color="#c0c4cc"></u-icon>
 			</view>
 		</view>
-		<view :style="[actionStyle]" class="u-action" 
+		<view v-if="showActionBtn" :style="[actionStyle]" class="u-action" 
 			:class="[showActionBtn || show ? 'u-action-active' : '']" 
 			@tap.stop.prevent="custom"
 		>{{ actionText }}</view>
@@ -116,7 +116,7 @@ export default {
 		// 是否在搜索框右侧显示取消按钮
 		showAction: {
 			type: Boolean,
-			default: true
+			default: false
 		},
 		// 右边控件的样式
 		actionStyle: {
@@ -180,12 +180,12 @@ export default {
 		// 输入框字体颜色
 		color: {
 			type: String,
-			default: '#bfbfbf'
+			default: '#262626'
 		},
 		// placeholder的颜色
 		placeholderColor: {
 			type: String,
-			default: '#909399'
+			default: '#BFBFBF'
 		},
 		// 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30rpx"、"30rpx 20rpx"等写法
 		margin: {
@@ -337,17 +337,17 @@ export default {
 }
 
 .u-action {
-	font-size: 28rpx;
+	font-size: 32rpx;
 	color: $u-main-color;
-	width: 0;
 	overflow: hidden;
 	transition: all 0.3s;
 	white-space: nowrap;
 	text-align: center;
+	width: auto;
+  min-width: 80rpx;
 }
 
 .u-action-active {
-	width: 80rpx;
-	margin-left: 10rpx;
+	margin-left: 32rpx;
 }
 </style>

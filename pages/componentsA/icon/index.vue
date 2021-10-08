@@ -692,6 +692,10 @@
           {
             name: 'delete',
             prefix: 'capui'
+          },
+          {
+            name: 'sousuokuangshanchu',
+            prefix: 'capui'
           }
 				]
 			};
