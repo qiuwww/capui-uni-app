@@ -334,7 +334,7 @@
 					} else {
 						fatherWidth = this.componentsWidth;
 					}
-					this.scrollLeft = tabCenter - fatherWidth / 2;
+					// this.scrollLeft = tabCenter - fatherWidth / 2;
 				}
 			},
 			setDx(dx) {
