@@ -2,7 +2,7 @@
 	<view class="wrap">
 		<view class="u-border-left u-border-top inner-wrap">
 			<view @tap="selectIcon(item.name)" class="u-icon-item u-border-bottom u-border-right" v-for="(item, index) in iconList" :key="index">
-				<u-icon :name="item.name" size="40" :color="item.prefix ?'red' :'#909399'" :custom-prefix="item.prefix ? item.prefix  : ''"></u-icon>
+				<u-icon :name="item.name" size="40" :color="item.prefix ?'#BFBFBF' :'#909399'" :custom-prefix="item.prefix ? item.prefix  : 'uicon'"></u-icon>
 				<text class="u-icon-name">{{item.name}}</text>
 			</view>
 		</view>
@@ -703,7 +703,15 @@
 		methods: {
 			selectIcon(name) {
 				// #ifdef H5
-				return this.$u.toast('H5暂不支持复制');
+        const input = document.createElement('input');
+        document.body.appendChild(input);
+        input.setAttribute('value', name);
+        input.select();
+        if (document.execCommand('copy')) {
+            document.execCommand('copy');
+            console.log('复制成功');
+        }
+        document.body.removeChild(input);
 				// #endif
 				uni.setClipboardData({
 				    data: name,
@@ -731,7 +739,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 190rpx;
+		height: 230rpx;
 		flex: 0 0 33.33333333%;
 		justify-content: center;
 		overflow: hidden;

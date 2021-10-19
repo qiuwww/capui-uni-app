@@ -70,6 +70,12 @@ export default [
             example: "pages/componentsC/button/index",
           },
           {
+            path: "/u-icon",
+            title: "Icon 图标",
+            desc: "一期",
+            example: "pages/componentsA/icon/index",
+          },
+          {
             path: "/u-button",
             title: "Button 按钮",
             desc: "一期",
@@ -89,7 +95,7 @@ export default [
         icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
         children: [
           {
-            path: '/u-search',
+            path: "/u-search",
             title: "Search 搜索",
             desc: "一期",
             demoPath: "pages/componentsB/search/index",
