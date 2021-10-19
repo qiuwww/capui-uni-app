@@ -3,7 +3,7 @@
 			zIndex: zIndex,
 			background: bgColor
 		}">
-		<scroll-view scroll-x class="u-scroll-view" :scroll-left="scrollLeft" scroll-with-animation :style="{ zIndex: zIndex + 1 }">
+		<scroll-view scroll-x class="u-scroll-view" :scroll-left="scrollLeft" scroll-with-animation :style="{ zIndex: zIndex + 1 }" :show-scrollbar="false" :enhanced="true">
 			<view class="u-tabs-scroll-box" :class="{'u-tabs-scorll-flex': !isScroll}">
 				<view class="u-tabs-item" :style="[tabItemStyle(index)]"
 				 v-for="(item, index) in getTabs" :key="index" :class="[preId + index]" @tap="emit(index)">
@@ -334,7 +334,7 @@
 					} else {
 						fatherWidth = this.componentsWidth;
 					}
-					this.scrollLeft = tabCenter - fatherWidth / 2;
+					// this.scrollLeft = tabCenter - fatherWidth / 2;
 				}
 			},
 			setDx(dx) {

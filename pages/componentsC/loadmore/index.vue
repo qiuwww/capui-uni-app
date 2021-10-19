@@ -41,8 +41,8 @@
 				isDot: false,
 				loadText: {
 					loadmore: '点击或上拉加载更多',
-					loading: '正在加载...',
-					nomore: '没有更多了'
+					loading: '正在加载更多内容...',
+					nomore: '没有更多内容了'
 				},
 				current: 0
 			}
