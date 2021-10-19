@@ -180,7 +180,7 @@ export default {
 		// 输入框字体颜色
 		color: {
 			type: String,
-			default: '#262626'
+			default: '#BFBFBF'
 		},
 		// placeholder的颜色
 		placeholderColor: {
