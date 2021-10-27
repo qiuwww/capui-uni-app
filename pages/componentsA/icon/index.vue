@@ -2,6 +2,7 @@
 	<view class="wrap">
 		<view class="u-border-left u-border-top inner-wrap">
 			<view @tap="selectIcon(item.name)" class="u-icon-item u-border-bottom u-border-right" v-for="(item, index) in iconList" :key="index">
+        <text v-if="item.prefix === 'capui'" style="color: #c00">{{item.prefix}}</text>
 				<u-icon :name="item.name" size="40" :color="item.prefix ?'#BFBFBF' :'#909399'" :custom-prefix="item.prefix ? item.prefix  : 'uicon'"></u-icon>
 				<text class="u-icon-name">{{item.name}}</text>
 			</view>

@@ -2,16 +2,12 @@
   <div class="doc-nav" :style="style">
     <div class="doc-nav__item" v-for="group in navConfig" :key="group.title">
       <NavLink :title="group.title" :path="group.path" :base="base" />
-
       <div v-for="(subGroup, index) in group.children" :key="index">
         <div class="doc-nav__group-title">{{ subGroup.title }}</div>
         <div>
-          <div
-            :key="index"
-            class="doc-nav__subitem"
-            v-for="(navItem, index) in subGroup.children"
-          >
+          <div :key="index" class="doc-nav__subitem" v-for="(navItem, index) in subGroup.children">
             <NavLink :title="navItem.title" :path="navItem.path" :base="base" />
+            <span v-if="navItem.desc" style="color: red; display: inline-block">{{ navItem.desc }}</span>
           </div>
         </div>
       </div>
@@ -20,10 +16,10 @@
 </template>
 
 <script>
-import NavLink from "./NavLink.vue";
+import NavLink from './NavLink.vue';
 
 export default {
-  name: "doc-nav",
+  name: 'doc-nav',
 
   components: {
     NavLink,
@@ -33,7 +29,7 @@ export default {
     navConfig: Array,
     base: {
       type: String,
-      default: "",
+      default: '',
     },
   },
 
@@ -47,16 +43,16 @@ export default {
   computed: {
     style() {
       return {
-        top: this.top + "px",
-        bottom: this.bottom + "px",
+        top: this.top + 'px',
+        bottom: this.bottom + 'px',
       };
     },
   },
 
   created() {
-    console.log("Nav", this.navConfig);
+    console.log('Nav', this.navConfig);
 
-    window.addEventListener("scroll", this.onScroll);
+    window.addEventListener('scroll', this.onScroll);
     this.onScroll();
   },
 
@@ -70,7 +66,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../style/variable";
+@import '../style/variable';
 
 .doc-nav {
   left: 0;
@@ -130,6 +126,10 @@ export default {
   }
 
   &__subitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     a {
       font-size: 14px;
 

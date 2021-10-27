@@ -1,9 +1,214 @@
-## Color 色彩
+# Color 色彩
 
-uView经过大量调试和研究，得出一套专有的调色板，在各个组件内部，使用统一的配色，为您的产品带来统一又鲜明的视觉效果。
+## 使用说明
 
-> 注意： uView为了更好编写css，使用了scss预处理器，使用uView之前，请确认您的Hbuilder X已经安装了scss预处理器，一般情况下，相信您已经安装了。如果没有安装， 请在 Hbuilder X->工具->插件安装 中找到找到"scss/sass编译"安装即可，安装完毕如果不生效，请重启Hbuilder X。
+[uView的Color色彩文档](https://www.uviewui.com/components/color.html)
 
-### 平台差异说明
+颜色是定制组件库的基础，需要对照设计师在不同位置使用的颜色来分别设置，通常使用变量方式注入组件库，一个颜色值可能会影响到很多的位置。
 
-App	H5	微信小程序	支付宝小程序	百度小程序	头条小程序	QQ小程序
+## 内置的scss颜色变量
+
+本次主要修改了内置的一些颜色及尺寸，让其符合capui的标准。
+
+```scss
+// 此文件为uView的主题变量，这些变量目前只能通过uni.scss引入才有效，另外由于
+// uni.scss中引入的样式会同时混入到全局样式文件和单独每一个页面的样式中，造成微信程序包太大，
+// 故uni.scss只建议放scss变量名相关样式，其他的样式可以通过main.js或者App.vue引入
+
+// uview-ui的自定义的变量值，如果不引用这个文件，直接使用组件，组件引用的变量就找不到，就会报错
+
+// 如下是基于设计添加的，可以在项目内直接使用
+
+// 这里的字体大小，可以通过直接使用class来控制，也可以使用变量来在scss中使用，在common.scss
+$font-size-xxs: 20rpx; // 特殊搭配图形样式，用于角标或特定场景
+$font-size-xs: 24rpx; // 提示性标题，用于辅助文案，警示文案或用于小标签字体大小
+$font-size-sm: 28rpx; // 副标题/描述文本，辅助文本，可单独使用或搭配标题使用
+$font-size-md: 32rpx; // 标题/正文/描述文本，常规文本或正文，输入文案，描述文案，首选字号
+$font-size-lg: 36rpx; // 重要标题，用于主标题或列表标题
+$font-size-xl: 40rpx; // 重要标题/独立使用，重点且突出的标题，可搭配或单独使用
+$font-size-bg: 48rpx; // 特殊标题，独立页面或结构简单数字或需强调文本
+
+// Color Palette
+$black: #000;
+$white: #fff;
+$red: #ee0a24;
+$blue: #1989fa;
+$orange: #ff976a;
+$orange-dark: #ed6a0c;
+$orange-light: #fffbe8;
+$green: #07c160;
+
+// 中性色板
+$gray-1: #ffffff; // 模块背景
+$gray-2: #f5f5f5; // 默认背景/界面背景
+$gray-3: #eeeeee; // 分割线/占位图
+$gray-4: #d9d9d9; // 边框
+$gray-5: #bfbfbf; // 暗文本/未输入
+$gray-6: #8c8c8c; // 副标题/辅助文案
+$gray-7: #595959; // 描述文本/正文
+$gray-8: #262626; // 主标题/重要标题
+
+// 品牌色，蓝色
+$primary-1: #ebf8ff; // 背景
+$primary-2: #c2e9ff;
+$primary-3: #99d6ff;
+$primary-4: #70c1ff;
+$primary-5: #47a9ff; // 点击
+$primary-6: #1e8df0; // 默认
+$primary-7: #0f6dd9;
+$primary-8: #044fb3;
+$primary-9: #00388c;
+$primary-10: #002566;
+
+// $secondary-color:
+// 辅色
+$secondary-1: #fff7e6; // 背景
+$secondary-2: #ffdfa3;
+$secondary-3: #ffcc7a;
+$secondary-4: #ffb752;
+$secondary-5: #ff9f29;
+$secondary-6: #ff8200; // 默认
+$secondary-7: #d96900; // 点击
+$secondary-8: #b35000;
+$secondary-9: #8c3a00;
+$secondary-10: #8c3a00;
+
+// Component Colors
+$text-color: $gray-7;
+$active-color: $gray-2;
+$active-opacity: 0.7;
+$disabled-opacity: 0.45;
+$background-color: $gray-2;
+$background-color-light: #fafafa;
+$text-link-color: #576b95;
+
+$primary-color: $primary-6; // 主色
+$primary-color-disable: $primary-1;
+$secondary-color: $secondary-6; // 辅色
+
+// 功能色 ，跟设计师沟通功能色的确定可能不在颜色的10个色阶中，所以有的颜色是直接写死了颜色的
+$link-color: $primary-color;
+$link-bg-color: $primary-1;
+
+$warning-color: $secondary-color;
+$warning-bg-color: $secondary-1;
+
+$success-color: #52c41a;
+$success-bg-color: #f6ffed;
+
+$error-color: #ff4e47;
+$error-bg-color: #ffeeeb;
+
+$dot-bg-color: #fa4b4b;
+
+// Gradient Colors
+$gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+$gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+
+// 字体颜色， 
+$text-primary-color: $gray-8; // 主标题/重要标题
+$text-default-color: $gray-7; // 常规文本/辅助文本/描述文本/正文
+$text-sub-title-color: $gray-6; // 副标题/次级标题
+$text-disable-color: $gray-5; // 暗文本/未输入
+
+// 基于新的自定义样式，重置uview默认的样式
+$u-main-color: $gray-8;
+$u-content-color: #606266;
+$u-tips-color: #909399;
+$u-light-color: #c0c4cc;
+$u-border-color: #e4e7ed;
+$u-bg-color: #f3f4f6;
+
+$u-type-primary: $primary-color;
+$u-type-primary-light: #ecf5ff;
+// $u-type-primary-disabled: #a0cfff;
+$u-type-primary-dark: #2b85e4;
+$u-type-primary-dark-hover: $primary-7;
+$u-type-primary-disabled: rgba($primary-6, $disabled-opacity);
+
+$u-type-warning: $warning-color;
+$u-type-warning-disabled: #fcbd71;
+$u-type-warning-dark: #f29100;
+$u-type-warning-light: #fdf6ec;
+
+$u-type-success: $success-color;
+$u-type-success-disabled: #71d5a1;
+$u-type-success-dark: #18b566;
+$u-type-success-light: #dbf1e1;
+
+$u-type-error: $error-color;
+$u-type-error-disabled: #fab6b6;
+$u-type-error-dark: #dd6161;
+$u-type-error-light: #fef0f0;
+
+$u-type-info: #909399;
+$u-type-info-disabled: #c8c9cc;
+$u-type-info-dark: #82848a;
+$u-type-info-light: #f4f4f5;
+
+$u-form-item-height: 70rpx;
+$u-form-item-border-color: #dcdfe6;
+
+// 新增，修改组件库的时候
+// button
+$u-type-default: $primary-6;
+$u-type-default-tap: $primary-1;
+
+// tag
+$u-mode-plain-border-color: $gray-4;
+$u-mode-plain-text-color: $gray-7;
+$u-mode-dark-text-color: $white;
+```
+
+示例查看右侧。
+
+## 主题色
+
+`primary`，`success`，`error`，`warning`，`info`是组件库的主题色，他们给人在视觉感受上分别对应于蓝色，绿色，红色，黄色，灰色。而他们又有对应的`disabled`、`dark`和`light`状态，分别表示对应的**禁止，加深和变浅**的对应颜色。
+
+<br/>
+
+**主色示例：**
+
+<br/>
+
+<div class="custom-color">
+  <div class="primary" style="background-color: #1e8df0">
+    primary: #1e8df0
+  </div>
+  <div class="sub">
+    <div style="background-color: #2b85e4">
+      dark: #2b85e4
+    </div>
+    <div style="background-color: #ecf5ff">
+      light: #ecf5ff
+    </div>
+    <div style="background-color: rgba(30, 141, 240, 0.45)">
+      disabled: rgba(#1e8df0, 0.45)
+    </div>
+  </di>
+</div>
+
+<style>
+  .custom-color{
+    width: 600px;
+    height: 200px;
+  }
+  .custom-color > div{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sub > div{
+    height: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

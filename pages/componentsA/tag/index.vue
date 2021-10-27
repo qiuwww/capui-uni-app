@@ -30,7 +30,7 @@
 				<u-subsection :list="['default', 'mini', 'large']" @change="sizeChange"></u-subsection>
 			</view>
 			<view class="u-config-item">
-				<view class="u-item-title">关闭图标</view>
+				<view class="u-item-title">展示图标</view>
 				<u-subsection :list="['是', '否']" @change="closeableChange"></u-subsection>
 			</view>
 		</view>

@@ -30,21 +30,21 @@
 <script>
 // import Vue from "vue";
 // import VanDoc from "./VanDoc";
-import Nav from "./component/Nav";
+import Nav from './component/Nav';
 // import Block from "./component/Block";
-import Header from "./component/Header";
-import Content from "./component/Content";
-import Container from "./component/Container";
-import Simulator from "./component/Simulator";
+import Header from './component/Header';
+import Content from './component/Content';
+import Container from './component/Container';
+import Simulator from './component/Simulator';
 // import DemoBlock from "./component/DemoBlock";
 // import DemoSection from "./component/DemoSection";
 
 // import MainLayout from "@/layout/MainLayout/index.vue";
-import docsConfig, { github, versions } from "@/docs.config";
-import slideNav from "@/router/slide-nav";
+import docsConfig, { github, versions } from '@/docs.config';
+import slideNav from '@/router/slide-nav';
 
 export default {
-  name: "MainLayout",
+  name: 'MainLayout',
   components: {
     Header,
     Nav,
@@ -55,9 +55,9 @@ export default {
 
   data() {
     return {
-      lang: "zh-cn",
+      lang: 'zh-cn',
       searchConfig: {},
-      base: "",
+      base: '',
       nav: [],
       currentPath: null,
       leftNav: null,
@@ -72,28 +72,34 @@ export default {
 
   computed: {
     simulator() {
-      let prefix = "https://capsule-mobile.91jkys.com";
-      const { path, example } = this.$route.meta;
-      if (
-        location.hostname === "0.0.0.0" ||
-        location.hostname === "localhost"
-      ) {
-        // prefix = 'https://youzan.github.io';
-        prefix = "http://0.0.0.0:8181/#/";
+      let prefix = 'https://capsule-mobile.91jkys.com';
+      let { path, example } = this.$route.meta;
+
+      if (!example) {
+        return '';
       }
 
-      return prefix;
+      // 设置 / 定位到首页
+      if (example === '/') {
+        example = '';
+      }
+
+      if (location.hostname === '0.0.0.0' || location.hostname === 'localhost') {
+        // prefix = 'https://youzan.github.io';
+        prefix = 'http://0.0.0.0:8181/#/';
+      }
       // if (!UNSHARED.includes(path)) {
       //   return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
       // }
 
+      return `${prefix}${example}`;
       return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
       // return `./preview.html#${path}`;
     },
   },
 
   watch: {
-    "$route.path"(value) {
+    '$route.path'(value) {
       console.log(value);
       // this.setNav();
       // this.updateNav();
@@ -101,7 +107,7 @@ export default {
   },
 
   created() {
-    console.log("MainLayout", this);
+    console.log('MainLayout', this);
     // this.setNav();
     // this.updateNav();
     // this.keyboardHandler();
@@ -124,7 +130,7 @@ export default {
 
     updateNav() {
       let currentIndex;
-      this.currentPath = "/" + this.$route.path.split("/").pop();
+      this.currentPath = '/' + this.$route.path.split('/').pop();
       for (let i = 0, len = this.nav.length; i < len; i++) {
         if (this.nav[i].path === this.currentPath) {
           currentIndex = i;
@@ -136,7 +142,7 @@ export default {
     },
 
     handleNavClick(direction) {
-      const nav = direction === "prev" ? this.leftNav : this.rightNav;
+      const nav = direction === 'prev' ? this.leftNav : this.rightNav;
       if (nav.path) {
         this.$router.push(this.base + nav.path);
       } else if (nav.link) {
@@ -145,13 +151,13 @@ export default {
     },
 
     keyboardHandler() {
-      window.addEventListener("keyup", (event) => {
+      window.addEventListener('keyup', (event) => {
         switch (event.keyCode) {
           case 37: // left
-            this.handleNavClick("prev");
+            this.handleNavClick('prev');
             break;
           case 39: // right
-            this.handleNavClick("next");
+            this.handleNavClick('next');
             break;
         }
       });
@@ -166,5 +172,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./style/index.scss";
+@import './style/index.scss';
 </style>

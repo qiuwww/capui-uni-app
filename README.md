@@ -19,16 +19,6 @@ uView UI，是[uni-app](https://uniapp.dcloud.io/)生态优秀的UI框架，全�
 
 ## [官方文档：https://www.uviewui.com](https://www.uviewui.com)
 
-### 官方1群：1042987248（已满）
-### 官方2群：249718512（已满）
-### 官方3群：1129077272（已满）
-### 官方4群：1084514613（已满）
-### 官方5群：863820668（已满）
-### 官方6群：745721078（已满）
-### 官方7群：627867855（已满）
-### 官方8群：496409492（已满）
-### [点击加9群交流反馈：828504448](https://jq.qq.com/?_wv=1027&k=Ute1wecV)
-
 ## 特性
 
 - 兼容安卓，iOS，微信小程序，H5，QQ小程序，百度小程序，支付宝小程序，头条小程序
@@ -37,7 +27,6 @@ uView UI，是[uni-app](https://uniapp.dcloud.io/)生态优秀的UI框架，全�
 - 众多的常用页面和布局，让您专注逻辑，事半功倍
 - 详尽的文档支持，现代化的演示效果
 - 按需引入，精简打包体积
-
 
 ## 预览
 
@@ -129,12 +118,13 @@ Vue.use(uView);
 请通过[快速上手](https://uviewui.com/components/quickstart.html)了解更详细的内容
 
 
-## 捐赠uView的研发
+<!-- ## 捐赠uView的研发
 
 uView文档内容和框架源码全部开源免费，如果您认为uView帮到了您的开发工作，您可以捐赠uView的研发工作，捐赠无门槛，哪怕是一杯可乐也好(相信这比打赏主播更有意义)。
 
 <img src="https://uviewui.com/common/wechat.png" width="220" >
-<img style="margin-left: 100px;" src="https://uviewui.com/common/alipay.png" width="220" >
+<img style="margin-left: 100px;" src="https://uviewui.com/common/alipay.png" width="220" > -->
 
 ## 版权信息
+
 uView遵循[MIT](https://en.wikipedia.org/wiki/MIT_License)开源协议，意味着您无需支付任何费用，也无需授权，即可将uView应用到您的产品中。

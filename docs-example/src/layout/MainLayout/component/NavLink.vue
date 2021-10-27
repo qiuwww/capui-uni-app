@@ -1,17 +1,12 @@
 <template>
-  <router-link
-    v-if="path"
-    active-class="active"
-    :to="base + path"
-    v-html="itemName"
-  />
+  <router-link v-if="path" active-class="active" :to="base + path" v-html="itemName" />
   <!-- <a v-else-if="item.link" :href="item.link" v-html="itemName" /> -->
   <a v-else v-html="itemName" />
 </template>
 
 <script>
 export default {
-  name: "doc-nav-link",
+  name: 'doc-nav-link',
 
   props: {
     base: String,
@@ -24,8 +19,8 @@ export default {
   computed: {
     itemName() {
       // 为了处理这样的，Button 按钮，前面14px，后边13px
-      const name = this.title.split(" ");
-      return `${name[0]} <span>${name.slice(1).join(" ")}</span>`;
+      const name = this.title.split(' ');
+      return `${name[0]} <span>${name.slice(1).join(' ')}</span>`;
     },
   },
 };

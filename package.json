@@ -5,12 +5,10 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    
     "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
-
-    "dev:docs": "npx cross-env NODE_ENV=development webpack-serve --config ./docs/build/webpack.doc.dev.js",
-    "build:docs": "npx cross-env NODE_ENV=production webpack --config ./docs/build/webpack.doc.prd.js"
+    "dev:docs": "npx cross-env NODE_ENV=development webpack-serve --config ./docs-example/build/webpack.doc.dev.js",
+    "build:docs": "npx cross-env NODE_ENV=production webpack --config ./docs-example/build/webpack.doc.prd.js"
   },
   "repository": {
     "type": "git",

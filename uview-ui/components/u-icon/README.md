@@ -1,13 +1,19 @@
 # Icon 图标
 
-这里有一个不好的地方，引用的是线上的文件，可能会被修改。需要下载到本地。
+## 使用说明
+
+[原Icon图标文档地址](https://www.uviewui.com/components/icon.html)
+
+本次主要在原有图标的基础上新增capui的图标库的一些图标。
+
+原有的图标，默认的`custom-prefix`为`uicon`，新增的icon需要自己添加`custom-prefix="capui"`。
 
 ## 新增capui的图标字体库
 
 1. [参考iconfont](https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.d8cf4382a&helptype=code)
 2. [iconfont的仓库地址](https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=2843205)
 
-这里顺着原来的icon的设计，沿用一下，仍旧使用unicode模式引用。
+这里继续原来的icon的设计方案，仍旧使用**unicode模式**引用。
 
 ### 使用capui的图标
 
@@ -18,7 +24,7 @@
 <u-icon name="toastshibai" custom-prefix="capui" size="40" color="red"></u-icon>
 ```
 
-### 目前总共添加的图标如右
+### 目前总共添加的图标如下：
 
 ```js
   // capui的图标

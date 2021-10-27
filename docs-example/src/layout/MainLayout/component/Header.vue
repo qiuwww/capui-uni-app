@@ -3,47 +3,33 @@
     <div class="doc-row">
       <div class="doc-header__top">
         <a class="doc-header__logo" :href="config.logo.href">
-          <img :src="config.logo.image" />
+          <img :src="config.logo.image" class="logo" />
           <span>{{ config.logo.title }}</span>
         </a>
-
-        <search-input
-          v-if="searchConfig"
-          :lang="lang"
-          :search-config="searchConfig"
-        />
-
+        <!-- <search-input v-if="searchConfig" :lang="lang" :search-config="searchConfig" /> -->
         <ul class="doc-header__top-nav">
-          <li
-            v-for="item in config.nav.logoLink"
-            class="doc-header__top-nav-item"
-          >
+          <li v-for="item in config.nav.logoLink" class="doc-header__top-nav-item" :key="item.url">
             <a class="doc-header__logo-link" target="_blank" :href="item.url">
               <img :src="item.image" />
             </a>
           </li>
-
-          <li ref="version" v-if="versions" class="doc-header__top-nav-item">
-            <span
-              class="doc-header__cube doc-header__version"
-              @click="toggleVersionPop"
-            >
+          <!-- <li ref="version" v-if="versions" class="doc-header__top-nav-item">
+            <span class="doc-header__cube doc-header__version" @click="toggleVersionPop">
               {{ versions[0] }}
-
               <transition name="doc-dropdown">
                 <div v-if="showVersionPop" class="doc-header__version-pop">
                   <div
                     v-for="item in versions"
                     class="doc-header__version-pop-item"
                     @click="onSwitchVersion(item)"
+                    :key="item"
                   >
                     {{ item }}
                   </div>
                 </div>
               </transition>
             </span>
-          </li>
-
+          </li> -->
           <li v-if="config.nav.lang" class="doc-header__top-nav-item">
             <a class="doc-header__cube" :href="langLink">
               {{ config.nav.lang.text }}
@@ -56,10 +42,10 @@
 </template>
 
 <script>
-import SearchInput from "./SearchInput";
+import SearchInput from './SearchInput';
 
 export default {
-  name: "doc-header",
+  name: 'doc-header',
 
   components: {
     SearchInput,
@@ -90,11 +76,8 @@ export default {
     toggleVersionPop() {
       const val = !this.showVersionPop;
 
-      const action = val ? "add" : "remove";
-      document.body[`${action}EventListener`](
-        "click",
-        this.checkHideVersionPop
-      );
+      const action = val ? 'add' : 'remove';
+      document.body[`${action}EventListener`]('click', this.checkHideVersionPop);
 
       this.showVersionPop = val;
     },
@@ -110,14 +93,14 @@ export default {
     },
 
     onSwitchVersion(version) {
-      this.$emit("switch-version", version);
+      this.$emit('switch-version', version);
     },
   },
 };
 </script>
 
 <style lang="scss">
-@import "../style/variable";
+@import '../style/variable';
 
 .doc-header {
   width: 100%;
@@ -128,6 +111,7 @@ export default {
     display: flex;
     align-items: center;
     background-color: #001938;
+    // background-color: white;
     padding: 0 $doc-padding;
     height: $doc-header-top-height;
     line-height: $doc-header-top-height;
@@ -165,7 +149,7 @@ export default {
     text-align: center;
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.7);
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     transition: 0.3s ease-in-out;
   }
 
@@ -174,7 +158,7 @@ export default {
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       top: 7px;
       right: 7px;
       width: 5px;
@@ -221,7 +205,7 @@ export default {
     }
 
     img {
-      width: 26px;
+      width: 150px;
       margin-right: 5px;
     }
 

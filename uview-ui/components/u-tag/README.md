@@ -1,6 +1,8 @@
 # Tag 标签
 
-<!-- [主要参考](https://www.uviewui.com/components/tag.html) -->
+## 使用说明
+
+[原Tag 标签文档地址](https://www.uviewui.com/components/tag.html)
 
 ## 标签大小
 

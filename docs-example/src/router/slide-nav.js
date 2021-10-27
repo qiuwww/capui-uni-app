@@ -2,384 +2,469 @@
 // 三级结构，保持两边结构一致
 export default [
   {
-    title: "开发指南",
-    path: "/guide",
+    title: '开发指南',
+    path: '/guide',
     children: [
       {
         children: [
           {
-            path: "/intro",
-            title: "介绍",
-            views: "guide",
+            path: '/intro',
+            title: '介绍',
+            views: 'guide',
+            example: '/',
           },
           {
-            path: "/install",
-            title: "安装",
-            views: "guide",
-            example: "pages/componentsC/button/index",
+            path: '/install',
+            title: '安装',
+            views: 'guide',
+            example: '/',
           },
           {
-            path: "/quickstart",
-            title: "快速上手",
-            views: "guide",
-          },
-          {
-            path: "/changelog",
-            title: "更新日志",
-            views: "guide",
+            path: '/quickstart',
+            title: '快速上手',
+            views: 'guide',
+            example: '/',
           },
           // {
-          //   path: "/common",
-          //   title: "内置样式",
-          //   views: "guide",
+          //   path: '/changelog',
+          //   title: '更新日志',
+          //   views: 'guide',
+          //   example: '/',
           // },
           {
-            path: "/custom-style",
-            title: "样式覆盖",
-            views: "guide",
+            path: '/common',
+            title: '内置样式',
+            views: 'guide',
+            example: '/',
           },
-          {
-            path: "/theme",
-            title: "定制主题",
-            views: "guide",
-          },
-          {
-            path: "/demo",
-            title: "demo",
-            views: "guide",
-          },
+          // {
+          //   path: '/custom-style',
+          //   title: '样式覆盖',
+          //   views: 'guide',
+          //   example: '/',
+          // },
+          // {
+          //   path: '/theme',
+          //   title: '定制主题',
+          //   views: 'guide',
+          //   example: '/',
+          // },
         ],
       },
     ],
   },
 
   {
-    title: "组件",
-    path: "/component",
+    title: '组件',
+    path: '/component',
     children: [
       {
-        title: "基础组件",
-        path: "/base",
-        icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
+        title: '基础组件',
+        path: '/base',
         children: [
           {
-            path: "/color",
-            title: "Color 色彩",
-            desc: "一期",
-            views: "components",
-            example: "pages/componentsC/button/index",
+            path: '/color',
+            title: 'Color 色彩',
+            desc: '一期',
+            views: 'components',
+            example: 'pages/componentsC/color/index',
           },
           {
-            path: "/u-icon",
-            title: "Icon 图标",
-            desc: "一期",
-            example: "pages/componentsA/icon/index",
+            path: '/u-icon',
+            title: 'Icon 图标',
+            desc: '一期',
+            example: 'pages/componentsA/icon/index',
           },
           {
-            path: "/u-button",
-            title: "Button 按钮",
-            desc: "一期",
-            example: "pages/componentsC/button/index",
+            path: '/u-image',
+            title: 'Image 图片',
+            desc: '一期',
+            example: 'pages/componentsB/image/index',
           },
           {
-            path: "/u-tag",
-            title: "Tag 标签",
-            desc: "一期",
-            demoPath: "pages/componentsA/tag/index",
+            path: '/u-button',
+            title: 'Button 按钮',
+            desc: '一期',
+            example: 'pages/componentsC/button/index',
+          },
+          {
+            path: '/layout',
+            title: 'Layout 布局',
+            views: 'components',
+            example: 'pages/componentsC/cell/index',
+          },
+          {
+            path: '/u-cell',
+            title: 'Cell 单元格',
+            example: 'pages/componentsC/badge/index',
+          },
+          {
+            path: '/u-badge',
+            title: 'Badge 徽标数',
+            example: 'pages/componentsC/badge/index',
+          },
+          {
+            path: '/u-tag',
+            title: 'Tag 标签',
+            desc: '一期',
+            example: 'pages/componentsA/tag/index',
           },
         ],
       },
       {
-        title: "表单组件",
-        path: "/form",
-        icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
+        title: '表单组件',
+        path: '/form',
         children: [
           {
-            path: "/u-search",
-            title: "Search 搜索",
-            desc: "一期",
-            demoPath: "pages/componentsB/search/index",
+            path: '/u-input',
+            title: 'Input 输入框',
           },
           {
-            path: "/u-input",
-            title: "Input 输入框",
+            path: '/u-form',
+            title: 'Form 表单',
+            example: 'pages/componentsA/form/index',
           },
           {
-            path: "/u-form",
-            title: "Form 表单",
-            example: "pages/componentsA/form/index",
+            path: '/u-calendar',
+            title: 'Calendar 日历',
+            example: 'pages/componentsA/calendar/index',
           },
-        ],
-      },
-    ],
-  },
-];
+          {
+            path: '/u-select',
+            title: 'Select 列选择器',
+            example: 'pages/componentsA/select/index',
+          },
 
-const config = [
-  {
-    name: "基础组件",
-    icon: "https://img.yzcdn.cn/vant/basic-0401.svg",
-    children: [
-      {
-        path: "/u-button",
-        title: "Button 按钮",
-        desc: "一期",
-        demoPath: "pages/componentsC/button/index",
+          {
+            path: '/u-keyboard',
+            title: 'Keyboard 键盘',
+            example: 'pages/componentsA/keyboard/index',
+          },
+          {
+            path: '/u-picker',
+            title: 'Picker 选择器',
+            example: 'pages/componentsB/picker/index',
+          },
+          {
+            path: '/u-rate',
+            title: 'Rate 评分',
+            example: 'pages/componentsB/rate/index',
+          },
+          {
+            path: '/u-search',
+            title: 'Search 搜索',
+            desc: '一期',
+            example: 'pages/componentsB/search/index',
+          },
+          {
+            path: '/u-number-box',
+            title: 'NumberBox 步进器',
+            example: 'pages/componentsC/numberBox/index',
+          },
+          {
+            path: '/u-upload',
+            title: 'Upload 上传',
+            example: 'pages/componentsB/upload/index',
+          },
+          {
+            path: '/u-verification-code',
+            title: 'VerificationCode 验证码倒计时',
+            example: 'pages/componentsA/verificationCode/index',
+          },
+          {
+            path: '/u-field',
+            title: 'Field 输入框',
+            example: 'pages/componentsA/field/index',
+          },
+          {
+            path: '/u-checkbox',
+            title: 'Checkbox 复选框',
+            example: 'pages/componentsB/checkbox/index',
+          },
+          {
+            path: '/u-radio',
+            title: 'Radio 单选框',
+            example: 'pages/componentsB/radio/index',
+          },
+          {
+            path: '/u-switch',
+            title: 'Switch 开关选择器',
+            example: 'pages/componentsB/switch/index',
+          },
+          {
+            path: '/u-slider',
+            title: 'Slider 滑动选择器 ',
+            example: 'pages/componentsA/slider/index',
+          },
+        ],
       },
       {
-        path: "/u-tag",
-        title: "Tag 标签",
-        desc: "一期",
-        demoPath: "pages/componentsA/tag/index",
+        title: '数据组件',
+        path: '/data',
+        children: [
+          {
+            path: '/u-circle-progress',
+            title: 'CircleProgress 圆形进度条',
+            example: 'pages/componentsC/circleProgress/index',
+          },
+          {
+            path: '/u-line-progress',
+            title: 'LineProgress 线形进度条',
+            example: 'pages/componentsC/progress/index',
+          },
+          {
+            path: '/u-table',
+            title: 'Table 表格',
+            example: 'pages/componentsB/table/index',
+          },
+          {
+            path: '/u-count-down',
+            title: 'CountDown 倒计时',
+            example: 'pages/componentsB/countDown/index',
+          },
+          {
+            path: '/u-count-to',
+            title: 'CountTo 数字滚动',
+            example: 'pages/componentsC/countTo/index',
+          },
+        ],
       },
-      //     {
-      //       path: '/icon',
-      //       title: 'Icon 图标',
-      //     },
-      //     {
-      //       path: '/image',
-      //       title: 'Image 图片',
-      //     },
-      //     {
-      //       path: '/dot',
-      //       title: 'Dot 徽标',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/col',
-      //       title: 'Layout 布局',
-      //     },
-      //     {
-      //       path: '/popup',
-      //       title: 'Popup 弹出层',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/transition',
-      //       title: 'Transition 动画',
-      //     },
-      //   ],
-      // },
-      // {
-      //   name: '表单组件',
-      //   icon: 'https://img.yzcdn.cn/vant/form-0401.svg',
-      //   list: [
-      //     {
-      //       path: '/calendar',
-      //       title: 'Calendar 日历',
-      //     },
-      //     {
-      //       path: '/checkbox',
-      //       title: 'Checkbox 复选框',
-      //     },
-      //     {
-      //       path: '/datetime-picker',
-      //       title: 'DatetimePicker 时间选择',
-      //     },
-      //     {
-      //       path: '/field',
-      //       title: 'Field 输入框',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/picker',
-      //       title: 'Picker 选择器',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/radio',
-      //       title: 'Radio 单选框',
-      //     },
-      //     {
-      //       path: '/rate',
-      //       title: 'Rate 评分',
-      //     },
-      //     {
-      //       path: '/search',
-      //       title: 'Search 搜索',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/slider',
-      //       title: 'Slider 滑块',
-      //     },
-      //     {
-      //       path: '/stepper',
-      //       title: 'Stepper 步进器',
-      //     },
-      //     {
-      //       path: '/switch',
-      //       title: 'Switch 开关',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/uploader',
-      //       title: 'Uploader 文件上传',
-      //     },
-      //   ],
-      // },
-      // {
-      //   name: '反馈组件',
-      //   icon: 'passed',
-      //   list: [
-      //     {
-      //       path: '/action-sheet',
-      //       title: 'ActionSheet 上拉菜单',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/modal-sheet',
-      //       title: 'ModalSheet 模态框',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/dialog',
-      //       title: 'Dialog 弹出框',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/dropdown-menu',
-      //       title: 'DropdownMenu 下拉菜单',
-      //     },
-      //     {
-      //       path: '/loading',
-      //       title: 'Loading 加载',
-      //     },
-      //     {
-      //       path: '/notify',
-      //       title: 'Notify 消息通知',
-      //     },
-      //     {
-      //       path: '/overlay',
-      //       title: 'Overlay 遮罩层',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/share-sheet',
-      //       title: 'ShareSheet 分享面板',
-      //     },
-      //     {
-      //       path: '/swipe-cell',
-      //       title: 'SwipeCell 滑动单元格',
-      //     },
-      //     {
-      //       path: '/toast',
-      //       title: 'Toast 轻提示',
-      //     },
-      //   ],
-      // },
-      // {
-      //   name: '展示组件',
-      //   icon: 'photo-o',
-      //   list: [
-      //     {
-      //       path: '/circle',
-      //       title: 'Circle 进度条',
-      //     },
-      //     {
-      //       path: '/collapse',
-      //       title: 'Collapse 折叠面板',
-      //     },
-      //     {
-      //       path: '/count-down',
-      //       title: 'CountDown 倒计时',
-      //     },
-      //     {
-      //       path: '/divider',
-      //       title: 'Divider 分割线',
-      //     },
-      //     {
-      //       path: '/empty',
-      //       title: 'Empty 空状态',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/notice-bar',
-      //       title: 'NoticeBar 通告栏',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/panel',
-      //       title: 'Panel 面板',
-      //     },
-      //     {
-      //       path: '/progress',
-      //       title: 'Progress 进度条',
-      //     },
-      //     {
-      //       path: '/skeleton',
-      //       title: 'Skeleton 骨架屏',
-      //     },
-      //     {
-      //       path: '/steps',
-      //       title: 'Steps 步骤条',
-      //     },
-      //     {
-      //       path: '/sticky',
-      //       title: 'Sticky 粘性布局',
-      //     },
-      //     {
-      //       path: '/tag',
-      //       title: 'Tag 标记',
-      //     },
-      //     {
-      //       path: '/tree-select',
-      //       title: 'TreeSelect 分类选择',
-      //     },
-      //   ],
-      // },
-      // {
-      //   name: '导航组件',
-      //   icon: 'https://img.yzcdn.cn/vant/nav-0401.svg',
-      //   list: [
-      //     {
-      //       path: '/grid',
-      //       title: 'Grid 宫格',
-      //     },
-      //     {
-      //       path: '/index-bar',
-      //       title: 'IndexBar 索引栏',
-      //     },
-      //     {
-      //       path: '/sidebar',
-      //       title: 'Sidebar 侧边导航',
-      //     },
-      //     {
-      //       path: '/nav-bar',
-      //       title: 'NavBar 导航栏',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/tab',
-      //       title: 'Tab 标签页',
-      //       desc: '一期',
-      //     },
-      //     {
-      //       path: '/tabbar',
-      //       title: 'Tabbar 标签栏',
-      //     },
-      //   ],
-      // },
-      // {
-      //   name: '业务组件',
-      //   icon: 'ellipsis',
-      //   list: [
-      //     {
-      //       path: '/area',
-      //       title: 'Area 省市区选择',
-      //     },
-      //     {
-      //       path: '/card',
-      //       title: 'Card 商品卡片',
-      //     },
-      //     {
-      //       path: '/submit-bar',
-      //       title: 'SubmitBar 提交订单栏',
-      //     },
-      //     {
-      //       path: '/goods-action',
-      //       title: 'GoodsAction 商品导航',
-      //     },
+      {
+        title: '反馈组件',
+        path: '/feedback',
+        children: [
+          {
+            path: '/u-action-sheet',
+            title: 'ActionSheet 操作菜单',
+            example: 'pages/componentsC/actionSheet/index',
+          },
+          {
+            path: '/u-alert-tips',
+            title: 'AlertTips 警告提示',
+            example: 'pages/componentsC/alertTips/index',
+          },
+          {
+            path: '/u-toast',
+            title: 'Toast 消息提示',
+            example: 'pages/componentsA/toast/index',
+          },
+          {
+            path: '/u-notice-bar',
+            title: 'NoticeBar 滚动通知',
+            example: 'pages/componentsB/noticeBar/index',
+          },
+          {
+            path: '/u-top-tips',
+            title: 'TopTips 顶部提示',
+            example: 'pages/componentsA/topTips/index',
+          },
+          {
+            path: '/u-collapse',
+            title: 'Collapse 折叠面板',
+            example: 'pages/componentsC/collapse/index',
+          },
+          {
+            path: '/u-popup',
+            title: 'Popup 弹出层',
+            example: 'pages/componentsC/popup/index',
+          },
+          {
+            path: '/u-swipe-action',
+            title: 'SwipeAction 滑动操作',
+            example: 'pages/componentsB/swipeAction/index',
+          },
+          {
+            path: '/u-modal',
+            title: 'Modal 模态框',
+            example: 'pages/componentsA/modal/index',
+          },
+          {
+            path: '/u-full-screen',
+            title: 'FullScreen 压窗屏',
+            example: 'pages/componentsA/fullScreen/index',
+          },
+        ],
+      },
+      {
+        title: '布局组件',
+        path: '/layout',
+        children: [
+          {
+            path: '/u-line',
+            title: 'Line 线条',
+            example: 'pages/componentsB/line/index',
+          },
+          {
+            path: '/u-card',
+            title: 'Card 卡片',
+            example: 'pages/componentsB/card/index',
+          },
+          {
+            path: '/u-mask',
+            title: 'Mask 遮罩层',
+            example: 'pages/componentsC/mask/index',
+          },
+          {
+            path: '/u-no-network',
+            title: 'NoNetwork 无网络提示',
+            example: 'pages/componentsA/noNetwork/index',
+          },
+          {
+            path: '/u-grid',
+            title: 'Grid 宫格布局',
+            example: 'pages/componentsC/grid/index',
+          },
+          {
+            path: '/u-swiper',
+            title: 'Swiper 轮播图',
+            example: 'pages/componentsB/swiper/index',
+          },
+          {
+            path: '/u-timeLine',
+            title: 'TimeLine 时间轴',
+            example: 'pages/componentsA/timeLine/index',
+          },
+          {
+            path: '/u-skeleton',
+            title: 'Skeleton 骨架屏',
+            example: 'pages/componentsB/skeleton/index',
+          },
+          {
+            path: '/u-sticky',
+            title: 'Sticky 吸顶',
+            example: 'pages/componentsB/sticky/index',
+          },
+          {
+            path: '/u-waterfall',
+            title: 'Waterfall 瀑布流',
+            example: 'pages/componentsB/waterfall/index',
+          },
+          {
+            path: '/u-divider',
+            title: 'Divider 分割线',
+            example: 'pages/componentsB/divider/index',
+          },
+        ],
+      },
+      {
+        title: '导航组件',
+        path: '/nav',
+        children: [
+          {
+            path: '/u-dropdown',
+            title: 'Dropdown 下拉菜单',
+            example: 'pages/componentsB/dropdown/index',
+          },
+          {
+            path: '/u-tabbar',
+            title: 'Tabbar 底部导航栏',
+            example: 'pages/componentsB/tabbar/index',
+          },
+          {
+            path: '/u-back-top',
+            title: 'BackTop 返回顶部',
+            example: 'pages/componentsA/backTop/index',
+          },
+          {
+            path: '/u-navbar',
+            title: 'Navbar 自定义导航栏',
+            example: 'pages/componentsA/navbar/index',
+          },
+          {
+            path: '/u-tabs',
+            title: 'Tabs 标签',
+            example: 'pages/componentsA/tabs/index',
+          },
+          {
+            path: '/u-tabs-swiper',
+            title: 'TabsSwiper 全屏选项卡',
+            desc: '一期',
+            example: 'pages/template/order/index',
+          },
+          {
+            path: '/u-subsection',
+            title: 'Subsection 分段器',
+            example: 'pages/componentsC/subsection/index',
+          },
+          {
+            path: '/u-index-list',
+            title: 'IndexList 索引列表',
+            example: 'pages/componentsA/indexList/index',
+          },
+          {
+            path: '/u-steps',
+            title: 'Steps 步骤条',
+            example: 'pages/componentsB/steps/index',
+          },
+          {
+            path: '/u-empty',
+            title: 'Empty 内容为空',
+            example: 'pages/componentsA/empty/index',
+          },
+          {
+            path: '/u-link',
+            title: 'Link 超链接',
+            example: 'pages/componentsC/link/index',
+          },
+          {
+            path: '/u-section',
+            title: 'Section 查看更多',
+            example: 'pages/componentsC/section/index',
+          },
+        ],
+      },
+      {
+        title: '其他组件',
+        path: '/others',
+        children: [
+          {
+            path: '/u-parse',
+            title: 'Parse 富文本解析器',
+            example: 'pages/componentsA/parse/index',
+          },
+          {
+            path: '/u-message-input',
+            title: 'MessageInput 验证码输入',
+            example: 'pages/componentsC/messageInput/index',
+          },
+          {
+            path: '/u-avatar-cropper',
+            title: 'AvatarCropper 头像裁剪',
+            example: 'pages/componentsA/avatarCropper/index',
+          },
+          {
+            path: '/u-loadmore',
+            title: 'loadMore 加载更多',
+            desc: '一期',
+            example: 'pages/componentsC/loadMore/index',
+          },
+          {
+            path: '/u-read-more',
+            title: 'ReadMore 展开阅读更多',
+            example: 'pages/componentsB/readMore/index',
+          },
+          {
+            path: '/u-lazy-load',
+            title: 'LazyLoad 懒加载',
+            example: 'pages/componentsA/lazyLoad/index',
+          },
+          {
+            path: '/u-gap',
+            title: 'Gap 间隔槽',
+            example: 'pages/componentsA/gap/index',
+          },
+          {
+            path: '/u-avatar',
+            title: 'Avatar 头像',
+            example: 'pages/componentsA/avatar/index',
+          },
+          {
+            path: '/u-loading',
+            title: 'Loading 加载动画',
+            example: 'pages/componentsB/loading/index',
+          },
+        ],
+      },
     ],
   },
 ];

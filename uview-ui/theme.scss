@@ -41,7 +41,7 @@ $primary-2: #c2e9ff;
 $primary-3: #99d6ff;
 $primary-4: #70c1ff;
 $primary-5: #47a9ff; // 点击
-$primary-6: #1e8dff; // 默认
+$primary-6: #1e8df0; // 默认
 $primary-7: #0f6dd9;
 $primary-8: #044fb3;
 $primary-9: #00388c;
@@ -59,7 +59,6 @@ $secondary-7: #d96900; // 点击
 $secondary-8: #b35000;
 $secondary-9: #8c3a00;
 $secondary-10: #8c3a00;
-
 
 // Component Colors
 $text-color: $gray-7;
@@ -99,7 +98,6 @@ $text-default-color: $gray-7; // 常规文本/辅助文本/描述文本/正文
 $text-sub-title-color: $gray-6; // 副标题/次级标题
 $text-disable-color: $gray-5; // 暗文本/未输入
 
-
 // 基于新的自定义样式，重置uview默认的样式
 $u-main-color: $gray-8;
 $u-content-color: #606266;
@@ -112,6 +110,8 @@ $u-type-primary: $primary-color;
 $u-type-primary-light: #ecf5ff;
 // $u-type-primary-disabled: #a0cfff;
 $u-type-primary-dark: #2b85e4;
+$u-type-primary-dark-hover: $primary-7;
+$u-type-primary-disabled: rgba($primary-6, $disabled-opacity);
 
 $u-type-warning: $warning-color;
 $u-type-warning-disabled: #fcbd71;
@@ -138,9 +138,6 @@ $u-form-item-border-color: #dcdfe6;
 
 // 新增，修改组件库的时候
 // button
-$u-type-primary-dark-hover: $primary-7;
-$u-type-primary-disabled: rgba($primary-6, $disabled-opacity);
-
 $u-type-default: $primary-6;
 $u-type-default-tap: $primary-1;
 

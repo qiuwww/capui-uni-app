@@ -1,6 +1,10 @@
 # Button 按钮
 
-<!-- [主要参考](https://www.uviewui.com/components/button.html) -->
+## 使用说明
+
+[原的Button 按钮文档地址](https://www.uviewui.com/components/button.html)
+
+主要修改了，按钮的尺寸、颜色。
 
 ## 设置尺寸
 
@@ -35,7 +39,7 @@ button组件的size，可选值为default(默认)、large、medium(中等尺寸)
 
 ## API
 
-### Props
+### 修改的Props
 
 | 参数 | 说明 | 类型 | 默认值 | 平台差异说明 |
 | --- | --- | --- | --- | --- |
