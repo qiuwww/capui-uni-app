@@ -4,11 +4,11 @@
 
 <script>
 // @ is an alias to /src
-import txt from "./test.txt";
-console.log("txt", txt);
+import txt from './test.txt';
+console.log('txt', txt);
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {},
   data() {
     return {

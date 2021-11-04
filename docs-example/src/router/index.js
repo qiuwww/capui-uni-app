@@ -2,10 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '@/views/Home.vue';
 import MainLayout from '@/layout/MainLayout/index.vue';
-
 import slideNav from './slide-nav';
 import RegisterRoute from './RegisterRoute';
-console.log('slideNav', slideNav);
 
 Vue.use(VueRouter);
 
@@ -30,10 +28,6 @@ const routes = [
   },
   {
     path: '/',
-    redirect: '/docs',
-  },
-  {
-    path: '/docs',
     name: 'docs',
     component: MainLayout,
     children: [...new RegisterRoute(slideNav)],

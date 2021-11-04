@@ -10,7 +10,6 @@
     />
 
     <Nav :nav-config="slideNav" :base="base" />
-
     <Container :has-simulator="!!simulator">
       <Content>
         <router-view />

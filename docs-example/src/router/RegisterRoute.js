@@ -3,18 +3,14 @@ export default class RegisterRoute {
     const routes = this.registerRoute(routeConfigList);
     return routes;
   }
-
   routes = [
     {
-      path: "/",
+      path: '/',
       redirect: () => `/intro`,
     },
   ];
-
   setRouteItem(item) {
-    let { path, children, title, views = "" } = item;
-    // console.log("####setRouteItem", item);
-
+    let { path, children, title, views = '' } = item;
     if (children) {
       children.forEach((page) => {
         this.setRouteItem(page);
@@ -28,7 +24,7 @@ export default class RegisterRoute {
     }
 
     if (path) {
-      path = path.replace("/", "");
+      path = path.replace('/', '');
       const component = () =>
         views
           ? import(`../../../uview-ui/docs/${views}/${path}.md`)
@@ -39,7 +35,7 @@ export default class RegisterRoute {
       }
 
       this.routes.push({
-        name: "/" + path,
+        name: '/' + path,
         component,
         path: `/${path}`,
         md: true,
@@ -57,13 +53,6 @@ export default class RegisterRoute {
     // 需要处理三级的路由，需要拼接二级路由，最后得到的都是绝对地址
     list.forEach((item) => {
       this.setRouteItem(item);
-      // if (item.children) {
-      //   item.children.forEach((page) => {
-      //     setRouteItem(page);
-      //   });
-      // } else {
-      //   setRouteItem(item);
-      // }
     });
     return this.routes;
   };
