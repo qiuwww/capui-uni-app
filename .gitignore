@@ -1,4 +1,5 @@
 /unpackage/dist/*
+/dist/*
 /node_modules/*
 /.idea/*
 deploy.sh
