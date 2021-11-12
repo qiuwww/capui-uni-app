@@ -86,7 +86,10 @@ export default {
       if (location.hostname === '0.0.0.0' || location.hostname === 'localhost') {
         // prefix = 'https://youzan.github.io';
         prefix = 'http://localhost:8181/#/';
+      } else {
+        prefix = `https://static.91jkys.com/f2e/capui-uni-app/example/#/`;
       }
+
       // if (!UNSHARED.includes(path)) {
       //   return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
       // }
