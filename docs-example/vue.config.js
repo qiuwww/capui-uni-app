@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  publicPath: './',
   lintOnSave: false,
   // 那可以通过 resolveLoader 属性添加 loader 本地目录, 例如下面配置就会去找 project/loaders/txt-loader 下面的自定义 loader
   configureWebpack: {

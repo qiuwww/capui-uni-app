@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo build success",
-    "build-site": "rm -rf dist/docs/*",
+    "build-site": "rm -rf dist/* && cp -r docs-example/dist dist/docs &&  cp -r unpackage/dist/build/h5 dist/example",
     "ignoreBuild": "echo =======不需要编译======"
   },
   "repository": {
