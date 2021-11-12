@@ -6,7 +6,7 @@ depoly-qa:
   script:
     - devops dp --lintCheck=false --delOutputDir=false --useYarnInstall=false --buildCommand=ignoreBuild
   rules:
-    - if: '$CI_COMMIT_BRANCH =~ /^reDev/'
+    - if: '$CI_COMMIT_BRANCH =~ /^qa/'
   tags:
     - qa-node:12.18
 
