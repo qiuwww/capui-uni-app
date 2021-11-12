@@ -134,7 +134,7 @@
                 "enable" : false
             }
         },
-        "title" : "uView UI",
+        "title" : "caiui-uni-app",
         "devServer" : {
             "port" : 8181
         }
