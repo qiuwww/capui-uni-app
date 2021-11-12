@@ -85,7 +85,7 @@ export default {
 
       if (location.hostname === '0.0.0.0' || location.hostname === 'localhost') {
         // prefix = 'https://youzan.github.io';
-        prefix = 'http://0.0.0.0:8181/#/';
+        prefix = 'http://localhost:8181/#/';
       }
       // if (!UNSHARED.includes(path)) {
       //   return `${prefix}/v1/mobile.html#/zh-CN/${path}`;
