@@ -127,14 +127,14 @@
         "template" : "template.h5.html",
         "router" : {
             "mode" : "hash",
-            "base" : ""
+            "base" : "./"
         },
         "optimization" : {
             "treeShaking" : {
                 "enable" : false
             }
         },
-        "title" : "uView UI",
+        "title" : "caiui-uni-app",
         "devServer" : {
             "port" : 8181
         }
