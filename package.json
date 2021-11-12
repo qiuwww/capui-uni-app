@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-docs": "cd docs-example && yarn build && cd ../",
-    "build-site": "yarn build-docs && rm -rf dist/* && cp -r docs-example/dist dist/docs &&  cp -r unpackage/dist/build/h5 dist/example",
+    "build-site": "echo 确保你已经使用HBuilder打包了example项目 && yarn build-docs && rm -rf dist/* && cp -r docs-example/dist dist/docs &&  cp -r unpackage/dist/build/h5 dist/example",
     "ignoreBuild": "echo =======不需要编译======"
   },
   "repository": {
