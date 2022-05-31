@@ -11,9 +11,9 @@ export default {
   header: {
     logo: {
       image:
-        'https://static.91jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png',
+        'https://static.92jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png',
       // title: 'Capsule Mini Program',
-      href: 'https://capsule.91jkys.com/#/zh-CN/',
+      href: 'https://capsule.92jkys.com/#/zh-CN/',
     },
     nav: {
       // logoLink: [

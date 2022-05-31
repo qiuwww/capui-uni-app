@@ -1,13 +1,13 @@
 <p align="center">
-  <img alt="logo" src="https://static.91jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png" width="120" style="margin-bottom: 10px;">
+  <img alt="logo" src="https://static.92jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png" width="120" style="margin-bottom: 10px;">
 </p>
 <h3 align="center">Capsule Mini Program - 轻量、可靠的小程序 UI 组件库</h3>
 
 <p align="center">
-  🔥 <a href="https://static.91jkys.com/f2e/capui-mini-program/#/intro">文档网站</a>
+  🔥 <a href="https://static.92jkys.com/f2e/capui-mini-program/#/intro">文档网站</a>
   &nbsp;
   &nbsp;
-  🚀 <a href="https://capsule-mobile.91jkys.com/v1/#/zh-CN/" target="_blank">移动端版</a>
+  🚀 <a href="https://capsule-mobile.92jkys.com/v1/#/zh-CN/" target="_blank">移动端版</a>
 </p>
 
 ---
@@ -20,7 +20,7 @@ Capsule-Mini-Program 是智云健康前端团队及设计团队开发的移动�
 
 扫描下方小程序二维码，体验组件库示例：
 
-<img src="http://static.91jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg" width="200" height="200" style="margin-top: 10px;" >
+<img src="http://static.92jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg" width="200" height="200" style="margin-top: 10px;" >
 
 ## 使用之前
 

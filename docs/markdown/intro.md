@@ -1,6 +1,6 @@
 <div class="card">
   <div class="van-doc-intro">
-    <img class="van-doc-intro__logo" style="width: 154px; height: 30px; box-shadow: none;" src="https://static.91jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png">
+    <img class="van-doc-intro__logo" style="width: 154px; height: 30px; box-shadow: none;" src="https://static.92jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png">
     <h2 style="margin: 0; font-size: 32px; line-height: 60px;">Capsule Mini Program</h2>
     <p>轻量、可靠的小程序 UI 组件库</p>
   </div>
@@ -14,7 +14,7 @@ Capsule-Mini-Program 是**智云健康**前端团队及设计团队开发的移�
 
 扫描下方小程序二维码，体验组件库示例：
 
-<img src="http://static.91jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg" style="width: 200px; height: 200px; margin-top: 15px; box-shadow: none" >
+<img src="http://static.92jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg" style="width: 200px; height: 200px; margin-top: 15px; box-shadow: none" >
 
 ### 快速上手
 

@@ -6,7 +6,7 @@
   <meta http-Equiv="Cache-Control" Content="no-cache" />
   <meta http-Equiv="Pragma" Content="no-cache" />
   <meta http-Equiv="Expires" Content="0" />
-  <link rel="shortcut icon" href="https://static.91jkys.com/third_files/GuoYao/202003/19/c94f7a37fb9e4990946140a964a23925.png">
+  <link rel="shortcut icon" href="https://static.92jkys.com/third_files/GuoYao/202003/19/c94f7a37fb9e4990946140a964a23925.png">
   <title>Capsule Mini Program - 轻量、可靠的小程序 UI 组件库</title>
   <script>
     var _hmt = _hmt || [];

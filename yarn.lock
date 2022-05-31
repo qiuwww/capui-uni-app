@@ -5270,7 +5270,7 @@ decompress-response@^6.0.0:
 
 dedent@0.7.0, dedent@^0.7.0:
   version "0.7.0"
-  resolved "http://npmreg.qa.91jkys.com/dedent/-/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
+  resolved "http://npmreg.qa.92jkys.com/dedent/-/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
   integrity sha1-JJXduvbrh0q7Dhvp3yLS5aVEMmw=
 
 deep-equal@~1.0.1:
@@ -6785,7 +6785,7 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.3, glob@^7.1.4, gl
 
 global-dirs@^0.1.0, global-dirs@^0.1.1:
   version "0.1.1"
-  resolved "http://npmreg.qa.91jkys.com/global-dirs/-/global-dirs-0.1.1.tgz#b319c0dd4607f353f3be9cca4c72fc148c49f445"
+  resolved "http://npmreg.qa.92jkys.com/global-dirs/-/global-dirs-0.1.1.tgz#b319c0dd4607f353f3be9cca4c72fc148c49f445"
   integrity sha1-sxnA3UYH81PzvpzKTHL8FIxJ9EU=
   dependencies:
     ini "^1.3.4"
@@ -6860,7 +6860,7 @@ globals@^9.18.0:
 
 globby@11.0.1, globby@^11.0.1:
   version "11.0.1"
-  resolved "http://npmreg.qa.91jkys.com/globby/-/globby-11.0.1.tgz#9a2bf107a068f3ffeabc49ad702c79ede8cfd357"
+  resolved "http://npmreg.qa.92jkys.com/globby/-/globby-11.0.1.tgz#9a2bf107a068f3ffeabc49ad702c79ede8cfd357"
   integrity sha1-mivxB6Bo8//qvEmtcCx57ejP01c=
   dependencies:
     array-union "^2.1.0"
@@ -8877,7 +8877,7 @@ lower-case@^2.0.1:
 
 lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
   version "1.0.1"
-  resolved "http://npmreg.qa.91jkys.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
+  resolved "http://npmreg.qa.92jkys.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
   integrity sha1-b54wtHCE2XGnyCD/FabFFnt0wm8=
 
 lowercase-keys@^2.0.0:
@@ -9538,7 +9538,7 @@ negotiator@0.6.2:
 
 neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   version "2.6.2"
-  resolved "http://npmreg.qa.91jkys.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
+  resolved "http://npmreg.qa.92jkys.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha1-tKr7k+OustgXTKU88WOrfXMIMF8=
 
 next-tick@~1.0.0:
@@ -11072,7 +11072,7 @@ pupa@^2.1.1:
 
 q@^1.1.2, q@^1.5.1:
   version "1.5.1"
-  resolved "http://npmreg.qa.91jkys.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+  resolved "http://npmreg.qa.92jkys.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
 qrcode-reader@^1.0.4:
@@ -11882,7 +11882,7 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
 
 run-async@^2.2.0, run-async@^2.4.0:
   version "2.4.1"
-  resolved "http://npmreg.qa.91jkys.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
+  resolved "http://npmreg.qa.92jkys.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
   integrity sha1-hEDsz5nqPnC9QJ1JqriOEMGJpFU=
 
 run-node@^1.0.0:
@@ -12439,7 +12439,7 @@ string-width@^1.0.1, string-width@^1.0.2:
 
 string-width@^2.0.0, string-width@^2.1.0, string-width@^2.1.1:
   version "2.1.1"
-  resolved "http://npmreg.qa.91jkys.com/string-width/-/string-width-2.1.1.tgz#ab93f27a8dc13d28cac815c462143a6d9012ae9e"
+  resolved "http://npmreg.qa.92jkys.com/string-width/-/string-width-2.1.1.tgz#ab93f27a8dc13d28cac815c462143a6d9012ae9e"
   integrity sha1-q5Pyeo3BPSjKyBXEYhQ6bZASrp4=
   dependencies:
     is-fullwidth-code-point "^2.0.0"
@@ -12979,7 +12979,7 @@ through2-filter@^3.0.0:
 
 through2@^2.0.0, through2@^2.0.2, through2@^2.0.3, through2@~2.0.0:
   version "2.0.5"
-  resolved "http://npmreg.qa.91jkys.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
+  resolved "http://npmreg.qa.92jkys.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
   integrity sha1-AcHjnrMdB8t9A6lqcIIyYLIxMs0=
   dependencies:
     readable-stream "~2.3.6"
@@ -12994,7 +12994,7 @@ through2@^4.0.0:
 
 through@2, "through@>=2.2.7 <3", through@^2.3.6, through@^2.3.8:
   version "2.3.8"
-  resolved "http://npmreg.qa.91jkys.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  resolved "http://npmreg.qa.92jkys.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
 time-fix-plugin@^2.0.0:
@@ -13654,7 +13654,7 @@ urix@^0.1.0:
 
 url-join@4.0.1, url-join@^4.0.0:
   version "4.0.1"
-  resolved "http://npmreg.qa.91jkys.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
+  resolved "http://npmreg.qa.92jkys.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
   integrity sha1-tkLiGiZGgI/6F4xMX9o5hE4Szec=
 
 url-parse-lax@^1.0.0:
@@ -14168,7 +14168,7 @@ windows-release@^4.0.0:
 
 word-wrap@^1.0.3, word-wrap@~1.2.3:
   version "1.2.3"
-  resolved "http://npmreg.qa.91jkys.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
+  resolved "http://npmreg.qa.92jkys.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
   integrity sha1-YQY29rH3A4kb00dxzLF/uTtHB5w=
 
 wordwrap@0.0.2:
@@ -14230,7 +14230,7 @@ write-file-atomic@^2.0.0:
 
 write-file-atomic@^3.0.0, write-file-atomic@^3.0.3:
   version "3.0.3"
-  resolved "http://npmreg.qa.91jkys.com/write-file-atomic/-/write-file-atomic-3.0.3.tgz#56bd5c5a5c70481cd19c571bd39ab965a5de56e8"
+  resolved "http://npmreg.qa.92jkys.com/write-file-atomic/-/write-file-atomic-3.0.3.tgz#56bd5c5a5c70481cd19c571bd39ab965a5de56e8"
   integrity sha1-Vr1cWlxwSBzRnFcb05q5ZaXeVug=
   dependencies:
     imurmurhash "^0.1.4"

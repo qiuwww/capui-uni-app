@@ -31,7 +31,7 @@ export default {
     },
 
     simulator() {
-      let prefix = 'https://capsule-mobile.91jkys.com';
+      let prefix = 'https://capsule-mobile.92jkys.com';
       const { path } = this.$route.meta;
 
       // if (

@@ -1,6 +1,6 @@
 <view class="demo-home">
   <view class="demo-home__title">
-    <image mode="aspectFit" class="demo-home__image" src="https://static.91jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png" />
+    <image mode="aspectFit" class="demo-home__image" src="https://static.92jkys.com/third_files/GuoYao/202003/11/1274bd068b484d5aadfb039d4c8807a2.png" />
     <!-- <view class="demo-home__text">CapUI Mini Program</view> -->
   </view>
   <view class="demo-home__desc">

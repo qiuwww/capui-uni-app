@@ -7,7 +7,7 @@
     <div class="preview-popup">
       <div class="preview-content">
         <img
-          src="http://static.91jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg"
+          src="http://static.92jkys.com/third_files/GuoYao/202011/24/33ce1513e86c40bc975d8e90a9589418.jpg"
         />
         <p>微信扫码体验</p>
       </div>
