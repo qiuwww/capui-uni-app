@@ -10,7 +10,7 @@
 		<view :class="status == 'loadmore' || status == 'nomore' ? 'u-more' : ''" class="u-load-more-inner">
 			<view class="u-loadmore-icon-wrap">
 				<!-- <u-loading class="u-loadmore-icon" :color="iconColor" :mode="iconType == 'circle' ? 'circle' : 'flower'" :show="status == 'loading' && icon"></u-loading> -->
-        <u-icon size="30" class="u-loadmore-icon" :color="iconColor" v-if="status == 'loading' && icon" name="https://static.91jkys.com/attachment/20210728190614440_7fd1debc9f92417a9f6a5b99655c8231.gif" ></u-icon>
+        <u-icon size="30" class="u-loadmore-icon" :color="iconColor" v-if="status == 'loading' && icon" name="https://static.92jkys.com/attachment/20210728190614440_7fd1debc9f92417a9f6a5b99655c8231.gif" ></u-icon>
 			</view>
 			<!-- 如果没有更多的状态下，显示内容为dot（粗点），加载特定样式 -->
 			<view class="u-line-1" :style="[loadTextStyle]" :class="[(status == 'nomore' && isDot == true) ? 'u-dot-text' : 'u-more-text']" @tap="loadMore">

@@ -17,7 +17,7 @@
         <!-- <u-icon class="u-icon" :name="delIcon" size="20" :color="delColor"></u-icon> -->
         <u-icon
           class="u-icon"
-          name="https://static.91jkys.com/attachment/20211207140851381_9f74c790e7c64efa817d494eb4c10a7c.png"
+          name="https://static.92jkys.com/attachment/20211207140851381_9f74c790e7c64efa817d494eb4c10a7c.png"
           size="32"
           :color="delColor"
         ></u-icon>

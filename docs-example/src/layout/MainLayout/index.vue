@@ -71,7 +71,7 @@ export default {
 
   computed: {
     simulator() {
-      let prefix = 'https://capsule-mobile.91jkys.com';
+      let prefix = 'https://capsule-mobile.92jkys.com';
       let { path, example } = this.$route.meta;
 
       if (!example) {
@@ -87,7 +87,7 @@ export default {
         // prefix = 'https://youzan.github.io';
         prefix = 'http://localhost:8181/#/';
       } else {
-        prefix = `https://static.91jkys.com/f2e/capui-uni-app/example/#/`;
+        prefix = `https://static.92jkys.com/f2e/capui-uni-app/example/#/`;
       }
 
       // if (!UNSHARED.includes(path)) {

@@ -5,7 +5,7 @@
 [原LoadMore 还在更多文档地址](https://www.uviewui.com/components/loadMore.html)
 
 1. 删掉了原来的两侧的分割线；
-2. 替换loading状态的icon为：`https://static.91jkys.com/attachment/20210728190614440_7fd1debc9f92417a9f6a5b99655c8231.gif`；
+2. 替换loading状态的icon为：`https://static.92jkys.com/attachment/20210728190614440_7fd1debc9f92417a9f6a5b99655c8231.gif`；
 
 ## API
 
